@@ -6,7 +6,8 @@
     "date": "2025-10-30",
     "time": "15:54 AM",
     "reason": "Sore throat, fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6538586104"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "date": "2025-10-28",
     "time": "11:45 AM",
     "reason": "Routine check-up, high BP",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3748194617"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "date": "2025-10-25",
     "time": "14:14 AM",
     "reason": "Wheeze and cough",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1055801944"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "date": "2025-10-20",
     "time": "11:09 AM",
     "reason": "High cholesterol on bloods",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2842736109"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "date": "2025-10-29",
     "time": "11:18 AM",
     "reason": "Headache and low fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4315792829"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "date": "2025-10-27",
     "time": "13:29 AM",
     "reason": "Itchy eyes, sneezing",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6703065764"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "date": "2025-10-15",
     "time": "09:01 AM",
     "reason": "Knee pain after sports",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9930757538"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "date": "2025-10-22",
     "time": "11:40 AM",
     "reason": "Productive cough, fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6412244999"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "date": "2025-10-18",
     "time": "16:48 AM",
     "reason": "Shortness of breath and cough",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1937225747"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "date": "2025-10-12",
     "time": "09:56 AM",
     "reason": "Fever and sore throat",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0834678659"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "date": "2025-09-30",
     "time": "09:38 AM",
     "reason": "Raised HbA1c on blood test",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "8440179340"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "date": "2025-10-05",
     "time": "09:25 AM",
     "reason": "Sneezing and itchy eyes",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9427293039"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "date": "2025-10-01",
     "time": "12:22 AM",
     "reason": "Ear pain and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3795743850"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "date": "2025-10-10",
     "time": "11:20 AM",
     "reason": "Heartburn and reflux symptoms",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0176749152"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "date": "2025-09-20",
     "time": "15:23 AM",
     "reason": "Raised cholesterol",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4647088979"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "date": "2025-10-03",
     "time": "16:04 AM",
     "reason": "Lower back pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7256963432"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "date": "2025-10-07",
     "time": "16:21 AM",
     "reason": "Low mood, poor sleep",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4054087388"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "date": "2025-10-02",
     "time": "11:07 AM",
     "reason": "Itchy rash and sneezing",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1487623658"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "date": "2025-10-11",
     "time": "15:27 AM",
     "reason": "Sinus pain and green discharge",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3906914518"
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "date": "2025-10-06",
     "time": "14:28 AM",
     "reason": "Acid reflux symptoms",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9516004776"
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "date": "2025-09-25",
     "time": "11:18 AM",
     "reason": "Raised blood sugar on screening",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4063756793"
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "date": "2025-10-09",
     "time": "13:32 AM",
     "reason": "High BP readings",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7955347048"
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "date": "2025-10-21",
     "time": "13:21 AM",
     "reason": "Ear infection symptoms",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5954675740"
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "date": "2025-09-15",
     "time": "15:43 AM",
     "reason": "High cholesterol on review",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3958557031"
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "date": "2025-10-14",
     "time": "09:11 AM",
     "reason": "Shoulder pain after injury",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5430525790"
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "date": "2025-10-01",
     "time": "13:29 AM",
     "reason": "Fatigue and weight gain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2755133783"
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "date": "2025-10-16",
     "time": "15:38 AM",
     "reason": "Severe allergic flare",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3927052396"
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "date": "2025-10-04",
     "time": "10:13 AM",
     "reason": "Bronchitic cough with green sputum",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9672170890"
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "date": "2025-10-13",
     "time": "12:53 AM",
     "reason": "Fever and migraine symptoms",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3298389188"
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "date": "2025-10-26",
     "time": "09:46 AM",
     "reason": "Fever in toddler",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0166036064"
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "date": "2025-10-17",
     "time": "10:11 AM",
     "reason": "Sinus congestion and facial pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7495367466"
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "date": "2025-10-08",
     "time": "16:12 AM",
     "reason": "Contraception request",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2802706446"
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "date": "2025-09-05",
     "time": "16:21 AM",
     "reason": "Low energy, dry skin",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4009273895"
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "date": "2025-10-19",
     "time": "15:16 AM",
     "reason": "Tooth pain after extraction",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9541088074"
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "date": "2025-09-12",
     "time": "15:14 AM",
     "reason": "Cardiovascular risk assessment",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6471828837"
   },
   {
     "id": 36,
@@ -321,7 +356,8 @@
     "date": "2025-10-23",
     "time": "15:51 AM",
     "reason": "Fever and sore throat",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4176305606"
   },
   {
     "id": 37,
@@ -330,7 +366,8 @@
     "date": "2025-10-24",
     "time": "14:20 AM",
     "reason": "Exercise-induced cough",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7586577323"
   },
   {
     "id": 38,
@@ -339,7 +376,8 @@
     "date": "2025-10-02",
     "time": "10:23 AM",
     "reason": "Persistent productive cough",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6203338710"
   },
   {
     "id": 39,
@@ -348,7 +386,8 @@
     "date": "2025-10-09",
     "time": "15:02 AM",
     "reason": "Fever and ear pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1455229172"
   },
   {
     "id": 40,
@@ -357,7 +396,8 @@
     "date": "2025-09-01",
     "time": "12:28 AM",
     "reason": "Routine hypertension management",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4607334987"
   },
   {
     "id": 41,
@@ -366,7 +406,8 @@
     "date": "2025-10-18",
     "time": "10:12 AM",
     "reason": "High LDL on routine bloods",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4920143451"
   },
   {
     "id": 42,
@@ -375,7 +416,8 @@
     "date": "2025-10-21",
     "time": "13:21 AM",
     "reason": "Toothache with swelling",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5679629224"
   },
   {
     "id": 43,
@@ -384,7 +426,8 @@
     "date": "2025-10-11",
     "time": "12:18 AM",
     "reason": "Low mood and anxiety",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6664789957"
   },
   {
     "id": 44,
@@ -393,7 +436,8 @@
     "date": "2025-10-05",
     "time": "09:07 AM",
     "reason": "Acid reflux and regurgitation",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3137478995"
   },
   {
     "id": 45,
@@ -402,7 +446,8 @@
     "date": "2025-09-10",
     "time": "10:35 AM",
     "reason": "Fatigue and weight gain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5456734834"
   },
   {
     "id": 46,
@@ -411,7 +456,8 @@
     "date": "2025-10-20",
     "time": "13:45 AM",
     "reason": "Menstrual cramp pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9046839311"
   },
   {
     "id": 47,
@@ -420,7 +466,8 @@
     "date": "2025-10-02",
     "time": "11:40 AM",
     "reason": "Urinary symptoms and dysuria",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2029708895"
   },
   {
     "id": 48,
@@ -429,7 +476,8 @@
     "date": "2025-10-08",
     "time": "13:20 AM",
     "reason": "High cholesterol",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9253511109"
   },
   {
     "id": 49,
@@ -438,7 +486,8 @@
     "date": "2025-10-12",
     "time": "14:14 AM",
     "reason": "Acute back spasm",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6034202965"
   },
   {
     "id": 50,
@@ -447,7 +496,8 @@
     "date": "2025-09-22",
     "time": "13:25 AM",
     "reason": "High blood sugar",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0667088997"
   },
   {
     "id": 51,
@@ -456,7 +506,8 @@
     "date": "2025-10-27",
     "time": "09:58 AM",
     "reason": "Seasonal allergy flare",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "3852507189"
   },
   {
     "id": 52,
@@ -465,7 +516,8 @@
     "date": "2025-10-29",
     "time": "16:28 AM",
     "reason": "Ear pain in toddler",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7547043135"
   },
   {
     "id": 53,
@@ -474,7 +526,8 @@
     "date": "2025-10-07",
     "time": "10:00 AM",
     "reason": "Heartburn and regurgitation",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9880383567"
   },
   {
     "id": 54,
@@ -483,7 +536,8 @@
     "date": "2025-10-13",
     "time": "14:55 AM",
     "reason": "Sinus pain and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4976220591"
   },
   {
     "id": 55,
@@ -492,7 +546,8 @@
     "date": "2025-10-02",
     "time": "13:38 AM",
     "reason": "Elbow pain after injury",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0901893994"
   },
   {
     "id": 56,
@@ -501,7 +556,8 @@
     "date": "2025-09-18",
     "time": "16:11 AM",
     "reason": "Anxiety symptoms",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0689695497"
   },
   {
     "id": 57,
@@ -510,7 +566,8 @@
     "date": "2025-10-22",
     "time": "12:33 AM",
     "reason": "High fever and cough",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7516975605"
   },
   {
     "id": 58,
@@ -519,7 +576,8 @@
     "date": "2025-09-28",
     "time": "14:19 AM",
     "reason": "Tiredness and cold intolerance",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5383430830"
   },
   {
     "id": 59,
@@ -528,7 +586,8 @@
     "date": "2025-10-03",
     "time": "09:52 AM",
     "reason": "Fever in infant",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7494744711"
   },
   {
     "id": 60,
@@ -537,7 +596,8 @@
     "date": "2025-10-01",
     "time": "10:48 AM",
     "reason": "Elevated BP on screening",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5353682432"
   },
   {
     "id": 61,
@@ -546,7 +606,8 @@
     "date": "2025-09-05",
     "time": "16:48 AM",
     "reason": "Raised lipids",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0379517825"
   },
   {
     "id": 62,
@@ -555,7 +616,8 @@
     "date": "2025-10-09",
     "time": "12:29 AM",
     "reason": "Sore throat with exudate",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1230322833"
   },
   {
     "id": 63,
@@ -564,7 +626,8 @@
     "date": "2025-10-11",
     "time": "11:11 AM",
     "reason": "Dental pain following wisdom tooth",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9252211462"
   },
   {
     "id": 64,
@@ -573,7 +636,8 @@
     "date": "2025-10-02",
     "time": "13:29 AM",
     "reason": "Frequent indigestion",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2296156193"
   },
   {
     "id": 65,
@@ -582,7 +646,8 @@
     "date": "2025-10-20",
     "time": "09:09 AM",
     "reason": "Sinus pressure and purulent discharge",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1575207966"
   },
   {
     "id": 66,
@@ -591,7 +656,8 @@
     "date": "2025-09-30",
     "time": "09:38 AM",
     "reason": "High BP readings",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9231682180"
   },
   {
     "id": 67,
@@ -600,7 +666,8 @@
     "date": "2025-10-06",
     "time": "12:19 AM",
     "reason": "High cholesterol review",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7059121684"
   },
   {
     "id": 68,
@@ -609,7 +676,8 @@
     "date": "2025-10-22",
     "time": "13:26 AM",
     "reason": "Fatigue and cold intolerance",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0117253944"
   },
   {
     "id": 69,
@@ -618,7 +686,8 @@
     "date": "2025-09-16",
     "time": "15:43 AM",
     "reason": "High blood sugar on screening",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "8549714305"
   },
   {
     "id": 70,
@@ -627,7 +696,8 @@
     "date": "2025-09-20",
     "time": "15:05 AM",
     "reason": "Frequent heartburn",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5663733841"
   },
   {
     "id": 71,
@@ -636,7 +706,8 @@
     "date": "2025-10-01",
     "time": "13:51 AM",
     "reason": "Elevated BP",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "8201426894"
   },
   {
     "id": 72,
@@ -645,7 +716,8 @@
     "date": "2025-10-14",
     "time": "09:11 AM",
     "reason": "Earache and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4334743129"
   },
   {
     "id": 73,
@@ -654,7 +726,8 @@
     "date": "2025-10-03",
     "time": "15:10 AM",
     "reason": "Ankle sprain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2014021686"
   },
   {
     "id": 74,
@@ -663,7 +736,8 @@
     "date": "2025-10-06",
     "time": "13:33 AM",
     "reason": "Raised cholesterol",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2525930002"
   },
   {
     "id": 75,
@@ -672,7 +746,8 @@
     "date": "2025-09-25",
     "time": "13:34 AM",
     "reason": "High blood sugar",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9385343513"
   },
   {
     "id": 76,
@@ -681,7 +756,8 @@
     "date": "2025-10-17",
     "time": "09:33 AM",
     "reason": "Ear pain and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0083453962"
   },
   {
     "id": 77,
@@ -690,7 +766,8 @@
     "date": "2025-10-21",
     "time": "16:15 AM",
     "reason": "Chronic reflux",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5892205592"
   },
   {
     "id": 78,
@@ -699,7 +776,8 @@
     "date": "2025-10-12",
     "time": "15:50 AM",
     "reason": "Low mood and insomnia",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6010203082"
   },
   {
     "id": 79,
@@ -708,7 +786,8 @@
     "date": "2025-09-28",
     "time": "16:51 AM",
     "reason": "Shoulder pain from overuse",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9369147934"
   },
   {
     "id": 80,
@@ -717,7 +796,8 @@
     "date": "2025-09-10",
     "time": "09:12 AM",
     "reason": "Fatigue and dry skin",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6589057079"
   },
   {
     "id": 81,
@@ -726,7 +806,8 @@
     "date": "2025-10-08",
     "time": "13:29 AM",
     "reason": "High cholesterol",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2936312639"
   },
   {
     "id": 82,
@@ -735,7 +816,8 @@
     "date": "2025-10-02",
     "time": "14:36 AM",
     "reason": "Hypertension control",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0700059547"
   },
   {
     "id": 83,
@@ -744,7 +826,8 @@
     "date": "2025-10-19",
     "time": "13:02 AM",
     "reason": "Sinus pain and discharge",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7113173489"
   },
   {
     "id": 84,
@@ -753,7 +836,8 @@
     "date": "2025-10-05",
     "time": "09:45 AM",
     "reason": "Fever in young child",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2427976946"
   },
   {
     "id": 85,
@@ -762,7 +846,8 @@
     "date": "2025-10-07",
     "time": "12:22 AM",
     "reason": "Dental pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5974533852"
   },
   {
     "id": 86,
@@ -771,7 +856,8 @@
     "date": "2025-09-30",
     "time": "10:26 AM",
     "reason": "Raised glucose",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5907940034"
   },
   {
     "id": 87,
@@ -780,7 +866,8 @@
     "date": "2025-10-18",
     "time": "10:10 AM",
     "reason": "Fever and cough in child",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4148515472"
   },
   {
     "id": 88,
@@ -789,7 +876,8 @@
     "date": "2025-10-12",
     "time": "12:52 AM",
     "reason": "Ear discharge and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2222769337"
   },
   {
     "id": 89,
@@ -798,7 +886,8 @@
     "date": "2025-10-23",
     "time": "10:56 AM",
     "reason": "Low mood and anxiety",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0163065462"
   },
   {
     "id": 90,
@@ -807,7 +896,8 @@
     "date": "2025-10-10",
     "time": "12:32 AM",
     "reason": "High blood pressure",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "8070302771"
   },
   {
     "id": 91,
@@ -816,7 +906,8 @@
     "date": "2025-10-14",
     "time": "10:37 AM",
     "reason": "Sore throat with purulent exudate",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "4590278510"
   },
   {
     "id": 92,
@@ -825,7 +916,8 @@
     "date": "2025-10-01",
     "time": "10:04 AM",
     "reason": "Very high LDL",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "9475373012"
   },
   {
     "id": 93,
@@ -834,7 +926,8 @@
     "date": "2025-10-02",
     "time": "12:43 AM",
     "reason": "Ongoing heartburn",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "2733019406"
   },
   {
     "id": 94,
@@ -843,7 +936,8 @@
     "date": "2025-10-18",
     "time": "12:21 AM",
     "reason": "Ear pain and discharge",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1678031216"
   },
   {
     "id": 95,
@@ -852,7 +946,8 @@
     "date": "2025-09-30",
     "time": "13:45 AM",
     "reason": "Menstrual pain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "5752908701"
   },
   {
     "id": 96,
@@ -861,7 +956,8 @@
     "date": "2025-10-03",
     "time": "14:50 AM",
     "reason": "High BP on screening",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0742718808"
   },
   {
     "id": 97,
@@ -870,7 +966,8 @@
     "date": "2025-09-26",
     "time": "15:51 AM",
     "reason": "Fatigue and weight gain",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "6416503409"
   },
   {
     "id": 98,
@@ -879,7 +976,8 @@
     "date": "2025-09-20",
     "time": "14:28 AM",
     "reason": "Raised cholesterol",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "1585276065"
   },
   {
     "id": 99,
@@ -888,7 +986,8 @@
     "date": "2025-10-08",
     "time": "11:58 AM",
     "reason": "Migraine headache",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "7096153047"
   },
   {
     "id": 100,
@@ -897,6 +996,7 @@
     "date": "2025-10-11",
     "time": "16:37 AM",
     "reason": "Sore throat and fever",
-    "status": "Completed"
+    "status": "Completed",
+    "patientNHS": "0916757552"
   }
 ]

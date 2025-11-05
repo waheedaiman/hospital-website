@@ -177,10 +177,10 @@
     // Same-origin endpoints (page and data are on the same domain)
 // in patient_portal.html (or its JS)
 const DATA_ENDPOINTS = {
-  details: 'https://waheedaiman.github.io/hospital-website/data/Patientdetails.json',
-  appointments: 'https://waheedaiman.github.io/hospital-website/data/appointments.json',
-  prescriptions: 'https://waheedaiman.github.io/hospital-website/data/prescriptions.json',
-  requests: 'https://waheedaiman.github.io/hospital-website/data/prescription_requests.json',
+  details: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/Patientdetails.json',
+  appointments: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/appointments.json',
+  prescriptions: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/prescriptions.json',
+  requests: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/prescription-requests.json',
 };
 
 
@@ -241,14 +241,10 @@ const DATA_ENDPOINTS = {
       return null;
     }
 
-    async function getJSON(key) {
-      try {
-        const raw = localStorage.getItem(key);
-        return JSON.parse(raw || '[]');
-      } catch (e) {
-        console.warn('Could not parse localStorage key:', key, e);
-        return [];
-      }
+    async function getJSON(url) {
+      const res = await fetch(url, { cache: 'no-cache' });
+      if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
+      return res.json();
     }
 
     function renderHeader(details) {
@@ -264,7 +260,7 @@ const DATA_ENDPOINTS = {
 
     function filterByPatientId(arr, activeId) {
       return (arr || []).filter(item => {
-        const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber']);
+        const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS']);
         return sameId(pid, activeId);
       });
     }
@@ -321,12 +317,13 @@ const DATA_ENDPOINTS = {
         const activeId = await resolveActivePatientId();
         $('#activeId').textContent = activeId || '—';
 
-        const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
-          getJSON('Patientdetails'),
-          getJSON('appointments'),
-          getJSON('prescriptions'),
-          getJSON('prescription_requests'),
-        ]);
+const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
+  getJSON(DATA_ENDPOINTS.details),
+  getJSON(DATA_ENDPOINTS.appointments),
+  getJSON(DATA_ENDPOINTS.prescriptions),
+  getJSON(DATA_ENDPOINTS.requests),
+]);
+
 
         // Resolve patient details by ID, tolerate different key names
         const details = Array.isArray(detailsArr) ? detailsArr.find(p => {
