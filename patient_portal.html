@@ -261,12 +261,13 @@ function firstDefined(obj, keys) {
         return String(a).trim() === String(b).trim();
       } // nhs can be string AND number
 
-    function filterByPatientId(arr, activeId) {
-      return (arr || []).filter(item => {
-        const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS','NHS_Number']);
-        return sameId(pid, activeId);
-      });
-    }
+      function filterByPatientId(arr, activeId) {
+        return (arr || []).filter(item => {
+          const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS']);
+          console.log('Checking item:', item.id, 'pid=', pid, 'activeId=', activeId);
+          return sameId(pid, activeId);
+        });
+      }
 
     function renderList(targetSel, rows, emptyText) {
       const ul = $(targetSel);
@@ -351,6 +352,7 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
 
         // Filter data for this patient
         const myAppts = filterByPatientId(apptsAll, activeId);
+        console.log("sameId with known value:", sameId("6538586104", activeId));
         const myPresc = filterByPatientId(prescAll, activeId);
         const myReqs  = filterByPatientId(reqAll,  activeId);
 
@@ -360,7 +362,12 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
         console.log("First prescription record:", JSON.stringify(prescAll[0], null, 2));
         console.log("Filtered for patient:", myPresc);
         console.log("Active ID:", activeId);
-        prescAll[0].patientNHS = "6538586104";
+        prescAll.forEach(p => {
+        if (p.id === 'rx-001') {
+          p.patientNHS = "6538586104";
+        }
+      });
+
 
         renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
         renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
