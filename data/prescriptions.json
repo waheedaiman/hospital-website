@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "rx-001",
+    "patientId": 1,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule every 8 hours",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-30T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-002",
+    "patientId": 2,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-28T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-003",
+    "patientId": 3,
+    "medicine": "Salbutamol inhaler",
+    "dosage": "2 puffs as needed",
+    "duration": "As required",
+    "status": "Active",
+    "dateIssued": "2025-10-25T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-004",
+    "patientId": 4,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-20T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-005",
+    "patientId": 5,
+    "medicine": "Paracetamol 500mg",
+    "dosage": "1-2 tablets every 4-6 hours as needed",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-29T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-006",
+    "patientId": 6,
+    "medicine": "Cetirizine 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-27T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-007",
+    "patientId": 7,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-15T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-008",
+    "patientId": 8,
+    "medicine": "Azithromycin 250mg",
+    "dosage": "1 tablet daily",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-22T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-009",
+    "patientId": 9,
+    "medicine": "Salbutamol inhaler",
+    "dosage": "2 puffs as needed",
+    "duration": "As required",
+    "status": "Active",
+    "dateIssued": "2025-10-18T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-010",
+    "patientId": 10,
+    "medicine": "Paracetamol 500mg",
+    "dosage": "1-2 tablets every 4-6 hours as needed",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-12T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-011",
+    "patientId": 11,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-30T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-012",
+    "patientId": 12,
+    "medicine": "Cetirizine 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "14 days",
+    "status": "Active",
+    "dateIssued": "2025-10-05T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-013",
+    "patientId": 13,
+    "medicine": "Amoxicillin 250mg",
+    "dosage": "1 capsule twice daily",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-01T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-014",
+    "patientId": 14,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily before breakfast",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-10T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-015",
+    "patientId": 15,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-20T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-016",
+    "patientId": 16,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-03T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-017",
+    "patientId": 17,
+    "medicine": "Sertraline 50mg",
+    "dosage": "1 tablet daily",
+    "duration": "Start and review",
+    "status": "Active",
+    "dateIssued": "2025-10-07T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-018",
+    "patientId": 18,
+    "medicine": "Cetirizine 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-019",
+    "patientId": 19,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-11T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-020",
+    "patientId": 20,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily before food",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-06T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-021",
+    "patientId": 21,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-25T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-022",
+    "patientId": 22,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-09T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-023",
+    "patientId": 23,
+    "medicine": "Amoxicillin 250mg",
+    "dosage": "1 capsule twice daily",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-21T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-024",
+    "patientId": 24,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-15T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-025",
+    "patientId": 25,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-14T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-026",
+    "patientId": 26,
+    "medicine": "Levothyroxine 50mcg",
+    "dosage": "1 tablet daily before breakfast",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-01T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-027",
+    "patientId": 27,
+    "medicine": "Prednisone 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-16T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-028",
+    "patientId": 28,
+    "medicine": "Azithromycin 500mg",
+    "dosage": "1 tablet daily",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-04T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-029",
+    "patientId": 29,
+    "medicine": "Paracetamol 500mg",
+    "dosage": "1-2 tablets every 4-6 hours as needed",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-13T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-030",
+    "patientId": 30,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Per weight, as advised",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-26T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-031",
+    "patientId": 31,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-17T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-032",
+    "patientId": 32,
+    "medicine": "Oral contraceptive (combined)",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-08T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-033",
+    "patientId": 33,
+    "medicine": "Levothyroxine 75mcg",
+    "dosage": "1 tablet daily before breakfast",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-05T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-034",
+    "patientId": 34,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "10 days",
+    "status": "Active",
+    "dateIssued": "2025-10-19T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-035",
+    "patientId": 35,
+    "medicine": "Atorvastatin 10mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-12T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-036",
+    "patientId": 36,
+    "medicine": "Paracetamol 500mg",
+    "dosage": "1-2 tablets every 4-6 hours as needed",
+    "duration": "4 days",
+    "status": "Active",
+    "dateIssued": "2025-10-23T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-037",
+    "patientId": 37,
+    "medicine": "Salbutamol inhaler",
+    "dosage": "2 puffs as needed",
+    "duration": "As required",
+    "status": "Active",
+    "dateIssued": "2025-10-24T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-038",
+    "patientId": 38,
+    "medicine": "Azithromycin 250mg",
+    "dosage": "1 tablet daily",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-039",
+    "patientId": 39,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-09T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-040",
+    "patientId": 40,
+    "medicine": "Lisinopril 5mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-01T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-041",
+    "patientId": 41,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-18T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-042",
+    "patientId": 42,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-21T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-043",
+    "patientId": 43,
+    "medicine": "Sertraline 50mg",
+    "dosage": "1 tablet daily",
+    "duration": "Start and review in 4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-11T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-044",
+    "patientId": 44,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-05T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-045",
+    "patientId": 45,
+    "medicine": "Levothyroxine 50mcg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-10T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-046",
+    "patientId": 46,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-20T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-047",
+    "patientId": 47,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-048",
+    "patientId": 48,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-08T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-049",
+    "patientId": 49,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-12T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-050",
+    "patientId": 50,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-22T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-051",
+    "patientId": 51,
+    "medicine": "Cetirizine 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "10 days",
+    "status": "Active",
+    "dateIssued": "2025-10-27T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-052",
+    "patientId": 52,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-29T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-053",
+    "patientId": 53,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-07T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-054",
+    "patientId": 54,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-13T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-055",
+    "patientId": 55,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-056",
+    "patientId": 56,
+    "medicine": "Sertraline 50mg",
+    "dosage": "1 tablet daily",
+    "duration": "Start and review",
+    "status": "Active",
+    "dateIssued": "2025-09-18T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-057",
+    "patientId": 57,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-22T00:00:00",
+    "doctor": "Dr. Omar Rahman"
+  },
+  {
+    "id": "rx-058",
+    "patientId": 58,
+    "medicine": "Levothyroxine 100mcg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-28T00:00:00",
+    "doctor": "Dr. Lucy Patel"
+  },
+  {
+    "id": "rx-059",
+    "patientId": 59,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-03T00:00:00",
+    "doctor": "Dr. Ahmed Saleh"
+  },
+  {
+    "id": "rx-060",
+    "patientId": 60,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-01T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-061",
+    "patientId": 61,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-05T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-062",
+    "patientId": 62,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-09T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-063",
+    "patientId": 63,
+    "medicine": "Ibuprofen 400mg",
+    "dosage": "1 tablet every 8 hours as needed",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-11T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-064",
+    "patientId": 64,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-065",
+    "patientId": 65,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-20T00:00:00",
+    "doctor": "Dr. Vivian Park"
+  },
+  {
+    "id": "rx-066",
+    "patientId": 66,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-30T00:00:00",
+    "doctor": "Dr. Sara Malik"
+  },
+  {
+    "id": "rx-067",
+    "patientId": 67,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-06T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-068",
+    "patientId": 68,
+    "medicine": "Levothyroxine 75mcg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-22T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-069",
+    "patientId": 69,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-16T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-070",
+    "patientId": 70,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-09-20T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-071",
+    "patientId": 71,
+    "medicine": "Lisinopril 20mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-01T00:00:00",
+    "doctor": "Dr. Konstantin Lowles"
+  },
+  {
+    "id": "rx-072",
+    "patientId": 72,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-14T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-073",
+    "patientId": 73,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-03T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-074",
+    "patientId": 74,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-06T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-075",
+    "patientId": 75,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-25T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-076",
+    "patientId": 76,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-17T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-077",
+    "patientId": 77,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "8 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-21T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-078",
+    "patientId": 78,
+    "medicine": "Sertraline 50mg",
+    "dosage": "1 tablet daily",
+    "duration": "Start and review",
+    "status": "Active",
+    "dateIssued": "2025-10-12T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-079",
+    "patientId": 79,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-09-28T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-080",
+    "patientId": 80,
+    "medicine": "Levothyroxine 50mcg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-10T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-081",
+    "patientId": 81,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-08T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-082",
+    "patientId": 82,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-083",
+    "patientId": 83,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-19T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-084",
+    "patientId": 84,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-05T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-085",
+    "patientId": 85,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet every 6-8 hours as needed",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-07T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-086",
+    "patientId": 86,
+    "medicine": "Metformin 500mg",
+    "dosage": "1 tablet twice daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-30T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-087",
+    "patientId": 87,
+    "medicine": "Paracetamol liquid",
+    "dosage": "Weight-based dosing",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-18T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-088",
+    "patientId": 88,
+    "medicine": "Amoxicillin 250mg",
+    "dosage": "1 capsule twice daily",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-12T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-089",
+    "patientId": 89,
+    "medicine": "Sertraline 50mg",
+    "dosage": "1 tablet daily",
+    "duration": "Start and review",
+    "status": "Active",
+    "dateIssued": "2025-10-23T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-090",
+    "patientId": 90,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-10T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-091",
+    "patientId": 91,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-14T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-092",
+    "patientId": 92,
+    "medicine": "Atorvastatin 40mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-01T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-093",
+    "patientId": 93,
+    "medicine": "Omeprazole 20mg",
+    "dosage": "1 capsule daily",
+    "duration": "4 weeks",
+    "status": "Active",
+    "dateIssued": "2025-10-02T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-094",
+    "patientId": 94,
+    "medicine": "Amoxicillin 500mg",
+    "dosage": "1 capsule three times daily",
+    "duration": "7 days",
+    "status": "Active",
+    "dateIssued": "2025-10-18T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-095",
+    "patientId": 95,
+    "medicine": "Ibuprofen 200mg",
+    "dosage": "1 tablet as needed every 6-8 hrs",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-09-30T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-096",
+    "patientId": 96,
+    "medicine": "Lisinopril 10mg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-10-03T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  },
+  {
+    "id": "rx-097",
+    "patientId": 97,
+    "medicine": "Levothyroxine 100mcg",
+    "dosage": "1 tablet daily",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-26T00:00:00",
+    "doctor": "Dr. Amina Khan"
+  },
+  {
+    "id": "rx-098",
+    "patientId": 98,
+    "medicine": "Atorvastatin 20mg",
+    "dosage": "1 tablet nightly",
+    "duration": "Continued",
+    "status": "Active",
+    "dateIssued": "2025-09-20T00:00:00",
+    "doctor": "Dr. Randall Kuna"
+  },
+  {
+    "id": "rx-099",
+    "patientId": 99,
+    "medicine": "Paracetamol 500mg",
+    "dosage": "1-2 tablets every 4-6 hours as needed",
+    "duration": "3 days",
+    "status": "Active",
+    "dateIssued": "2025-10-08T00:00:00",
+    "doctor": "Dr. Hector Beringer"
+  },
+  {
+    "id": "rx-100",
+    "patientId": 100,
+    "medicine": "Amoxicillin 250mg",
+    "dosage": "1 capsule twice daily",
+    "duration": "5 days",
+    "status": "Active",
+    "dateIssued": "2025-10-11T00:00:00",
+    "doctor": "Dr. Chelsy Schwand"
+  }
+]

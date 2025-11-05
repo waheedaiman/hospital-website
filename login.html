@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Health Hospital | Login</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: #ffffff;
+        color: #1a2e40;
+        overflow-x: hidden;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 40px;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        height: 80px;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-img {
+        height: 80px;
+        width: auto;
+        border-radius: 0;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: #6d98bd;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .btn {
+        background-color: #6d98bd;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 25px;
+        transition: 0.3s ease;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .btn:hover {
+        background-color: #bfd4e8;
+        color: #1a2e40;
+      }
+
+      .login {
+        background-color: #1a2e40;
+      }
+
+      .login:hover {
+        background-color: #6d98bd;
+        color: white;
+      }
+
+      .contacthero {
+        text-align: center;
+        background-image: url("Images/h.jpg");
+        background-size: cover;
+        padding: 100px 20px 60px;
+        margin-top: 100px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .contacthero h2 {
+        font-size: 36px;
+        color: #6ddbdb;
+        margin-bottom: 12px;
+      }
+
+      .contacthero p {
+        font-size: 20px;
+        color: #76bbbf;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .loginsection {
+        max-width: 600px;
+        text-align: center;
+        margin: 30px auto;
+        padding: 25px 60px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .loginsection ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+      }
+      .loginsection ul li button {
+        background-color: #7ec0ee;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .loginsection ul li button:hover {
+        background-color: #003366;
+        transform: scale(1.05);
+      }
+
+      .contactform {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 25px 50px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      .contactform.active {
+        display: block;
+      }
+
+      .contactform h3 {
+        font-size: 22px;
+        color: #0c3d3d;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .formgroup {
+        margin-bottom: 15px;
+      }
+
+      .formgroup label {
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        color: #0c3d3d;
+        margin-bottom: 6px;
+      }
+
+      .formgroup input {
+        width: 100%;
+        padding: 8px 10px;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 13px;
+        background-color: #fafafa;
+        transition: all 0.3s ease;
+      }
+
+      .formgroup input:focus {
+        outline: none;
+        border-color: #9ecbfc;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(158, 203, 252, 0.1);
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #258eff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #1e7ee6;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(37, 142, 255, 0.3);
+      }
+
+      .checkbox {
+        display: inline-block;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .footer {
+        text-align: center;
+        background-color: #004c91;
+        color: #fff;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+      .footer p {
+        margin: 0;
+        color: #f5efe7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <nav>
+      <div class="logo-area">
+        <a href="#hero"
+          ><img src="Images/logo.png" alt="Prime Health Logo" class="logo-img"
+        /></a>
+        <span class="logo-text"></span>
+      </div>
+      <div class="nav-links">
+        <a href="Bookappointment.html" class="btn">Book Appointment</a>
+        <a href="login.html" class="btn login">Login</a>
+        <a href="index.html" class="btn login">Home</a>
+      </div>
+    </nav>
+
+    <section class="contacthero">
+      <h2>Get in Touch </h2>
+      <p>Your Health, Our Priority</p>
+      <p>We are here to help you on your health journey</p>
+    </section>
+
+    <section class="loginsection">
+      <ul>
+        <li><button onclick="showLogin('user')">Patient Login</button></li>
+        <li><button onclick="showLogin('doctor')">Doctor Login</button></li>
+        <li><button onclick="showLogin('admin')">Admin Login</button></li>
+      </ul>
+    </section>
+
+    <div class="loginforms">
+      <div id="user" class="contactform active">
+        <h3>PATIENT LOGIN</h3>
+        <form>
+          <div class="formgroup">
+            <label for="userId">Patient ID</label>
+            <input
+              id="userId"
+              type="text"
+              required
+              placeholder="Enter the patient ID"
+              title="Patient ID"
+            />
+          </div>
+
+          <div class="formgroup">
+            <label for="userPass">Password</label>
+            <input
+              id="userPass"
+              type="password"
+              required
+              placeholder="Enter your password"
+              title="Password"
+            />
+          </div>
+
+          <button type="submit" class="submit-btn">Login</button>
+          <div class="checkbox">
+            <label><input type="checkbox" /> Remember Me</label>
+          </div>
+        </form>
+      </div>
+
+      <div id="doctor" class="contactform">
+        <h3>DOCTOR LOGIN</h3>
+        <form>
+          <div class="formgroup">
+            <label>Doctor ID</label>
+            <input id="docId" type="text" required placeholder="Enter the Doctor ID" />
+          </div>
+
+          <div class="formgroup">
+            <label>Password</label>
+            <input id="docPass" type="password" required placeholder="Enter the password" />
+          </div>
+
+          <button type="submit" class="submit-btn">Login</button>
+          <div class="checkbox">
+            <label><input type="checkbox" /> Remember Me</label>
+          </div>
+        </form>
+      </div>
+
+      <div id="admin" class="contactform">
+        <h3>ADMIN LOGIN</h3>
+        <form>
+          <div class="formgroup">
+            <label>Admin ID</label>
+            <input id="adminId" type="text" required placeholder="Enter the Admin ID" />
+          </div>
+
+          <div class="formgroup">
+            <label>Password</label>
+            <input id="adminPass" type="password" required placeholder="Enter the password" />
+          </div>
+
+          <button type="submit" class="submit-btn">Login</button>
+          <div class="checkbox">
+            <label><input type="checkbox" /> Remember Me</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Happiness Centre | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      var encryptionKey = "1234567890987654321";
+
+      function encryptData(name) {
+        return CryptoJS.AES.encrypt(name, encryptionKey).toString();
+      }
+
+      function decryptData(encryptedName) {
+        return CryptoJS.AES.decrypt(encryptedName, encryptionKey).toString(
+          CryptoJS.enc.Utf8
+        );
+      }
+
+      let db;
+      let request = indexedDB.open("hospitalDB", 1);
+
+      request.onupgradeneeded = function (e) {
+        db = e.target.result;
+
+        let patientStore = db.createObjectStore("patients", { keyPath: "id" });
+        patientStore.createIndex("NHS", "NHS", { unique: true });
+        patientStore.createIndex("password", "password", { unique: false });
+
+        let doctorStore = db.createObjectStore("doctors", { keyPath: "id" });
+        doctorStore.createIndex("email", "email", { unique: true });
+        doctorStore.createIndex("password", "password", { unique: false });
+
+        let adminStore = db.createObjectStore("admins", { keyPath: "id" });
+        adminStore.createIndex("email", "email", { unique: true });
+        adminStore.createIndex("password", "password", { unique: false });
+      };
+
+      request.onsuccess = function (e) {
+        db = e.target.result;
+        addSampleData();
+      };
+
+      async function fetchJSON(url) {
+        const response = await fetch(url);
+        return await response.json();
+      }
+
+      async function addSampleData() {
+        const patients = await fetchJSON(
+          "https://raw.githubusercontent.com/hamham005/HEHE/refs/heads/main/patient.json"
+        );
+        let patientsTx = db.transaction("patients", "readwrite");
+        let patientsStore = patientsTx.objectStore("patients");
+        patients.forEach((patient) => {
+          patientsStore.add({
+            id: patient.id,
+            NHS: patient.NHS,
+            password: CryptoJS.AES.encrypt(patient.password, encryptionKey).toString(),
+          });
+        });
+
+        const doctors = await fetchJSON(
+          "https://raw.githubusercontent.com/hamham005/HEHE/refs/heads/main/doc.json"
+        );
+        let doctorsTx = db.transaction("doctors", "readwrite");
+        let doctorsStore = doctorsTx.objectStore("doctors");
+        doctors.forEach((doctor) => {
+          doctorsStore.add({
+            id: doctor.id,
+            email: doctor.email,
+            password: CryptoJS.AES.encrypt(doctor.password, encryptionKey).toString(),
+          });
+        });
+
+        const admins = await fetchJSON(
+          "https://raw.githubusercontent.com/hamham005/HEHE/refs/heads/main/admin.json"
+        );
+        let adminsTx = db.transaction("admins", "readwrite");
+        let adminsStore = adminsTx.objectStore("admins");
+        admins.forEach((admin) => {
+          adminsStore.add({
+            id: admin.id,
+            email: admin.email,
+            password: CryptoJS.AES.encrypt(admin.password, encryptionKey).toString(),
+          });
+        });
+      }
+
+      // ---------- Show login and auto scroll ----------
+      let userForm = document.getElementById("user");
+      let adminForm = document.getElementById("admin");
+      let doctorForm = document.getElementById("doctor");
+
+      function showLogin(formName) {
+        userForm.classList.remove("active");
+        adminForm.classList.remove("active");
+        doctorForm.classList.remove("active");
+
+        if (formName === "user") userForm.classList.add("active");
+        else if (formName === "admin") adminForm.classList.add("active");
+        else if (formName === "doctor") doctorForm.classList.add("active");
+
+        // Smooth scroll to selected form
+        setTimeout(() => {
+          document.getElementById(formName).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }, 100);
+      }
+
+      // ---------- Login Validation + Redirects ----------
+
+      // Patient login
+      userForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let userId = document.getElementById("userId").value;
+        let userPass = document.getElementById("userPass").value;
+        let tx = db.transaction(["patients"], "readonly");
+        let store = tx.objectStore("patients");
+        let nhsIndex = store.index("NHS");
+        let request = nhsIndex.get(userId);
+
+        request.onsuccess = function (event) {
+          let patient = event.target.result;
+          if (!patient) {
+            alert("Patient not found. Please check your Patient ID.");
+            return;
+          }
+          let storedpassword = decryptData(patient.password);
+            if (storedpassword === userPass) {
+              alert("Patient Login successful!");
+              try { sessionStorage.setItem('loggedPatient', JSON.stringify({ id: patient.id, NHS: patient.NHS })); } catch(e){}
+              const pid = encodeURIComponent(patient.id || patient.ID || patient.patientId || patient.NHS || '');
+              // Redirect and pass a baseUrl to ensure local data folder is used.
+              window.location.href = 'patient_portal.html?patientId=' + pid + '&baseUrl=./data';
+            } else {
+              alert("Login failed. Incorrect password.");
+            }
+        };
+        request.onerror = function () {
+          alert("Login error occurred.");
+        };
+      });
+
+      // Doctor login
+      doctorForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let docId = document.getElementById("docId").value;
+        let docPass = document.getElementById("docPass").value;
+        let tx = db.transaction(["doctors"], "readonly");
+        let store = tx.objectStore("doctors");
+        let emailIndex = store.index("email");
+        let request = emailIndex.get(docId);
+
+        request.onsuccess = function (event) {
+          let doctor = event.target.result;
+          if (!doctor) {
+            alert("Doctor not found. Please check your Doctor ID.");
+            return;
+          }
+          let storedpassword = decryptData(doctor.password);
+          if (storedpassword === docPass) {
+            alert("Doctor Login successful!");
+            try { sessionStorage.setItem('loggedDoctor', JSON.stringify({ id: doctor.id, email: docId })); } catch(e){}
+            window.location.href = "Doctor_Login.html";
+          } else {
+            alert("Login failed. Incorrect password.");
+          }
+        };
+        request.onerror = function () {
+          alert("Login error occurred.");
+        };
+      });
+
+      // Admin login
+      adminForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let adminId = document.getElementById("adminId").value;
+        let adminPass = document.getElementById("adminPass").value;
+        let tx = db.transaction(["admins"], "readonly");
+        let store = tx.objectStore("admins");
+        let emailIndex = store.index("email");
+        let request = emailIndex.get(adminId);
+
+        request.onsuccess = function (event) {
+          let admin = event.target.result;
+          if (!admin) {
+            alert("Admin not found. Please check your Admin ID.");
+            return;
+          }
+          let storedpassword = decryptData(admin.password);
+          if (storedpassword === adminPass) {
+            alert("Admin Login successful!");
+            window.location.href = "admin.html";
+          } else {
+            alert("Login failed. Incorrect password.");
+          }
+        };
+        request.onerror = function () {
+          alert("Login error occurred.");
+        };
+      });
+    </script>
+  </body>
+</html>
+

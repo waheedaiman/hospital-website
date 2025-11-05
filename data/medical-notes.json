@@ -1,0 +1,702 @@
+[
+  {
+    "id": "note-001",
+    "patientId": 1,
+    "title": "Bacterial pharyngitis",
+    "body": "Rest, fluids, return if worsening",
+    "date": "2025-10-30T00:00:00"
+  },
+  {
+    "id": "note-002",
+    "patientId": 2,
+    "title": "Hypertension",
+    "body": "Low-salt diet, exercise, BP log",
+    "date": "2025-10-28T00:00:00"
+  },
+  {
+    "id": "note-003",
+    "patientId": 3,
+    "title": "Mild asthma exacerbation",
+    "body": "Avoid triggers, inhaler technique review",
+    "date": "2025-10-25T00:00:00"
+  },
+  {
+    "id": "note-004",
+    "patientId": 4,
+    "title": "Hyperlipidemia",
+    "body": "Diet changes, repeat lipids in 3 months",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "note-005",
+    "patientId": 5,
+    "title": "Likely viral illness",
+    "body": "Hydration, rest, symptomatic care",
+    "date": "2025-10-29T00:00:00"
+  },
+  {
+    "id": "note-006",
+    "patientId": 6,
+    "title": "Allergic rhinitis",
+    "body": "Avoid allergens, antihistamine",
+    "date": "2025-10-27T00:00:00"
+  },
+  {
+    "id": "note-007",
+    "patientId": 7,
+    "title": "Soft tissue sprain",
+    "body": "RICE, NSAID short course, physiotherapy referral",
+    "date": "2025-10-15T00:00:00"
+  },
+  {
+    "id": "note-008",
+    "patientId": 8,
+    "title": "Suspected community chest infection",
+    "body": "Rest, fluids, complete antibiotics",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "note-009",
+    "patientId": 9,
+    "title": "Reactive airways / viral-triggered wheeze",
+    "body": "Inhaler use, avoid triggers",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "note-010",
+    "patientId": 10,
+    "title": "Likely viral infection",
+    "body": "Symptomatic care, hydration",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "note-011",
+    "patientId": 11,
+    "title": "Type 2 diabetes",
+    "body": "Diet, exercise, start metformin",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "note-012",
+    "patientId": 12,
+    "title": "Seasonal allergic rhinitis",
+    "body": "Antihistamine, avoid pollen",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "note-013",
+    "patientId": 13,
+    "title": "Otitis media",
+    "body": "Analgesia and antibiotics",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "note-014",
+    "patientId": 14,
+    "title": "GORD",
+    "body": "Lifestyle measures, PPI",
+    "date": "2025-10-10T00:00:00"
+  },
+  {
+    "id": "note-015",
+    "patientId": 15,
+    "title": "Hyperlipidemia",
+    "body": "Diet, statin therapy",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "note-016",
+    "patientId": 16,
+    "title": "Mechanical back pain",
+    "body": "Analgesia, activity modification, physiotherapy",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "note-017",
+    "patientId": 17,
+    "title": "Depressive disorder (mild-moderate)",
+    "body": "Start SSRI, consider talking therapy",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "note-018",
+    "patientId": 18,
+    "title": "Allergic rhinitis with mild urticaria",
+    "body": "Antihistamine, avoid triggers",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-019",
+    "patientId": 19,
+    "title": "Acute bacterial sinusitis",
+    "body": "Antibiotics, nasal saline",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "note-020",
+    "patientId": 20,
+    "title": "GORD",
+    "body": "PPI and lifestyle changes",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "note-021",
+    "patientId": 21,
+    "title": "Type 2 diabetes",
+    "body": "Lifestyle measures, start metformin",
+    "date": "2025-09-25T00:00:00"
+  },
+  {
+    "id": "note-022",
+    "patientId": 22,
+    "title": "Hypertension",
+    "body": "BP log, diet changes",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "note-023",
+    "patientId": 23,
+    "title": "Otitis media",
+    "body": "Analgesia and antibiotics",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "note-024",
+    "patientId": 24,
+    "title": "Hyperlipidemia",
+    "body": "Statin and lifestyle change",
+    "date": "2025-09-15T00:00:00"
+  },
+  {
+    "id": "note-025",
+    "patientId": 25,
+    "title": "Rotator cuff strain",
+    "body": "Analgesia, rest, physiotherapy",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "note-026",
+    "patientId": 26,
+    "title": "Hypothyroidism",
+    "body": "Start levothyroxine, bloods in 6 weeks",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "note-027",
+    "patientId": 27,
+    "title": "Acute allergic dermatitis",
+    "body": "Short steroid course, topical emollients",
+    "date": "2025-10-16T00:00:00"
+  },
+  {
+    "id": "note-028",
+    "patientId": 28,
+    "title": "Acute bronchitis (secondary infection)",
+    "body": "Antibiotic course, fluids",
+    "date": "2025-10-04T00:00:00"
+  },
+  {
+    "id": "note-029",
+    "patientId": 29,
+    "title": "Tension headache with viral febrile illness",
+    "body": "Analgesia, rest",
+    "date": "2025-10-13T00:00:00"
+  },
+  {
+    "id": "note-030",
+    "patientId": 30,
+    "title": "Viral illness",
+    "body": "Supportive care, fluids",
+    "date": "2025-10-26T00:00:00"
+  },
+  {
+    "id": "note-031",
+    "patientId": 31,
+    "title": "Bacterial sinusitis",
+    "body": "Antibiotics and nasal decongestant",
+    "date": "2025-10-17T00:00:00"
+  },
+  {
+    "id": "note-032",
+    "patientId": 32,
+    "title": "Request for hormonal contraception",
+    "body": "Start pill, discuss side effects",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "note-033",
+    "patientId": 33,
+    "title": "Hypothyroidism",
+    "body": "Thyroid replacement, blood tests in 6 weeks",
+    "date": "2025-09-05T00:00:00"
+  },
+  {
+    "id": "note-034",
+    "patientId": 34,
+    "title": "Post-dental extraction pain",
+    "body": "Analgesia and oral hygiene",
+    "date": "2025-10-19T00:00:00"
+  },
+  {
+    "id": "note-035",
+    "patientId": 35,
+    "title": "Elevated LDL",
+    "body": "Statin therapy, exercise",
+    "date": "2025-09-12T00:00:00"
+  },
+  {
+    "id": "note-036",
+    "patientId": 36,
+    "title": "Viral upper respiratory infection",
+    "body": "Rest and symptomatic care",
+    "date": "2025-10-23T00:00:00"
+  },
+  {
+    "id": "note-037",
+    "patientId": 37,
+    "title": "Mild exercise-induced asthma",
+    "body": "Inhaler pre-exercise",
+    "date": "2025-10-24T00:00:00"
+  },
+  {
+    "id": "note-038",
+    "patientId": 38,
+    "title": "Suspected bacterial bronchitis",
+    "body": "Antibiotics, fluids",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-039",
+    "patientId": 39,
+    "title": "Viral URTI",
+    "body": "Symptomatic care, analgesia",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "note-040",
+    "patientId": 40,
+    "title": "Hypertension",
+    "body": "BP monitoring and lifestyle changes",
+    "date": "2025-09-01T00:00:00"
+  },
+  {
+    "id": "note-041",
+    "patientId": 41,
+    "title": "Hyperlipidemia",
+    "body": "Statin and diet changes",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "note-042",
+    "patientId": 42,
+    "title": "Dental abscess",
+    "body": "Antibiotics and dental referral",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "note-043",
+    "patientId": 43,
+    "title": "Generalised anxiety disorder",
+    "body": "Start SSRI and consider therapy",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "note-044",
+    "patientId": 44,
+    "title": "GORD",
+    "body": "PPI therapy, lifestyle changes",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "note-045",
+    "patientId": 45,
+    "title": "Hypothyroidism",
+    "body": "Start replacement, check TSH",
+    "date": "2025-09-10T00:00:00"
+  },
+  {
+    "id": "note-046",
+    "patientId": 46,
+    "title": "Dysmenorrhea",
+    "body": "NSAID use, heat therapy",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "note-047",
+    "patientId": 47,
+    "title": "Suspected UTI",
+    "body": "Antibiotic and urine test",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-048",
+    "patientId": 48,
+    "title": "Hyperlipidemia",
+    "body": "Statin therapy and diet",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "note-049",
+    "patientId": 49,
+    "title": "Muscle strain",
+    "body": "NSAID, rest, physio referral",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "note-050",
+    "patientId": 50,
+    "title": "Type 2 diabetes",
+    "body": "Start metformin, diet plan",
+    "date": "2025-09-22T00:00:00"
+  },
+  {
+    "id": "note-051",
+    "patientId": 51,
+    "title": "Allergic rhinitis",
+    "body": "Antihistamine and nasal spray if needed",
+    "date": "2025-10-27T00:00:00"
+  },
+  {
+    "id": "note-052",
+    "patientId": 52,
+    "title": "Otitis media/viral illness",
+    "body": "Supportive care and analgesia",
+    "date": "2025-10-29T00:00:00"
+  },
+  {
+    "id": "note-053",
+    "patientId": 53,
+    "title": "GORD",
+    "body": "PPI, weight loss if needed",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "note-054",
+    "patientId": 54,
+    "title": "Acute bacterial sinusitis",
+    "body": "Antibiotics and nasal saline",
+    "date": "2025-10-13T00:00:00"
+  },
+  {
+    "id": "note-055",
+    "patientId": 55,
+    "title": "Tendinopathy",
+    "body": "NSAID, rest, physio",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-056",
+    "patientId": 56,
+    "title": "Generalised anxiety",
+    "body": "SSRI and CBT referral",
+    "date": "2025-09-18T00:00:00"
+  },
+  {
+    "id": "note-057",
+    "patientId": 57,
+    "title": "Viral URTI",
+    "body": "Supportive care",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "note-058",
+    "patientId": 58,
+    "title": "Hypothyroidism",
+    "body": "Start replacement, TSH check",
+    "date": "2025-09-28T00:00:00"
+  },
+  {
+    "id": "note-059",
+    "patientId": 59,
+    "title": "Viral illness",
+    "body": "Hydrate and monitor",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "note-060",
+    "patientId": 60,
+    "title": "Hypertension",
+    "body": "Lifestyle changes and start ACE inhibitor",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "note-061",
+    "patientId": 61,
+    "title": "Hyperlipidemia",
+    "body": "Statin and diet",
+    "date": "2025-09-05T00:00:00"
+  },
+  {
+    "id": "note-062",
+    "patientId": 62,
+    "title": "Streptococcal pharyngitis",
+    "body": "Antibiotics and rest",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "note-063",
+    "patientId": 63,
+    "title": "Post-extraction pain",
+    "body": "Analgesia and mouth care",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "note-064",
+    "patientId": 64,
+    "title": "GORD",
+    "body": "PPI and diet changes",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-065",
+    "patientId": 65,
+    "title": "Acute sinusitis",
+    "body": "Antibiotics and nasal care",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "note-066",
+    "patientId": 66,
+    "title": "Hypertension",
+    "body": "Lifestyle and medication",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "note-067",
+    "patientId": 67,
+    "title": "Hyperlipidemia",
+    "body": "Statin and exercise",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "note-068",
+    "patientId": 68,
+    "title": "Hypothyroidism",
+    "body": "Replace thyroid hormone, check TSH",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "note-069",
+    "patientId": 69,
+    "title": "Type 2 diabetes",
+    "body": "Start metformin and diet",
+    "date": "2025-09-16T00:00:00"
+  },
+  {
+    "id": "note-070",
+    "patientId": 70,
+    "title": "GORD",
+    "body": "PPI and avoid triggers",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "note-071",
+    "patientId": 71,
+    "title": "Hypertension",
+    "body": "Medication adherence and diet",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "note-072",
+    "patientId": 72,
+    "title": "Otitis media",
+    "body": "Antibiotics and analgesia",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "note-073",
+    "patientId": 73,
+    "title": "Ligament sprain",
+    "body": "Rest, RICE, analgesia",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "note-074",
+    "patientId": 74,
+    "title": "Hyperlipidemia",
+    "body": "Statin and diet",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "note-075",
+    "patientId": 75,
+    "title": "Type 2 diabetes",
+    "body": "Metformin and diet",
+    "date": "2025-09-25T00:00:00"
+  },
+  {
+    "id": "note-076",
+    "patientId": 76,
+    "title": "Otitis media",
+    "body": "Antibiotics and analgesia",
+    "date": "2025-10-17T00:00:00"
+  },
+  {
+    "id": "note-077",
+    "patientId": 77,
+    "title": "GORD",
+    "body": "PPI and lifestyle changes",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "note-078",
+    "patientId": 78,
+    "title": "Depressive symptoms",
+    "body": "SSRI and therapy referral",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "note-079",
+    "patientId": 79,
+    "title": "Tendinopathy",
+    "body": "Rest and physio",
+    "date": "2025-09-28T00:00:00"
+  },
+  {
+    "id": "note-080",
+    "patientId": 80,
+    "title": "Hypothyroidism",
+    "body": "Thyroid replacement",
+    "date": "2025-09-10T00:00:00"
+  },
+  {
+    "id": "note-081",
+    "patientId": 81,
+    "title": "Hyperlipidemia",
+    "body": "Statin therapy",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "note-082",
+    "patientId": 82,
+    "title": "Hypertension",
+    "body": "Diet, salt reduction",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-083",
+    "patientId": 83,
+    "title": "Bacterial sinusitis",
+    "body": "Antibiotics and nasal care",
+    "date": "2025-10-19T00:00:00"
+  },
+  {
+    "id": "note-084",
+    "patientId": 84,
+    "title": "Viral infection",
+    "body": "Hydration and rest",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "note-085",
+    "patientId": 85,
+    "title": "Tooth infection",
+    "body": "Analgesia and dental referral",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "note-086",
+    "patientId": 86,
+    "title": "Type 2 diabetes",
+    "body": "Metformin and lifestyle",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "note-087",
+    "patientId": 87,
+    "title": "Viral respiratory infection",
+    "body": "Supportive care",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "note-088",
+    "patientId": 88,
+    "title": "Otitis externa/media",
+    "body": "Antibiotic and ENT referral if recurrent",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "note-089",
+    "patientId": 89,
+    "title": "Depression/anxiety",
+    "body": "SSRI and counselling referral",
+    "date": "2025-10-23T00:00:00"
+  },
+  {
+    "id": "note-090",
+    "patientId": 90,
+    "title": "Hypertension",
+    "body": "Medication and lifestyle",
+    "date": "2025-10-10T00:00:00"
+  },
+  {
+    "id": "note-091",
+    "patientId": 91,
+    "title": "Bacterial tonsillitis",
+    "body": "Antibiotic and fluids",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "note-092",
+    "patientId": 92,
+    "title": "Hyperlipidemia",
+    "body": "High-intensity statin",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "note-093",
+    "patientId": 93,
+    "title": "GORD",
+    "body": "PPI and diet",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "note-094",
+    "patientId": 94,
+    "title": "Otitis media",
+    "body": "Antibiotics and analgesia",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "note-095",
+    "patientId": 95,
+    "title": "Dysmenorrhea",
+    "body": "NSAIDs and heat",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "note-096",
+    "patientId": 96,
+    "title": "Hypertension",
+    "body": "Lifestyle and ACE inhibitor",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "note-097",
+    "patientId": 97,
+    "title": "Hypothyroidism",
+    "body": "Thyroid replacement, TSH check",
+    "date": "2025-09-26T00:00:00"
+  },
+  {
+    "id": "note-098",
+    "patientId": 98,
+    "title": "Hyperlipidemia",
+    "body": "Statin and diet",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "note-099",
+    "patientId": 99,
+    "title": "Tension-type headache",
+    "body": "Analgesia and rest",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "note-100",
+    "patientId": 100,
+    "title": "Bacterial tonsillitis",
+    "body": "Antibiotics and analgesia",
+    "date": "2025-10-11T00:00:00"
+  }
+]

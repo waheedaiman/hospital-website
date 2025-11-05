@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Doctor Portal — Medical App</title>
+<style>
+:root{
+  --blue:#0b74d1;
+  --muted:#f3f7fb;
+  --card:#ffffff;
+  --text:#222;
+  --accent:#0b74d1;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial
+}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--muted),#eef6fb);color:var(--text)}
+.app{display:flex;flex-direction:column;height:100vh}
+header{background:linear-gradient(90deg,var(--blue),#1ea0ff);color:white;padding:14px 20px;display:flex;align-items:center;gap:12px}
+header h1{font-size:18px;margin:0}
+header .sub{opacity:0.9;font-size:13px}
+header button#logoutBtn{margin-left:auto;padding:6px 12px;border:none;border-radius:8px;background:#f44336;color:white;cursor:pointer;font-size:13px;}
+.container{display:flex;flex:1;gap:18px;padding:18px}
+.left{width:320px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(10,40,80,0.06)}
+.patient-list{margin-top:8px;max-height:64vh;overflow:auto}
+.patient-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;border:1px solid transparent}
+.patient-item:hover{background:#eef6ff;cursor:pointer}
+.main{flex:1;display:flex;flex-direction:column}
+.tabs{display:flex;gap:6px}
+.tab{padding:10px 12px;border-radius:10px;background:transparent;border:1px solid transparent;cursor:pointer}
+.tab.active{background:var(--card);box-shadow:0 4px 10px rgba(10,40,80,0.04);border:1px solid #e6f1fb}
+.panel{margin-top:12px;padding:14px;flex:1;overflow:auto}
+.note{background:var(--muted);padding:10px;border-radius:8px;margin-bottom:8px}
+label{display:block;margin-top:8px;font-size:13px}
+input,textarea,select{width:100%;padding:8px;border-radius:8px;border:1px solid #dfeefc}
+textarea{min-height:90px}
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:white;cursor:pointer}
+footer{padding:12px;text-align:center;font-size:13px;color:#666}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Doctor Portal</h1>
+    <div class="sub" id="doctorName">Logged in as ...</div>
+    <button id="logoutBtn">Logout</button>
+  </header>
+  <div class="container">
+    <aside class="left">
+      <div class="card">
+        <strong>Patients</strong>
+        <input type="text" id="searchNHS" placeholder="Search by NHS number..." style="margin-top:8px;padding:6px;border-radius:8px;border:1px solid #ccc;width:100%;">
+        <div class="patient-list" id="patientList"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="tabs">
+        <button class="tab" id="tabAppointments" data-tab="appointments">Appointments</button>
+        <button class="tab active" data-tab="view">Patient View</button>
+        <button class="tab" data-tab="addnote">Add Notes</button>
+        <button class="tab" data-tab="presc">Prescriptions</button>
+        <button class="tab" data-tab="prescRequests">Prescription Requests</button>
+      </div>
+      <div class="panel card" id="panel">
+        <div id="noSelection">
+          <h2>Select a patient</h2>
+          <p>Choose a patient from the left to view their records.</p>
+        </div>
+      <div class="panel" id="appointmentsTab" style="display:none">
+        <div class="card">
+          <strong>My Appointments</strong>
+          <div id="noDocAppt" class="note" style="margin-top:8px;">No appointments found for your account yet.</div>
+          <div id="docApptList" class="patient-list" style="margin-top:8px;"></div>
+        </div>
+      </div>
+
+        <div id="viewTab" style="display:none">
+          <h2 id="pName"></h2>
+          <p id="pMeta"></p>
+          <h3>Medical Notes</h3>
+          <div id="notes"></div>
+          <h3>Prescriptions</h3>
+          <div id="presc"></div>
+        </div>
+        <div id="addnoteTab" style="display:none">
+          <h2>Add Clinical Note</h2>
+          <form id="noteForm">
+            <label>Title</label>
+            <input id="noteTitle" required/>
+            <label>Details</label>
+            <textarea id="noteBody" required></textarea>
+            <button class="btn" type="submit">Save Note</button>
+          </form>
+        </div>
+        <div id="prescTab" style="display:none">
+          <h2>Add Prescription</h2>
+          <form id="prescForm">
+            <label>Medicine</label>
+            <select id="medName" required>
+              <option value="">Select medicine</option>
+            </select>
+            <label>Dosage</label>
+            <input id="medDosage" required/>
+            <button class="btn" type="submit">Add Prescription</button>
+          </form>
+        </div>
+        <div id="prescRequestsTab" style="display:none">
+          <h2>Prescription Requests</h2>
+          <div style="margin-bottom:10px"><button id="refreshReqs" class="btn">Refresh requests</button></div>
+          <div id="prescriptionRequestsList">
+            <!-- Will be populated with pending requests -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>Doctor Portal</footer>
+</div>
+
+<script>
+let db, selectedPatient = null;
+const DB_NAME = 'MedicalDB';
+const DB_VERSION = 2;
+const PATIENTS_URL = "https://jsethi-mdx.github.io/cst2572.github.io/patients.json";
+const MEDICINES_URL = "https://jsethi-mdx.github.io/cst2572.github.io/medicines.json";
+const PATIENT_DETAILS_URL = "https://raw.githubusercontent.com/Raven2027/Patientnotes/refs/heads/main/Patientdetails.json"; // external notes/prescriptions
+
+function openDB() {
+  const req = indexedDB.open(DB_NAME, DB_VERSION);
+  req.onupgradeneeded = e => {
+    db = e.target.result;
+    if(db.objectStoreNames.contains('patients')) db.deleteObjectStore('patients');
+    if(db.objectStoreNames.contains('notes')) db.deleteObjectStore('notes');
+    if(db.objectStoreNames.contains('prescriptions')) db.deleteObjectStore('prescriptions');
+    db.createObjectStore('patients', {keyPath:'NHS'});
+    db.createObjectStore('notes', {keyPath:'id', autoIncrement:true});
+    db.createObjectStore('prescriptions', {keyPath:'id', autoIncrement:true});
+  };
+  req.onsuccess = e => {
+    db = e.target.result;
+    loadPatients();
+    loadMedicines();
+    loadDoctorInfo();
+  };
+  req.onerror = e => console.error(e);
+}
+
+// Load Patients
+async function loadPatients(){
+  try {
+    const res = await fetch(PATIENTS_URL);
+    const patients = await res.json();
+    const tx = db.transaction('patients','readwrite');
+    const store = tx.objectStore('patients');
+    patients.forEach(p => store.put(p));
+    tx.oncomplete = renderPatientList;
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+async function getAllPatients(){
+  return new Promise((res,rej)=>{
+    const tx = db.transaction('patients');
+    const store = tx.objectStore('patients');
+    const req = store.getAll();
+    req.onsuccess = ()=> res(req.result||[]);
+    req.onerror = e => rej(e);
+  });
+}
+
+async function renderPatientList(){
+  const list = document.getElementById('patientList');
+  list.innerHTML = '';
+  const patients = await getAllPatients();
+  patients.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'patient-item';
+    div.textContent = `${p.First} ${p.Last} — NHS: ${p.NHS}`;
+    div.onclick = () => showPatient(p);
+    list.appendChild(div);
+  });
+}
+
+// NHS search
+document.getElementById('searchNHS').addEventListener('input', async e => {
+  const query = e.target.value.trim();
+  const allPatients = await getAllPatients();
+  const filtered = query ? allPatients.filter(p => p.NHS.includes(query)) : allPatients;
+  const list = document.getElementById('patientList');
+  list.innerHTML = '';
+  filtered.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'patient-item';
+    div.textContent = `${p.First} ${p.Last} — NHS: ${p.NHS}`;
+    div.onclick = () => showPatient(p);
+    list.appendChild(div);
+  });
+});
+
+async function showPatient(p){
+  selectedPatient = p;
+  document.getElementById('noSelection').style.display='none';
+  document.getElementById('viewTab').style.display='block';
+  document.getElementById('addnoteTab').style.display='none';
+  document.getElementById('prescTab').style.display='none';
+  document.getElementById('pName').textContent = `${p.First} ${p.Last}`;
+  document.getElementById('pMeta').textContent = `Gender: ${p.Gender} | DOB: ${p.DOB} | NHS: ${p.NHS} | Address: ${p.Address} | Email: ${p.Email} | Phone: ${p.Telephone}`;
+
+  loadPatientRecords(p.NHS);
+}
+
+// Load Notes & Prescriptions (from IndexedDB + external file)
+async function loadPatientRecords(patientNHS){
+  const notesDiv = document.getElementById('notes');
+  const prescDiv = document.getElementById('presc');
+  notesDiv.innerHTML = 'Loading...';
+  prescDiv.innerHTML = 'Loading...';
+
+  try {
+    // Fetch from external JSON
+    const res = await fetch(PATIENT_DETAILS_URL);
+    const data = await res.json();
+    const patientData = Array.isArray(data)
+      ? data.find(d => d.NHS_Number === patientNHS)
+      : (data.NHS_Number === patientNHS ? data : null);
+
+    // Build external note and prescription sections
+    let notesHTML = '';
+    let prescHTML = '';
+
+    if (patientData && patientData.Patient_Note) {
+      const n = patientData.Patient_Note;
+      notesHTML += `
+        <div class="note">
+          <strong>Visit Date:</strong> ${n.Visit_Date}<br>
+          <strong>Reason:</strong> ${n.Reason_for_Visit}<br>
+          <strong>Diagnosis:</strong> ${n.Diagnosis}<br>
+          <strong>Recommendations:</strong> ${n.Recommendations}<br>
+          <strong>Follow Up:</strong> ${n.Follow_Up}
+        </div>`;
+    }
+
+    if (patientData && patientData.Prescription) {
+      const p = patientData.Prescription;
+      prescHTML += `
+        <div class="note">
+          <strong>${p.Medicine_Name}</strong><br>
+          <strong>Dosage:</strong> ${p.Dosage}<br>
+          <strong>Duration:</strong> ${p.Duration}<br>
+          <strong>Issued:</strong> ${p.Date_Issued}<br>
+          <strong>Instructions:</strong> ${p.Instructions}<br>
+          <strong>Prescribed By:</strong> ${p.Prescribed_By}
+        </div>`;
+    }
+
+    // If nothing found
+    if (!notesHTML) notesHTML = '<div class="note">No notes found.</div>';
+    if (!prescHTML) prescHTML = '<div class="note">No prescriptions found.</div>';
+
+    notesDiv.innerHTML = notesHTML;
+    prescDiv.innerHTML = prescHTML;
+
+  } catch (err) {
+    console.error("Error loading external data:", err);
+    notesDiv.innerHTML = '<div class="note">Failed to load notes.</div>';
+    prescDiv.innerHTML = '<div class="note">Failed to load prescriptions.</div>';
+  }
+}
+
+// Tabs
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const tab=btn.dataset.tab;
+  document.getElementById('viewTab').style.display = tab==='view'?'block':'none';
+  document.getElementById('addnoteTab').style.display = tab==='addnote'?'block':'none';
+  document.getElementById('prescTab').style.display = tab==='presc'?'block':'none';
+  document.getElementById('appointmentsTab').style.display = tab==='appointments'?'block':'none';
+  if (tab==='appointments' && typeof loadDoctorAppointments==='function') loadDoctorAppointments();
+}));
+
+// Ensure Prescription Requests panel is shown when its tab is clicked
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+  const tab = btn.dataset.tab;
+  // show/hide the requests panel
+  const reqPanel = document.getElementById('prescRequestsTab');
+  if (reqPanel) reqPanel.style.display = tab==='prescRequests' ? 'block' : 'none';
+}));
+
+// Add Note locally (unchanged)
+document.getElementById('noteForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(!selectedPatient) return alert('Select patient first');
+  const note = {patient:selectedPatient.NHS,title:noteTitle.value,body:noteBody.value,date:new Date().toLocaleDateString()};
+  db.transaction('notes','readwrite').objectStore('notes').add(note).onsuccess = () => {
+    alert('Note added');
+    noteForm.reset();
+    loadPatientRecords(selectedPatient.NHS);
+  };
+});
+
+// Add Prescription locally (unchanged)
+document.getElementById('prescForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(!selectedPatient) return alert('Select patient first');
+  const presc = {patient:selectedPatient.NHS,name:medName.value,dosage:medDosage.value,date:new Date().toLocaleDateString()};
+  db.transaction('prescriptions','readwrite').objectStore('prescriptions').add(presc).onsuccess = () => {
+    alert('Prescription added');
+    prescForm.reset();
+    loadPatientRecords(selectedPatient.NHS);
+  };
+});
+
+// Load Medicines
+async function loadMedicines(){
+  const medicineSelect = document.getElementById('medName');
+  try {
+    const res = await fetch(MEDICINES_URL);
+    const data = await res.json();
+    data.forEach(m => {
+      const option = document.createElement('option');
+      option.value = m.Drug;
+      option.textContent = m.Drug;
+      medicineSelect.appendChild(option);
+    });
+  } catch(e) {
+    console.error("Error loading medicines:", e);
+  }
+}
+
+// Doctor Info
+function loadDoctorInfo(){
+  const doctorData = sessionStorage.getItem('loggedDoctor');
+  if(doctorData){
+    const doctor = JSON.parse(doctorData);
+    document.getElementById('doctorName').textContent = `Logged in as Dr. ${doctor.email} • Role: Doctor`;
+  }
+}
+
+// Logout
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  sessionStorage.removeItem('loggedDoctor');
+  window.location.href = "index.html";
+});
+
+openDB();
+
+// ---------------- Prescription Requests (global/local sync) ----------------
+function safeParse(raw, fallback) {
+  try { return JSON.parse(raw); } catch (e) { return fallback; }
+}
+
+function lsPortalKey(patientId, name) { return `portal:${patientId}:${name}`; }
+
+function loadPrescriptionRequests() {
+    const raw = localStorage.getItem('prescriptionRequests') || '[]';
+    const requests = safeParse(raw, []);
+    const listDiv = document.getElementById('prescriptionRequestsList');
+  console.debug('[Doctor] loadPrescriptionRequests called, items=', requests.length);
+  listDiv.innerHTML = '';
+
+  // if no patient selected, ask the doc to pick one (we show per-patient requests)
+  if (!selectedPatient) {
+    listDiv.innerHTML = '<div class="note">Select a patient from the left to view their prescription requests.</div>';
+    return;
+  }
+
+  const patientKey = selectedPatient.NHS || selectedPatient.NHS_Number || selectedPatient.id || selectedPatient.NHS_id || selectedPatient.Id;
+  // Normalize to string for comparisons
+  const patientKeyStr = patientKey ? String(patientKey) : null;
+
+  // Filter requests for this patient (support both patientId and patientNHS fields and numeric/string variants)
+  const matchesPatient = req => {
+    try {
+      const a = req.patientId != null ? String(req.patientId) : '';
+      const b = req.patientNHS != null ? String(req.patientNHS) : '';
+      if (patientKeyStr && (a === patientKeyStr || b === patientKeyStr)) return true;
+      // also try substring match (some data uses numeric id like '1' for P001)
+      if (patientKeyStr && (a.includes(patientKeyStr) || b.includes(patientKeyStr))) return true;
+      return false;
+    } catch (e) { return false; }
+  };
+
+  // show only pending requests for this patient by default
+  const forPatient = requests.filter(r => matchesPatient(r));
+  const pending = forPatient.filter(r => (r.status || 'Pending') === 'Pending');
+  const toShow = pending.length ? pending : forPatient.slice();
+
+  if (!toShow.length) {
+    listDiv.innerHTML = '<div class="note">No prescription requests for this patient.</div>';
+    return;
+  }
+
+  toShow.slice().reverse().forEach(req => {
+        const reqDiv = document.createElement('div');
+        reqDiv.className = 'note';
+    // attach data attribute to allow immediate removal after approval/rejection
+    try { reqDiv.setAttribute('data-req-id', String(req.id)); } catch(e){}
+        reqDiv.innerHTML = `
+            <h3>Request from ${req.patientId || req.patientNHS || 'Unknown'}</h3>
+            <p><strong>Medicine:</strong> ${req.medicine}</p>
+            <p><strong>Reason:</strong> ${req.reason || ''}</p>
+            <p><strong>Urgency:</strong> ${req.urgency || ''}</p>
+            <p><strong>Date:</strong> ${new Date(req.date).toLocaleString()}</p>
+            <p><strong>Status:</strong> ${req.status || 'Pending'}</p>
+            <p><strong>Response:</strong> ${req.response || ''}</p>
+            <div style="margin-top:10px">
+        <button class="btn" onclick="approvePrescriptionRequest('${req.id}')" style="background: #2ecc71; margin-right:10px;">Approve</button>
+                <button class="btn" onclick="rejectPrescriptionRequest('${req.id}')" style="background: #e74c3c">Reject</button>
+            </div>`;
+        listDiv.appendChild(reqDiv);
+    });
+}
+
+function updateGlobalRequests(arr) {
+    try { localStorage.setItem('prescriptionRequests', JSON.stringify(arr)); } catch (e) { console.error(e); }
+}
+
+function updatePatientPortalCache(patientId, updatedReq) {
+    try {
+      const key = lsPortalKey(patientId, 'rxRequests');
+      const raw = localStorage.getItem(key) || '[]';
+      const arr = safeParse(raw, []);
+      const idx = arr.findIndex(x => String(x.id) === String(updatedReq.id));
+      if (idx === -1) arr.push(updatedReq);
+      else arr[idx] = updatedReq;
+      localStorage.setItem(key, JSON.stringify(arr));
+    } catch (e) { console.warn('Failed to update patient portal cache', e); }
+}
+
+function approvePrescriptionRequest(requestId) {
+    const raw = localStorage.getItem('prescriptionRequests') || '[]';
+    const arr = safeParse(raw, []);
+    const req = arr.find(r => String(r.id) === String(requestId));
+    if (!req) return alert('Request not found');
+    req.status = 'Approved';
+    req.response = 'Prescription approved. Please collect from pharmacy.';
+    req.reviewedBy = (sessionStorage.getItem('loggedDoctor') && JSON.parse(sessionStorage.getItem('loggedDoctor')).email) || 'Doctor';
+    req.reviewedDate = new Date().toISOString();
+    updateGlobalRequests(arr);
+    // also update per-patient cache
+    const pid = req.patientNHS || req.patientId;
+    updatePatientPortalCache(pid, req);
+    // remove from DOM immediately (optimistic UI) if present
+    try {
+      const dom = document.querySelector(`[data-req-id="${req.id}"]`);
+      if (dom && dom.parentNode) dom.parentNode.removeChild(dom);
+    } catch(e){console.warn('DOM remove failed', e)}
+    // refresh list to ensure state is consistent
+    loadPrescriptionRequests();
+    alert('Prescription request approved');
+}
+
+function rejectPrescriptionRequest(requestId) {
+    const reason = prompt('Please provide a reason for rejection:');
+    if (reason === null) return;
+    const raw = localStorage.getItem('prescriptionRequests') || '[]';
+    const arr = safeParse(raw, []);
+    const req = arr.find(r => String(r.id) === String(requestId));
+    if (!req) return alert('Request not found');
+    req.status = 'Rejected';
+    req.response = `Request rejected: ${reason}`;
+    req.reviewedBy = (sessionStorage.getItem('loggedDoctor') && JSON.parse(sessionStorage.getItem('loggedDoctor')).email) || 'Doctor';
+    req.reviewedDate = new Date().toISOString();
+    updateGlobalRequests(arr);
+    const pid2 = req.patientNHS || req.patientId;
+    updatePatientPortalCache(pid2, req);
+    // remove from DOM immediately (optimistic UI)
+    try {
+      const dom = document.querySelector(`[data-req-id="${req.id}"]`);
+      if (dom && dom.parentNode) dom.parentNode.removeChild(dom);
+    } catch(e){console.warn('DOM remove failed', e)}
+    loadPrescriptionRequests();
+    alert('Prescription request rejected');
+}
+// Robustly attach the refresh button handler; use delegation fallback in case the
+// element isn't present at the time script runs (or is re-rendered).
+function attachRefreshHandler() {
+  const btn = document.getElementById('refreshReqs');
+  if (btn) {
+    try { btn.removeEventListener('click', loadPrescriptionRequests); } catch(e){}
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      console.debug('[Doctor] refreshReqs clicked');
+      loadPrescriptionRequests();
+    });
+    return true;
+  }
+  return false;
+}
+
+// initial attach (if present)
+attachRefreshHandler();
+
+// delegated click handler as a fallback (panel is a parent that always exists)
+document.getElementById('panel')?.addEventListener('click', (e) => {
+  const target = e.target;
+  if (!target) return;
+  // match button by id or an inner element
+  if (target.id === 'refreshReqs' || (target.closest && target.closest('#refreshReqs'))) {
+    console.debug('[Doctor] delegated refresh click');
+    loadPrescriptionRequests();
+  }
+});
+
+// When this page loads, ensure requests are shown if the tab is selected later
+window.addEventListener('load', () => {
+  // If prescRequests tab exists, attach handler to tab switching to load requests
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.tab === 'prescRequests') {
+        loadPrescriptionRequests();
+        // re-attach refresh handler in case the DOM changed
+        attachRefreshHandler();
+      }
+    });
+  });
+});
+
+function getLoggedDoctorKey(){
+  const raw = sessionStorage.getItem('loggedDoctor');
+  if (!raw) return null;
+  try { const d = JSON.parse(raw); return d.id || d.email || null; } catch(e){ return null; }
+}
+function loadDoctorAppointments(){
+  const key = getLoggedDoctorKey();
+  const list = document.getElementById('docApptList');
+  const msg = document.getElementById('noDocAppt');
+  if (!list) return;
+  list.innerHTML='';
+  if (!key){ if (msg) msg.style.display='block'; return; }
+  const k = 'appointments:doctor:' + String(key);
+  let arr = []; try { arr = JSON.parse(localStorage.getItem(k) || '[]'); } catch(e){}
+  if (!arr.length){ if (msg) msg.style.display='block'; return; }
+  if (msg) msg.style.display='none';
+  arr.forEach(a => {
+    const when = a.datetime ? new Date(a.datetime).toLocaleString() : '-';
+    const status = a.status || 'Pending';
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start">
+        <div>
+          <div style="font-weight:600">${a.patientId || '-'}</div>
+          <div class="sub" style="margin-top:4px;">${when}</div>
+        </div>
+        <div style="text-align:right;max-width:60%;">
+          <div>${(a.reason || '-').replace(/</g,'&lt;')}</div>
+          <div class="note" style="display:inline-block;margin-top:6px;">${status}</div>
+        </div>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+</script>
+</body>
+</html>

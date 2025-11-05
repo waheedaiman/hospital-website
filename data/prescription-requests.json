@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "req-001",
+    "patientId": 1,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Bacterial pharyngitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-30T00:00:00"
+  },
+  {
+    "id": "req-002",
+    "patientId": 2,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-28T00:00:00"
+  },
+  {
+    "id": "req-003",
+    "patientId": 3,
+    "medicine": "Salbutamol inhaler",
+    "reason": "Mild asthma exacerbation",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-25T00:00:00"
+  },
+  {
+    "id": "req-004",
+    "patientId": 4,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "req-005",
+    "patientId": 5,
+    "medicine": "Paracetamol 500mg",
+    "reason": "Likely viral illness",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-29T00:00:00"
+  },
+  {
+    "id": "req-006",
+    "patientId": 6,
+    "medicine": "Cetirizine 10mg",
+    "reason": "Allergic rhinitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-27T00:00:00"
+  },
+  {
+    "id": "req-007",
+    "patientId": 7,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Soft tissue sprain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-15T00:00:00"
+  },
+  {
+    "id": "req-008",
+    "patientId": 8,
+    "medicine": "Azithromycin 250mg",
+    "reason": "Suspected community chest infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "req-009",
+    "patientId": 9,
+    "medicine": "Salbutamol inhaler",
+    "reason": "Reactive airways / viral-triggered wheeze",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "req-010",
+    "patientId": 10,
+    "medicine": "Paracetamol 500mg",
+    "reason": "Likely viral infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "req-011",
+    "patientId": 11,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "req-012",
+    "patientId": 12,
+    "medicine": "Cetirizine 10mg",
+    "reason": "Seasonal allergic rhinitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "req-013",
+    "patientId": 13,
+    "medicine": "Amoxicillin 250mg",
+    "reason": "Otitis media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "req-014",
+    "patientId": 14,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-10T00:00:00"
+  },
+  {
+    "id": "req-015",
+    "patientId": 15,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "req-016",
+    "patientId": 16,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Mechanical back pain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "req-017",
+    "patientId": 17,
+    "medicine": "Sertraline 50mg",
+    "reason": "Depressive disorder (mild-moderate)",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "req-018",
+    "patientId": 18,
+    "medicine": "Cetirizine 10mg",
+    "reason": "Allergic rhinitis with mild urticaria",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-019",
+    "patientId": 19,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Acute bacterial sinusitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "req-020",
+    "patientId": 20,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "req-021",
+    "patientId": 21,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-25T00:00:00"
+  },
+  {
+    "id": "req-022",
+    "patientId": 22,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "req-023",
+    "patientId": 23,
+    "medicine": "Amoxicillin 250mg",
+    "reason": "Otitis media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "req-024",
+    "patientId": 24,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-15T00:00:00"
+  },
+  {
+    "id": "req-025",
+    "patientId": 25,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Rotator cuff strain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "req-026",
+    "patientId": 26,
+    "medicine": "Levothyroxine 50mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "req-027",
+    "patientId": 27,
+    "medicine": "Prednisone 10mg",
+    "reason": "Acute allergic dermatitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-16T00:00:00"
+  },
+  {
+    "id": "req-028",
+    "patientId": 28,
+    "medicine": "Azithromycin 500mg",
+    "reason": "Acute bronchitis (secondary infection)",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-04T00:00:00"
+  },
+  {
+    "id": "req-029",
+    "patientId": 29,
+    "medicine": "Paracetamol 500mg",
+    "reason": "Tension headache with viral febrile illness",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-13T00:00:00"
+  },
+  {
+    "id": "req-030",
+    "patientId": 30,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral illness",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-26T00:00:00"
+  },
+  {
+    "id": "req-031",
+    "patientId": 31,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Bacterial sinusitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-17T00:00:00"
+  },
+  {
+    "id": "req-032",
+    "patientId": 32,
+    "medicine": "Oral contraceptive (combined)",
+    "reason": "Request for hormonal contraception",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "req-033",
+    "patientId": 33,
+    "medicine": "Levothyroxine 75mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-05T00:00:00"
+  },
+  {
+    "id": "req-034",
+    "patientId": 34,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Post-dental extraction pain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-19T00:00:00"
+  },
+  {
+    "id": "req-035",
+    "patientId": 35,
+    "medicine": "Atorvastatin 10mg",
+    "reason": "Elevated LDL",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-12T00:00:00"
+  },
+  {
+    "id": "req-036",
+    "patientId": 36,
+    "medicine": "Paracetamol 500mg",
+    "reason": "Viral upper respiratory infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-23T00:00:00"
+  },
+  {
+    "id": "req-037",
+    "patientId": 37,
+    "medicine": "Salbutamol inhaler",
+    "reason": "Mild exercise-induced asthma",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-24T00:00:00"
+  },
+  {
+    "id": "req-038",
+    "patientId": 38,
+    "medicine": "Azithromycin 250mg",
+    "reason": "Suspected bacterial bronchitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-039",
+    "patientId": 39,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral URTI",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "req-040",
+    "patientId": 40,
+    "medicine": "Lisinopril 5mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-01T00:00:00"
+  },
+  {
+    "id": "req-041",
+    "patientId": 41,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "req-042",
+    "patientId": 42,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Dental abscess",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "req-043",
+    "patientId": 43,
+    "medicine": "Sertraline 50mg",
+    "reason": "Generalised anxiety disorder",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "req-044",
+    "patientId": 44,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "req-045",
+    "patientId": 45,
+    "medicine": "Levothyroxine 50mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-10T00:00:00"
+  },
+  {
+    "id": "req-046",
+    "patientId": 46,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Dysmenorrhea",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "req-047",
+    "patientId": 47,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Suspected UTI",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-048",
+    "patientId": 48,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "req-049",
+    "patientId": 49,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Muscle strain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "req-050",
+    "patientId": 50,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-22T00:00:00"
+  },
+  {
+    "id": "req-051",
+    "patientId": 51,
+    "medicine": "Cetirizine 10mg",
+    "reason": "Allergic rhinitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-27T00:00:00"
+  },
+  {
+    "id": "req-052",
+    "patientId": 52,
+    "medicine": "Paracetamol liquid",
+    "reason": "Otitis media/viral illness",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-29T00:00:00"
+  },
+  {
+    "id": "req-053",
+    "patientId": 53,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "req-054",
+    "patientId": 54,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Acute bacterial sinusitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-13T00:00:00"
+  },
+  {
+    "id": "req-055",
+    "patientId": 55,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Tendinopathy",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-056",
+    "patientId": 56,
+    "medicine": "Sertraline 50mg",
+    "reason": "Generalised anxiety",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-18T00:00:00"
+  },
+  {
+    "id": "req-057",
+    "patientId": 57,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral URTI",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "req-058",
+    "patientId": 58,
+    "medicine": "Levothyroxine 100mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-28T00:00:00"
+  },
+  {
+    "id": "req-059",
+    "patientId": 59,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral illness",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "req-060",
+    "patientId": 60,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "req-061",
+    "patientId": 61,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-05T00:00:00"
+  },
+  {
+    "id": "req-062",
+    "patientId": 62,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Streptococcal pharyngitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-09T00:00:00"
+  },
+  {
+    "id": "req-063",
+    "patientId": 63,
+    "medicine": "Ibuprofen 400mg",
+    "reason": "Post-extraction pain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-11T00:00:00"
+  },
+  {
+    "id": "req-064",
+    "patientId": 64,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-065",
+    "patientId": 65,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Acute sinusitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-20T00:00:00"
+  },
+  {
+    "id": "req-066",
+    "patientId": 66,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "req-067",
+    "patientId": 67,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "req-068",
+    "patientId": 68,
+    "medicine": "Levothyroxine 75mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-22T00:00:00"
+  },
+  {
+    "id": "req-069",
+    "patientId": 69,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-16T00:00:00"
+  },
+  {
+    "id": "req-070",
+    "patientId": 70,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "req-071",
+    "patientId": 71,
+    "medicine": "Lisinopril 20mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "req-072",
+    "patientId": 72,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Otitis media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "req-073",
+    "patientId": 73,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Ligament sprain",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "req-074",
+    "patientId": 74,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-06T00:00:00"
+  },
+  {
+    "id": "req-075",
+    "patientId": 75,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-25T00:00:00"
+  },
+  {
+    "id": "req-076",
+    "patientId": 76,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Otitis media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-17T00:00:00"
+  },
+  {
+    "id": "req-077",
+    "patientId": 77,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-21T00:00:00"
+  },
+  {
+    "id": "req-078",
+    "patientId": 78,
+    "medicine": "Sertraline 50mg",
+    "reason": "Depressive symptoms",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "req-079",
+    "patientId": 79,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Tendinopathy",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-28T00:00:00"
+  },
+  {
+    "id": "req-080",
+    "patientId": 80,
+    "medicine": "Levothyroxine 50mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-10T00:00:00"
+  },
+  {
+    "id": "req-081",
+    "patientId": 81,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "req-082",
+    "patientId": 82,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-083",
+    "patientId": 83,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Bacterial sinusitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-19T00:00:00"
+  },
+  {
+    "id": "req-084",
+    "patientId": 84,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-05T00:00:00"
+  },
+  {
+    "id": "req-085",
+    "patientId": 85,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Tooth infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-07T00:00:00"
+  },
+  {
+    "id": "req-086",
+    "patientId": 86,
+    "medicine": "Metformin 500mg",
+    "reason": "Type 2 diabetes",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "req-087",
+    "patientId": 87,
+    "medicine": "Paracetamol liquid",
+    "reason": "Viral respiratory infection",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "req-088",
+    "patientId": 88,
+    "medicine": "Amoxicillin 250mg",
+    "reason": "Otitis externa/media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-12T00:00:00"
+  },
+  {
+    "id": "req-089",
+    "patientId": 89,
+    "medicine": "Sertraline 50mg",
+    "reason": "Depression/anxiety",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-23T00:00:00"
+  },
+  {
+    "id": "req-090",
+    "patientId": 90,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-10T00:00:00"
+  },
+  {
+    "id": "req-091",
+    "patientId": 91,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Bacterial tonsillitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-14T00:00:00"
+  },
+  {
+    "id": "req-092",
+    "patientId": 92,
+    "medicine": "Atorvastatin 40mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-01T00:00:00"
+  },
+  {
+    "id": "req-093",
+    "patientId": 93,
+    "medicine": "Omeprazole 20mg",
+    "reason": "GORD",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-02T00:00:00"
+  },
+  {
+    "id": "req-094",
+    "patientId": 94,
+    "medicine": "Amoxicillin 500mg",
+    "reason": "Otitis media",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-18T00:00:00"
+  },
+  {
+    "id": "req-095",
+    "patientId": 95,
+    "medicine": "Ibuprofen 200mg",
+    "reason": "Dysmenorrhea",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-30T00:00:00"
+  },
+  {
+    "id": "req-096",
+    "patientId": 96,
+    "medicine": "Lisinopril 10mg",
+    "reason": "Hypertension",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-03T00:00:00"
+  },
+  {
+    "id": "req-097",
+    "patientId": 97,
+    "medicine": "Levothyroxine 100mcg",
+    "reason": "Hypothyroidism",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-26T00:00:00"
+  },
+  {
+    "id": "req-098",
+    "patientId": 98,
+    "medicine": "Atorvastatin 20mg",
+    "reason": "Hyperlipidemia",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-09-20T00:00:00"
+  },
+  {
+    "id": "req-099",
+    "patientId": 99,
+    "medicine": "Paracetamol 500mg",
+    "reason": "Tension-type headache",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-08T00:00:00"
+  },
+  {
+    "id": "req-100",
+    "patientId": 100,
+    "medicine": "Amoxicillin 250mg",
+    "reason": "Bacterial tonsillitis",
+    "urgency": "medium",
+    "status": "Approved",
+    "response": "Renewed for 7 days",
+    "date": "2025-10-11T00:00:00"
+  }
+]

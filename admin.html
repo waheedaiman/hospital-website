@@ -1,0 +1,387 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f8fafc;margin:0;padding:0;}
+header{background:#273e52;color:white;padding:15px;text-align:center;font-size:24px;display:flex;justify-content:space-between;align-items:center;}
+.logout-btn{background:#6D98BD;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px;}
+.logout-btn:hover{background:#5b7ea0;}
+nav{display:flex;justify-content:center;background:#6D98BD;}
+nav button{background:none;border:none;color:white;padding:14px 20px;cursor:pointer;font-size:16px;}
+nav button:hover{background:#6D98BD;}
+section{display:none;padding:20px;}
+section.active{display:block;}
+table{width:100%;border-collapse:collapse;background:white;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+th,td{padding:10px;border-bottom:1px solid #ddd;text-align:left;}
+th{background:#f1f5f9;}
+tr:hover{background:#f9fafb;}
+.search-bar{margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;}
+input[type="text"]{padding:8px;width:300px;border-radius:6px;border:1px solid #ccc;}
+.refresh-btn{background:#6D98BD;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;}
+.refresh-btn:hover{background:#6D98BD;}
+.btn{padding:5px 10px;background:#6D98BD;color:white;border:none;border-radius:5px;cursor:pointer;margin-right:4px;}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;}
+.modal-content{background:white;padding:20px;border-radius:8px;min-width:300px;}
+.modal-content label{display:block;margin-top:8px;}
+.modal-content input{width:100%;padding:6px;margin-top:4px;border-radius:6px;border:1px solid #ccc;}
+.modal-content button{margin-top:12px;}
+
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Modal content */
+.modal-content {
+  background: #eef6fb;
+  padding: 25px;
+  border-radius: 15px;
+  width: 900px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: slideIn 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  border: 3px solid #6D98BD;
+}
+
+/* Modal header */
+.modal-content h2 {
+  margin: 0;
+  color: #173852;
+  text-align: center;
+}
+
+/* Form layout horizontal: label + input */
+.modal-content .form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.modal-content .form-row label {
+  width: 120px;
+  font-weight: 600;
+  color: #173852;
+}
+.modal-content .form-row input,
+.modal-content .form-row select,
+.modal-content .form-row textarea {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #6D98BD;
+  font-size: 14px;
+}
+
+/* Buttons container */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.modal-buttons button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.modal-buttons .save-btn {
+  background: #6D98BD;
+  color: rgba(68, 138, 209, 0.539);
+}
+.modal-buttons .save-btn:hover {
+  background: #5b7ea0;
+}
+
+.modal-buttons .cancel-btn {
+  background: #d1e4f2;
+  color: #1568a8;
+}
+.modal-buttons .cancel-btn:hover {
+  background: #1568a8;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {transform: translateY(-20px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <span>Admin Dashboard</span>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<nav>
+  <button onclick="showTab('doctors')">Doctors</button>
+  <button onclick="showTab('patients')">Patients</button>
+  <button onclick="showTab('appointments')">Appointments</button>
+</nav>
+
+<!-- Doctors -->
+<section id="doctors" class="active">
+  <div class="search-bar">
+    <input type="text" id="searchDoctors" placeholder="Search doctors by name or email">
+    <button class="refresh-btn" onclick="loadDoctors()">Refresh</button>
+  </div>
+  <table id="doctorTable">
+    <thead>
+      <tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Gender</th><th>Address</th><th>Telephone</th><th>Actions</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- Patients -->
+<section id="patients">
+  <div class="search-bar">
+    <input type="text" id="searchPatients" placeholder="Search patients by name or email">
+    <button class="refresh-btn" onclick="loadPatients()">Refresh</button>
+  </div>
+  <table id="patientTable">
+    <thead>
+      <tr><th>ID</th><th>NHS</th><th>Title</th><th>First</th><th>Last</th><th>DOB</th><th>Gender</th><th>Address</th><th>Email</th><th>Actions</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- Appointments -->
+<section id="appointments">
+  <div class="search-bar">
+    <input type="text" id="searchAppointments" placeholder="Search appointments by patient, doctor or reason">
+  </div>
+  <table id="appointmentTable">
+    <thead>
+      <tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Reason</th><th>Status</th><th>Actions</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content" id="modalContent">
+    <h3>Edit</h3>
+    <div id="modalFields"></div>
+    <button onclick="saveEdit()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script>
+let db;
+const DB_NAME = "MedicalDB";
+const DB_VERSION = 4;
+
+// Logout button function
+function logout() {
+  window.location.href = "login.html";
+}
+
+// Open IndexedDB
+function openDB(){
+  const req = indexedDB.open(DB_NAME, DB_VERSION);
+  req.onupgradeneeded = e=>{
+    db = e.target.result;
+    if(!db.objectStoreNames.contains('doctors')) db.createObjectStore('doctors',{keyPath:'id'});
+    if(!db.objectStoreNames.contains('patients')) db.createObjectStore('patients',{keyPath:'id'});
+    if(!db.objectStoreNames.contains('appointments')) db.createObjectStore('appointments',{keyPath:'id'});
+  };
+  req.onsuccess = e=>{ db = e.target.result; autoLoadAppointments(); loadDoctors(); loadPatients(); loadAppointments(); };
+  req.onerror = e=>console.error("DB error:", e);
+}
+openDB();
+
+// Tab switch
+function showTab(tabId){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
+
+// Fetch from GitHub
+async function fetchJSON(url){
+  const res = await fetch(url);
+  return res.json();
+}
+
+// Seed data
+async function seedData(storeName, data){
+  const tx = db.transaction(storeName,'readwrite');
+  const store = tx.objectStore(storeName);
+  data.forEach(item=>store.put(item));
+  return new Promise(res=>tx.oncomplete=res);
+}
+
+// Get all
+function getAll(storeName){
+  return new Promise(res=>{
+    const tx = db.transaction(storeName,'readonly');
+    const store = tx.objectStore(storeName);
+    const req = store.getAll();
+    req.onsuccess = ()=>res(req.result);
+  });
+}
+
+// Load Doctors
+async function loadDoctors(){
+  const tbody = document.querySelector("#doctorTable tbody");
+  tbody.innerHTML = "<tr><td colspan='8'>Loading...</td></tr>";
+  let doctors = await getAll('doctors');
+  if(doctors.length===0){
+    const data = await fetchJSON("https://jsethi-mdx.github.io/cst2572.github.io/doctors.json");
+    await seedData('doctors',data);
+    doctors = await getAll('doctors');
+  }
+  const search = document.getElementById("searchDoctors").value.toLowerCase();
+  tbody.innerHTML = "";
+  doctors.filter(d=>d.first_name.toLowerCase().includes(search)||d.last_name.toLowerCase().includes(search)||d.email.toLowerCase().includes(search))
+  .forEach(d=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${d.id}</td><td>${d.first_name}</td><td>${d.last_name}</td><td>${d.email}</td><td>${d.gender}</td><td>${d.Address}</td><td>${d.Telephone}</td>
+    <td><button class="btn" onclick="editDoctor(${d.id})">Edit</button><button class="btn" onclick="deleteDoctor(${d.id})">Delete</button></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Load Patients
+async function loadPatients(){
+  const tbody = document.querySelector("#patientTable tbody");
+  tbody.innerHTML = "<tr><td colspan='10'>Loading...</td></tr>";
+  let patients = await getAll('patients');
+  if(patients.length===0){
+    const data = await fetchJSON("https://jsethi-mdx.github.io/cst2572.github.io/patients.json");
+    await seedData('patients',data);
+    patients = await getAll('patients');
+  }
+  const search = document.getElementById("searchPatients").value.toLowerCase();
+  tbody.innerHTML="";
+  patients.filter(p=>(p.First + " " + p.Last).toLowerCase().includes(search)||(p.Email||"").toLowerCase().includes(search))
+  .forEach(p=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${p.id}</td><td>${p.NHS}</td><td>${p.Title||""}</td><td>${p.First}</td><td>${p.Last}</td><td>${p.DOB||""}</td><td>${p.Gender||""}</td><td>${p.Address||""}</td><td>${p.Email||""}</td>
+    <td><button class="btn" onclick="editPatient(${p.id})">Edit</button><button class="btn" onclick="deletePatient(${p.id})">Delete</button></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Load Appointments
+async function loadAppointments(){
+  const tbody = document.querySelector("#appointmentTable tbody");
+  tbody.innerHTML = "<tr><td colspan='8'>Loading...</td></tr>";
+  let apps = await getAll('appointments');
+  if(apps.length===0){
+    const data = await fetchJSON("https://raw.githubusercontent.com/Raven2027/Appointments.json/main/Appointments.json");
+    await seedData('appointments',data);
+    apps = await getAll('appointments');
+  }
+  const patients = await getAll('patients');
+  const doctors = await getAll('doctors');
+  const search = document.getElementById("searchAppointments").value.toLowerCase();
+  tbody.innerHTML="";
+  apps.filter(a=>{
+    const patient = patients.find(p=>p.id==a.patient_id);
+    const doctor = doctors.find(d=>d.id==a.doctor_id);
+    const searchStr = (patient?.First+" "+patient?.Last+" "+doctor?.first_name+" "+doctor?.last_name+" "+a.reason).toLowerCase();
+    return searchStr.includes(search);
+  }).forEach(a=>{
+    const patient = patients.find(p=>p.id==a.patient_id);
+    const doctor = doctors.find(d=>d.id==a.doctor_id);
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${a.id}</td><td>${patient?patient.First+" "+patient.Last:a.patient_id}</td><td>${doctor?doctor.first_name+" "+doctor.last_name:a.doctor_id}</td>
+    <td>${a.date}</td><td>${a.time}</td><td>${a.reason}</td><td>${a.status}</td>
+    <td><button class="btn" onclick="editAppointment(${a.id})">Edit</button><button class="btn" onclick="deleteAppointment(${a.id})">Delete</button></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+// Delete functions
+function deleteDoctor(id){ const tx = db.transaction('doctors','readwrite'); tx.objectStore('doctors').delete(id); tx.oncomplete=loadDoctors; }
+function deletePatient(id){ const tx = db.transaction('patients','readwrite'); tx.objectStore('patients').delete(id); tx.oncomplete=loadPatients; }
+function deleteAppointment(id){ const tx = db.transaction('appointments','readwrite'); tx.objectStore('appointments').delete(id); tx.oncomplete=loadAppointments; }
+
+// Modal editing
+let currentEdit={store:"",id:null};
+function editDoctor(id){ openModal('doctors',id); }
+function editPatient(id){ openModal('patients',id); }
+function editAppointment(id){ openModal('appointments',id); }
+
+async function openModal(store,id){
+  currentEdit={store,id};
+  const modal = document.getElementById('editModal');
+  const fieldsDiv = document.getElementById('modalFields');
+  fieldsDiv.innerHTML="";
+  const tx = db.transaction(store,'readonly');
+  const obj = await new Promise(res=>{
+    tx.objectStore(store).get(id).onsuccess=e=>res(e.target.result);
+  });
+  for(const key in obj){
+    if(key==='id') continue;
+    const label = document.createElement('label');
+    label.textContent=key;
+    const input = document.createElement('input');
+    input.value=obj[key];
+    input.id='modal_'+key;
+    fieldsDiv.appendChild(label);
+    fieldsDiv.appendChild(input);
+  }
+  modal.style.display='flex';
+}
+
+function closeModal(){ document.getElementById('editModal').style.display='none'; }
+
+function saveEdit(){
+  const tx = db.transaction(currentEdit.store,'readwrite');
+  const store = tx.objectStore(currentEdit.store);
+  store.get(currentEdit.id).onsuccess=e=>{
+    const obj = e.target.result;
+    for(const key in obj){
+      if(key==='id') continue;
+      const input = document.getElementById('modal_'+key);
+      if(input) obj[key]=input.value;
+    }
+    store.put(obj);
+  };
+  tx.oncomplete=()=>{
+    closeModal();
+    loadDoctors();
+    loadPatients();
+    loadAppointments();
+  };
+}
+
+// Auto load appointments after DB ready
+function autoLoadAppointments(){ loadAppointments(); }
+
+// Search inputs
+document.getElementById("searchDoctors").addEventListener('input',loadDoctors);
+document.getElementById("searchPatients").addEventListener('input',loadPatients);
+document.getElementById("searchAppointments").addEventListener('input',loadAppointments);
+</script>
+</body>
+</html>

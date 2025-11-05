@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+</head>
+<body>
+
+    <div class="form">
+        <div class="form-section active">
+            <form id="loginForm">
+                <h1>Login</h1>
+                <p class="form-description">Please fill out all fields to login and book your appointment</p>
+
+                <label for="nhsNumber">NHS Number:</label>
+                <div class="input-container">
+                    <input type="text" id="nhs" name="nhs" placeholder="Your NHS number (10 digits)" maxlength="10" required>
+                    <div class="char-count" id="nhsCharCount">0/10</div>
+                </div>
+                
+                <label for="mail">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <div class="validation-message" id="emailValidationMessage"></div>
+
+                <label for="phone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Your telephone" required>
+
+                <!-- Option tag allows dropdown -->
+                <label for="doctor">Select your doctor:</label>
+                <input list="doctors" id="doctor" name="doctor" placeholder="Select or type doctor name" required>
+                <datalist id="doctors">
+                    <option value="Dr. Violante Rilton">
+                    <option value="Dr. Ettie Beardsworth">
+                    <option value="Dr. Emera McQuillan"> 
+                    <option value="Dr. Noak Kyrkeman"> 
+                    <option value="Dr. Erwin Handlin"> 
+                    <option value="Dr. Monah Caghy"> 
+                    <option value="Dr. Rad Philipard"> 
+                    <option value="Dr. Zoe Galloway"> 
+                    <option value="Dr. Rowland Blount"> 
+                    <option value="Dr. Si Pawling"> 
+                    <option value="Dr. Merrily Harmson"> 
+                    <option value="Dr. Cordell Toor"> 
+                    <option value="Dr. Hi Willingam"> 
+                    <option value="Dr. Irvin Dumberrill"> 
+                    <option value="Dr. Stafani Gives">
+
+                </datalist>
+
+                <label for="appointmenttime">Appointment (date and time):</label>
+                <input type="datetime-local" id="appointmentDateTime" name="appointmentDateTime">
+
+                <label for="notes">Notes:</label>
+                <input type="text" id="notes" name="notes" placeholder="Any additional notes">
+
+                <div class="validation-message" id="validationMessage"></div>
+
+                <input type="submit" value="Submit Registration">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

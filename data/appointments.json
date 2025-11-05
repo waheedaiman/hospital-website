@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "patient_id": 1,
+    "doctor_id": 4,
+    "date": "2025-10-30",
+    "time": "15:54 AM",
+    "reason": "Sore throat, fever",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "patient_id": 2,
+    "doctor_id": 7,
+    "date": "2025-10-28",
+    "time": "11:45 AM",
+    "reason": "Routine check-up, high BP",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "patient_id": 3,
+    "doctor_id": 9,
+    "date": "2025-10-25",
+    "time": "14:14 AM",
+    "reason": "Wheeze and cough",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "patient_id": 4,
+    "doctor_id": 6,
+    "date": "2025-10-20",
+    "time": "11:09 AM",
+    "reason": "High cholesterol on bloods",
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "patient_id": 5,
+    "doctor_id": 1,
+    "date": "2025-10-29",
+    "time": "11:18 AM",
+    "reason": "Headache and low fever",
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "patient_id": 6,
+    "doctor_id": 5,
+    "date": "2025-10-27",
+    "time": "13:29 AM",
+    "reason": "Itchy eyes, sneezing",
+    "status": "Completed"
+  },
+  {
+    "id": 7,
+    "patient_id": 7,
+    "doctor_id": 7,
+    "date": "2025-10-15",
+    "time": "09:01 AM",
+    "reason": "Knee pain after sports",
+    "status": "Completed"
+  },
+  {
+    "id": 8,
+    "patient_id": 8,
+    "doctor_id": 4,
+    "date": "2025-10-22",
+    "time": "11:40 AM",
+    "reason": "Productive cough, fever",
+    "status": "Completed"
+  },
+  {
+    "id": 9,
+    "patient_id": 9,
+    "doctor_id": 9,
+    "date": "2025-10-18",
+    "time": "16:48 AM",
+    "reason": "Shortness of breath and cough",
+    "status": "Completed"
+  },
+  {
+    "id": 10,
+    "patient_id": 10,
+    "doctor_id": 10,
+    "date": "2025-10-12",
+    "time": "09:56 AM",
+    "reason": "Fever and sore throat",
+    "status": "Completed"
+  },
+  {
+    "id": 11,
+    "patient_id": 11,
+    "doctor_id": 4,
+    "date": "2025-09-30",
+    "time": "09:38 AM",
+    "reason": "Raised HbA1c on blood test",
+    "status": "Completed"
+  },
+  {
+    "id": 12,
+    "patient_id": 12,
+    "doctor_id": 7,
+    "date": "2025-10-05",
+    "time": "09:25 AM",
+    "reason": "Sneezing and itchy eyes",
+    "status": "Completed"
+  },
+  {
+    "id": 13,
+    "patient_id": 13,
+    "doctor_id": 9,
+    "date": "2025-10-01",
+    "time": "12:22 AM",
+    "reason": "Ear pain and fever",
+    "status": "Completed"
+  },
+  {
+    "id": 14,
+    "patient_id": 14,
+    "doctor_id": 6,
+    "date": "2025-10-10",
+    "time": "11:20 AM",
+    "reason": "Heartburn and reflux symptoms",
+    "status": "Completed"
+  },
+  {
+    "id": 15,
+    "patient_id": 15,
+    "doctor_id": 1,
+    "date": "2025-09-20",
+    "time": "15:23 AM",
+    "reason": "Raised cholesterol",
+    "status": "Completed"
+  },
+  {
+    "id": 16,
+    "patient_id": 16,
+    "doctor_id": 5,
+    "date": "2025-10-03",
+    "time": "16:04 AM",
+    "reason": "Lower back pain",
+    "status": "Completed"
+  },
+  {
+    "id": 17,
+    "patient_id": 17,
+    "doctor_id": 7,
+    "date": "2025-10-07",
+    "time": "16:21 AM",
+    "reason": "Low mood, poor sleep",
+    "status": "Completed"
+  },
+  {
+    "id": 18,
+    "patient_id": 18,
+    "doctor_id": 4,
+    "date": "2025-10-02",
+    "time": "11:07 AM",
+    "reason": "Itchy rash and sneezing",
+    "status": "Completed"
+  },
+  {
+    "id": 19,
+    "patient_id": 19,
+    "doctor_id": 9,
+    "date": "2025-10-11",
+    "time": "15:27 AM",
+    "reason": "Sinus pain and green discharge",
+    "status": "Completed"
+  },
+  {
+    "id": 20,
+    "patient_id": 20,
+    "doctor_id": 10,
+    "date": "2025-10-06",
+    "time": "14:28 AM",
+    "reason": "Acid reflux symptoms",
+    "status": "Completed"
+  },
+  {
+    "id": 21,
+    "patient_id": 21,
+    "doctor_id": 4,
+    "date": "2025-09-25",
+    "time": "11:18 AM",
+    "reason": "Raised blood sugar on screening",
+    "status": "Completed"
+  },
+  {
+    "id": 22,
+    "patient_id": 22,
+    "doctor_id": 7,
+    "date": "2025-10-09",
+    "time": "13:32 AM",
+    "reason": "High BP readings",
+    "status": "Completed"
+  },
+  {
+    "id": 23,
+    "patient_id": 23,
+    "doctor_id": 9,
+    "date": "2025-10-21",
+    "time": "13:21 AM",
+    "reason": "Ear infection symptoms",
+    "status": "Completed"
+  },
+  {
+    "id": 24,
+    "patient_id": 24,
+    "doctor_id": 6,
+    "date": "2025-09-15",
+    "time": "15:43 AM",
+    "reason": "High cholesterol on review",
+    "status": "Completed"
+  },
+  {
+    "id": 25,
+    "patient_id": 25,
+    "doctor_id": 1,
+    "date": "2025-10-14",
+    "time": "09:11 AM",
+    "reason": "Shoulder pain after injury",
+    "status": "Completed"
+  },
+  {
+    "id": 26,
+    "patient_id": 26,
+    "doctor_id": 5,
+    "date": "2025-10-01",
+    "time": "13:29 AM",
+    "reason": "Fatigue and weight gain",
+    "status": "Completed"
+  },
+  {
+    "id": 27,
+    "patient_id": 27,
+    "doctor_id": 7,
+    "date": "2025-10-16",
+    "time": "15:38 AM",
+    "reason": "Severe allergic flare",
+    "status": "Completed"
+  },
+  {
+    "id": 28,
+    "patient_id": 28,
+    "doctor_id": 4,
+    "date": "2025-10-04",
+    "time": "10:13 AM",
+    "reason": "Bronchitic cough with green sputum",
+    "status": "Completed"
+  },
+  {
+    "id": 29,
+    "patient_id": 29,
+    "doctor_id": 9,
+    "date": "2025-10-13",
+    "time": "12:53 AM",
+    "reason": "Fever and migraine symptoms",
+    "status": "Completed"
+  },
+  {
+    "id": 30,
+    "patient_id": 30,
+    "doctor_id": 10,
+    "date": "2025-10-26",
+    "time": "09:46 AM",
+    "reason": "Fever in toddler",
+    "status": "Completed"
+  },
+  {
+    "id": 31,
+    "patient_id": 31,
+    "doctor_id": 4,
+    "date": "2025-10-17",
+    "time": "10:11 AM",
+    "reason": "Sinus congestion and facial pain",
+    "status": "Completed"
+  },
+  {
+    "id": 32,
+    "patient_id": 32,
+    "doctor_id": 7,
+    "date": "2025-10-08",
+    "time": "16:12 AM",
+    "reason": "Contraception request",
+    "status": "Completed"
+  },
+  {
+    "id": 33,
+    "patient_id": 33,
+    "doctor_id": 9,
+    "date": "2025-09-05",
+    "time": "16:21 AM",
+    "reason": "Low energy, dry skin",
+    "status": "Completed"
+  },
+  {
+    "id": 34,
+    "patient_id": 34,
+    "doctor_id": 6,
+    "date": "2025-10-19",
+    "time": "15:16 AM",
+    "reason": "Tooth pain after extraction",
+    "status": "Completed"
+  },
+  {
+    "id": 35,
+    "patient_id": 35,
+    "doctor_id": 1,
+    "date": "2025-09-12",
+    "time": "15:14 AM",
+    "reason": "Cardiovascular risk assessment",
+    "status": "Completed"
+  },
+  {
+    "id": 36,
+    "patient_id": 36,
+    "doctor_id": 5,
+    "date": "2025-10-23",
+    "time": "15:51 AM",
+    "reason": "Fever and sore throat",
+    "status": "Completed"
+  },
+  {
+    "id": 37,
+    "patient_id": 37,
+    "doctor_id": 7,
+    "date": "2025-10-24",
+    "time": "14:20 AM",
+    "reason": "Exercise-induced cough",
+    "status": "Completed"
+  },
+  {
+    "id": 38,
+    "patient_id": 38,
+    "doctor_id": 4,
+    "date": "2025-10-02",
+    "time": "10:23 AM",
+    "reason": "Persistent productive cough",
+    "status": "Completed"
+  },
+  {
+    "id": 39,
+    "patient_id": 39,
+    "doctor_id": 9,
+    "date": "2025-10-09",
+    "time": "15:02 AM",
+    "reason": "Fever and ear pain",
+    "status": "Completed"
+  },
+  {
+    "id": 40,
+    "patient_id": 40,
+    "doctor_id": 10,
+    "date": "2025-09-01",
+    "time": "12:28 AM",
+    "reason": "Routine hypertension management",
+    "status": "Completed"
+  },
+  {
+    "id": 41,
+    "patient_id": 41,
+    "doctor_id": 4,
+    "date": "2025-10-18",
+    "time": "10:12 AM",
+    "reason": "High LDL on routine bloods",
+    "status": "Completed"
+  },
+  {
+    "id": 42,
+    "patient_id": 42,
+    "doctor_id": 7,
+    "date": "2025-10-21",
+    "time": "13:21 AM",
+    "reason": "Toothache with swelling",
+    "status": "Completed"
+  },
+  {
+    "id": 43,
+    "patient_id": 43,
+    "doctor_id": 6,
+    "date": "2025-10-11",
+    "time": "12:18 AM",
+    "reason": "Low mood and anxiety",
+    "status": "Completed"
+  },
+  {
+    "id": 44,
+    "patient_id": 44,
+    "doctor_id": 1,
+    "date": "2025-10-05",
+    "time": "09:07 AM",
+    "reason": "Acid reflux and regurgitation",
+    "status": "Completed"
+  },
+  {
+    "id": 45,
+    "patient_id": 45,
+    "doctor_id": 5,
+    "date": "2025-09-10",
+    "time": "10:35 AM",
+    "reason": "Fatigue and weight gain",
+    "status": "Completed"
+  },
+  {
+    "id": 46,
+    "patient_id": 46,
+    "doctor_id": 7,
+    "date": "2025-10-20",
+    "time": "13:45 AM",
+    "reason": "Menstrual cramp pain",
+    "status": "Completed"
+  },
+  {
+    "id": 47,
+    "patient_id": 47,
+    "doctor_id": 4,
+    "date": "2025-10-02",
+    "time": "11:40 AM",
+    "reason": "Urinary symptoms and dysuria",
+    "status": "Completed"
+  },
+  {
+    "id": 48,
+    "patient_id": 48,
+    "doctor_id": 9,
+    "date": "2025-10-08",
+    "time": "13:20 AM",
+    "reason": "High cholesterol",
+    "status": "Completed"
+  },
+  {
+    "id": 49,
+    "patient_id": 49,
+    "doctor_id": 10,
+    "date": "2025-10-12",
+    "time": "14:14 AM",
+    "reason": "Acute back spasm",
+    "status": "Completed"
+  },
+  {
+    "id": 50,
+    "patient_id": 50,
+    "doctor_id": 4,
+    "date": "2025-09-22",
+    "time": "13:25 AM",
+    "reason": "High blood sugar",
+    "status": "Completed"
+  },
+  {
+    "id": 51,
+    "patient_id": 51,
+    "doctor_id": 7,
+    "date": "2025-10-27",
+    "time": "09:58 AM",
+    "reason": "Seasonal allergy flare",
+    "status": "Completed"
+  },
+  {
+    "id": 52,
+    "patient_id": 52,
+    "doctor_id": 9,
+    "date": "2025-10-29",
+    "time": "16:28 AM",
+    "reason": "Ear pain in toddler",
+    "status": "Completed"
+  },
+  {
+    "id": 53,
+    "patient_id": 53,
+    "doctor_id": 6,
+    "date": "2025-10-07",
+    "time": "10:00 AM",
+    "reason": "Heartburn and regurgitation",
+    "status": "Completed"
+  },
+  {
+    "id": 54,
+    "patient_id": 54,
+    "doctor_id": 1,
+    "date": "2025-10-13",
+    "time": "14:55 AM",
+    "reason": "Sinus pain and fever",
+    "status": "Completed"
+  },
+  {
+    "id": 55,
+    "patient_id": 55,
+    "doctor_id": 5,
+    "date": "2025-10-02",
+    "time": "13:38 AM",
+    "reason": "Elbow pain after injury",
+    "status": "Completed"
+  },
+  {
+    "id": 56,
+    "patient_id": 56,
+    "doctor_id": 7,
+    "date": "2025-09-18",
+    "time": "16:11 AM",
+    "reason": "Anxiety symptoms",
+    "status": "Completed"
+  },
+  {
+    "id": 57,
+    "patient_id": 57,
+    "doctor_id": 4,
+    "date": "2025-10-22",
+    "time": "12:33 AM",
+    "reason": "High fever and cough",
+    "status": "Completed"
+  },
+  {
+    "id": 58,
+    "patient_id": 58,
+    "doctor_id": 9,
+    "date": "2025-09-28",
+    "time": "14:19 AM",
+    "reason": "Tiredness and cold intolerance",
+    "status": "Completed"
+  },
+  {
+    "id": 59,
+    "patient_id": 59,
+    "doctor_id": 10,
+    "date": "2025-10-03",
+    "time": "09:52 AM",
+    "reason": "Fever in infant",
+    "status": "Completed"
+  },
+  {
+    "id": 60,
+    "patient_id": 60,
+    "doctor_id": 4,
+    "date": "2025-10-01",
+    "time": "10:48 AM",
+    "reason": "Elevated BP on screening",
+    "status": "Completed"
+  },
+  {
+    "id": 61,
+    "patient_id": 61,
+    "doctor_id": 7,
+    "date": "2025-09-05",
+    "time": "16:48 AM",
+    "reason": "Raised lipids",
+    "status": "Completed"
+  },
+  {
+    "id": 62,
+    "patient_id": 62,
+    "doctor_id": 9,
+    "date": "2025-10-09",
+    "time": "12:29 AM",
+    "reason": "Sore throat with exudate",
+    "status": "Completed"
+  },
+  {
+    "id": 63,
+    "patient_id": 63,
+    "doctor_id": 6,
+    "date": "2025-10-11",
+    "time": "11:11 AM",
+    "reason": "Dental pain following wisdom tooth",
+    "status": "Completed"
+  },
+  {
+    "id": 64,
+    "patient_id": 64,
+    "doctor_id": 1,
+    "date": "2025-10-02",
+    "time": "13:29 AM",
+    "reason": "Frequent indigestion",
+    "status": "Completed"
+  },
+  {
+    "id": 65,
+    "patient_id": 65,
+    "doctor_id": 5,
+    "date": "2025-10-20",
+    "time": "09:09 AM",
+    "reason": "Sinus pressure and purulent discharge",
+    "status": "Completed"
+  },
+  {
+    "id": 66,
+    "patient_id": 66,
+    "doctor_id": 7,
+    "date": "2025-09-30",
+    "time": "09:38 AM",
+    "reason": "High BP readings",
+    "status": "Completed"
+  },
+  {
+    "id": 67,
+    "patient_id": 67,
+    "doctor_id": 4,
+    "date": "2025-10-06",
+    "time": "12:19 AM",
+    "reason": "High cholesterol review",
+    "status": "Completed"
+  },
+  {
+    "id": 68,
+    "patient_id": 68,
+    "doctor_id": 7,
+    "date": "2025-10-22",
+    "time": "13:26 AM",
+    "reason": "Fatigue and cold intolerance",
+    "status": "Completed"
+  },
+  {
+    "id": 69,
+    "patient_id": 69,
+    "doctor_id": 9,
+    "date": "2025-09-16",
+    "time": "15:43 AM",
+    "reason": "High blood sugar on screening",
+    "status": "Completed"
+  },
+  {
+    "id": 70,
+    "patient_id": 70,
+    "doctor_id": 6,
+    "date": "2025-09-20",
+    "time": "15:05 AM",
+    "reason": "Frequent heartburn",
+    "status": "Completed"
+  },
+  {
+    "id": 71,
+    "patient_id": 71,
+    "doctor_id": 1,
+    "date": "2025-10-01",
+    "time": "13:51 AM",
+    "reason": "Elevated BP",
+    "status": "Completed"
+  },
+  {
+    "id": 72,
+    "patient_id": 72,
+    "doctor_id": 4,
+    "date": "2025-10-14",
+    "time": "09:11 AM",
+    "reason": "Earache and fever",
+    "status": "Completed"
+  },
+  {
+    "id": 73,
+    "patient_id": 73,
+    "doctor_id": 7,
+    "date": "2025-10-03",
+    "time": "15:10 AM",
+    "reason": "Ankle sprain",
+    "status": "Completed"
+  },
+  {
+    "id": 74,
+    "patient_id": 74,
+    "doctor_id": 9,
+    "date": "2025-10-06",
+    "time": "13:33 AM",
+    "reason": "Raised cholesterol",
+    "status": "Completed"
+  },
+  {
+    "id": 75,
+    "patient_id": 75,
+    "doctor_id": 6,
+    "date": "2025-09-25",
+    "time": "13:34 AM",
+    "reason": "High blood sugar",
+    "status": "Completed"
+  },
+  {
+    "id": 76,
+    "patient_id": 76,
+    "doctor_id": 4,
+    "date": "2025-10-17",
+    "time": "09:33 AM",
+    "reason": "Ear pain and fever",
+    "status": "Completed"
+  },
+  {
+    "id": 77,
+    "patient_id": 77,
+    "doctor_id": 7,
+    "date": "2025-10-21",
+    "time": "16:15 AM",
+    "reason": "Chronic reflux",
+    "status": "Completed"
+  },
+  {
+    "id": 78,
+    "patient_id": 78,
+    "doctor_id": 9,
+    "date": "2025-10-12",
+    "time": "15:50 AM",
+    "reason": "Low mood and insomnia",
+    "status": "Completed"
+  },
+  {
+    "id": 79,
+    "patient_id": 79,
+    "doctor_id": 4,
+    "date": "2025-09-28",
+    "time": "16:51 AM",
+    "reason": "Shoulder pain from overuse",
+    "status": "Completed"
+  },
+  {
+    "id": 80,
+    "patient_id": 80,
+    "doctor_id": 7,
+    "date": "2025-09-10",
+    "time": "09:12 AM",
+    "reason": "Fatigue and dry skin",
+    "status": "Completed"
+  },
+  {
+    "id": 81,
+    "patient_id": 81,
+    "doctor_id": 9,
+    "date": "2025-10-08",
+    "time": "13:29 AM",
+    "reason": "High cholesterol",
+    "status": "Completed"
+  },
+  {
+    "id": 82,
+    "patient_id": 82,
+    "doctor_id": 6,
+    "date": "2025-10-02",
+    "time": "14:36 AM",
+    "reason": "Hypertension control",
+    "status": "Completed"
+  },
+  {
+    "id": 83,
+    "patient_id": 83,
+    "doctor_id": 4,
+    "date": "2025-10-19",
+    "time": "13:02 AM",
+    "reason": "Sinus pain and discharge",
+    "status": "Completed"
+  },
+  {
+    "id": 84,
+    "patient_id": 84,
+    "doctor_id": 7,
+    "date": "2025-10-05",
+    "time": "09:45 AM",
+    "reason": "Fever in young child",
+    "status": "Completed"
+  },
+  {
+    "id": 85,
+    "patient_id": 85,
+    "doctor_id": 9,
+    "date": "2025-10-07",
+    "time": "12:22 AM",
+    "reason": "Dental pain",
+    "status": "Completed"
+  },
+  {
+    "id": 86,
+    "patient_id": 86,
+    "doctor_id": 6,
+    "date": "2025-09-30",
+    "time": "10:26 AM",
+    "reason": "Raised glucose",
+    "status": "Completed"
+  },
+  {
+    "id": 87,
+    "patient_id": 87,
+    "doctor_id": 4,
+    "date": "2025-10-18",
+    "time": "10:10 AM",
+    "reason": "Fever and cough in child",
+    "status": "Completed"
+  },
+  {
+    "id": 88,
+    "patient_id": 88,
+    "doctor_id": 7,
+    "date": "2025-10-12",
+    "time": "12:52 AM",
+    "reason": "Ear discharge and fever",
+    "status": "Completed"
+  },
+  {
+    "id": 89,
+    "patient_id": 89,
+    "doctor_id": 9,
+    "date": "2025-10-23",
+    "time": "10:56 AM",
+    "reason": "Low mood and anxiety",
+    "status": "Completed"
+  },
+  {
+    "id": 90,
+    "patient_id": 90,
+    "doctor_id": 6,
+    "date": "2025-10-10",
+    "time": "12:32 AM",
+    "reason": "High blood pressure",
+    "status": "Completed"
+  },
+  {
+    "id": 91,
+    "patient_id": 91,
+    "doctor_id": 7,
+    "date": "2025-10-14",
+    "time": "10:37 AM",
+    "reason": "Sore throat with purulent exudate",
+    "status": "Completed"
+  },
+  {
+    "id": 92,
+    "patient_id": 92,
+    "doctor_id": 9,
+    "date": "2025-10-01",
+    "time": "10:04 AM",
+    "reason": "Very high LDL",
+    "status": "Completed"
+  },
+  {
+    "id": 93,
+    "patient_id": 93,
+    "doctor_id": 6,
+    "date": "2025-10-02",
+    "time": "12:43 AM",
+    "reason": "Ongoing heartburn",
+    "status": "Completed"
+  },
+  {
+    "id": 94,
+    "patient_id": 94,
+    "doctor_id": 7,
+    "date": "2025-10-18",
+    "time": "12:21 AM",
+    "reason": "Ear pain and discharge",
+    "status": "Completed"
+  },
+  {
+    "id": 95,
+    "patient_id": 95,
+    "doctor_id": 9,
+    "date": "2025-09-30",
+    "time": "13:45 AM",
+    "reason": "Menstrual pain",
+    "status": "Completed"
+  },
+  {
+    "id": 96,
+    "patient_id": 96,
+    "doctor_id": 6,
+    "date": "2025-10-03",
+    "time": "14:50 AM",
+    "reason": "High BP on screening",
+    "status": "Completed"
+  },
+  {
+    "id": 97,
+    "patient_id": 97,
+    "doctor_id": 4,
+    "date": "2025-09-26",
+    "time": "15:51 AM",
+    "reason": "Fatigue and weight gain",
+    "status": "Completed"
+  },
+  {
+    "id": 98,
+    "patient_id": 98,
+    "doctor_id": 7,
+    "date": "2025-09-20",
+    "time": "14:28 AM",
+    "reason": "Raised cholesterol",
+    "status": "Completed"
+  },
+  {
+    "id": 99,
+    "patient_id": 99,
+    "doctor_id": 9,
+    "date": "2025-10-08",
+    "time": "11:58 AM",
+    "reason": "Migraine headache",
+    "status": "Completed"
+  },
+  {
+    "id": 100,
+    "patient_id": 100,
+    "doctor_id": 6,
+    "date": "2025-10-11",
+    "time": "16:37 AM",
+    "reason": "Sore throat and fever",
+    "status": "Completed"
+  }
+]

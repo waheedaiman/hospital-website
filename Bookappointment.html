@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="form">
+        <div class="form-section active">
+            <form id="patientForm">
+                <h1>Book an Appointment</h1>
+                <p class="form-description">Please fill out all fields to book your appointment</p>
+
+                <label for="nhsNumber">NHS Number:</label>
+                <div class="input-container">
+                    <input type="text" id="nhs" name="nhs" placeholder="Your NHS number (10 digits)" maxlength="10" required>
+                    <div class="char-count" id="nhsCharCount">0/10</div>
+                </div>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Your title" required>
+
+                
+                <label for="fname">First name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                
+                <label for="lname">Last name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" placeholder="Your Date of Birth" required>
+                <div class="validation-message" id="dobValidationMessage"></div>
+
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" placeholder="Your gender" required>
+
+                <label for="lname">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Your address" required>
+                
+                <label for="mail">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <div class="validation-message" id="emailValidationMessage"></div>
+
+                <label for="phone">Telephone:</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Your telephone" required>
+
+                <!-- Option tag allows dropdown -->
+                <label for="doctor">Select your doctor:</label>
+                <input list="doctors" id="doctor" name="doctor" placeholder="Select or type doctor name" required>
+                <datalist id="doctors">
+                    <option value="Dr. Violante Rilton">
+                    <option value="Dr. Ettie Beardsworth">
+                    <option value="Dr. Emera McQuillan"> 
+                    <option value="Dr. Noak Kyrkeman"> 
+                    <option value="Dr. Erwin Handlin"> 
+                    <option value="Dr. Monah Caghy"> 
+                    <option value="Dr. Rad Philipard"> 
+                    <option value="Dr. Zoe Galloway"> 
+                    <option value="Dr. Rowland Blount"> 
+                    <option value="Dr. Si Pawling"> 
+                    <option value="Dr. Merrily Harmson"> 
+                    <option value="Dr. Cordell Toor"> 
+                    <option value="Dr. Hi Willingam"> 
+                    <option value="Dr. Irvin Dumberrill"> 
+                    <option value="Dr. Stafani Gives">
+
+                </datalist>
+
+                <label for="appointmenttime">Appointment (date and time):</label>
+                <input type="datetime-local" id="appointmentDateTime" name="appointmentDateTime">
+
+                <label for="notes">Notes:</label>
+                <input type="text" id="notes" name="notes" placeholder="Any additional notes">
+
+                <div class="validation-message" id="validationMessage"></div>
+
+                <input type="submit" value="Submit Registration">
+            </form>
+        </div>
+    </div>
+    <!-- Password Popup -->
+<div id="passwordPopup" class="popup">
+  <div class="popup-content">
+    <h2>Account Created</h2>
+    <p>Your temporary password:</p>
+    <div class="password-box">
+      <span id="generatedPassword"></span>
+      <button id="copyPasswordBtn">Copy</button>
+    </div>
+    <button id="closePopupBtn" class="close-btn">Close</button>
+  </div>
+</div>
+
+</body>
+</html>

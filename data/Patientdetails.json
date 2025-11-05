@@ -1,0 +1,2102 @@
+[
+  {
+    "NHS_Number": "6538586104",
+    "Patient_Name": "Laryssa Vasilik",
+    "Date_of_Birth": "22/09/1984",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-30",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule every 8 hours",
+      "Duration": "7 days",
+      "Instructions": "Take after food. Finish full course.",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-30",
+      "Reason_for_Visit": "Sore throat, fever",
+      "Diagnosis": "Bacterial pharyngitis",
+      "Recommendations": "Rest, fluids, return if worsening",
+      "Follow_Up": "If no improvement in 5 days"
+    }
+  },
+  {
+    "NHS_Number": "3748194617",
+    "Patient_Name": "Maurita Charke",
+    "Date_of_Birth": "07/09/1958",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-28",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Take in morning. Monitor BP.",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-28",
+      "Reason_for_Visit": "Routine check-up, high BP",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Low-salt diet, exercise, BP log",
+      "Follow_Up": "2 weeks for BP review"
+    }
+  },
+  {
+    "NHS_Number": "1055801944",
+    "Patient_Name": "Aeriell Norvill",
+    "Date_of_Birth": "20/05/1985",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-25",
+      "Medicine_Name": "Salbutamol inhaler",
+      "Dosage": "2 puffs as needed",
+      "Duration": "As required",
+      "Instructions": "Use for wheeze or breathlessness",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-25",
+      "Reason_for_Visit": "Wheeze and cough",
+      "Diagnosis": "Mild asthma exacerbation",
+      "Recommendations": "Avoid triggers, inhaler technique review",
+      "Follow_Up": "1 month or earlier if worse"
+    }
+  },
+  {
+    "NHS_Number": "2842736109",
+    "Patient_Name": "Aubrey Dunston",
+    "Date_of_Birth": "10/07/1972",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-20",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Take at night. Monitor lipids.",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-20",
+      "Reason_for_Visit": "High cholesterol on bloods",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Diet changes, repeat lipids in 3 months",
+      "Follow_Up": "3 months for lipid panel"
+    }
+  },
+  {
+    "NHS_Number": "4315792829",
+    "Patient_Name": "Emanuele Duncanson",
+    "Date_of_Birth": "25/10/2008",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-29",
+      "Medicine_Name": "Paracetamol 500mg",
+      "Dosage": "1-2 tablets every 4-6 hours as needed",
+      "Duration": "3 days",
+      "Instructions": "Do not exceed 4g/24h",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-29",
+      "Reason_for_Visit": "Headache and low fever",
+      "Diagnosis": "Likely viral illness",
+      "Recommendations": "Hydration, rest, symptomatic care",
+      "Follow_Up": "If fever >3 days"
+    }
+  },
+  {
+    "NHS_Number": "6703065764",
+    "Patient_Name": "Rudie Theurer",
+    "Date_of_Birth": "23/10/2021",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-27",
+      "Medicine_Name": "Cetirizine 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "7 days",
+      "Instructions": "Take at night if drowsy",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-27",
+      "Reason_for_Visit": "Itchy eyes, sneezing",
+      "Diagnosis": "Allergic rhinitis",
+      "Recommendations": "Avoid allergens, antihistamine",
+      "Follow_Up": "If symptoms persist"
+    }
+  },
+  {
+    "NHS_Number": "9930757538",
+    "Patient_Name": "Randall Kuna",
+    "Date_of_Birth": "16/12/1992",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-15",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "5 days",
+      "Instructions": "Take with food for stomach protection",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-15",
+      "Reason_for_Visit": "Knee pain after sports",
+      "Diagnosis": "Soft tissue sprain",
+      "Recommendations": "RICE, NSAID short course, physiotherapy referral",
+      "Follow_Up": "2 weeks if not improving"
+    }
+  },
+  {
+    "NHS_Number": "6412244999",
+    "Patient_Name": "Brnaba Claridge",
+    "Date_of_Birth": "21/07/2013",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-22",
+      "Medicine_Name": "Azithromycin 250mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "3 days",
+      "Instructions": "Take same time daily",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-22",
+      "Reason_for_Visit": "Productive cough, fever",
+      "Diagnosis": "Suspected community chest infection",
+      "Recommendations": "Rest, fluids, complete antibiotics",
+      "Follow_Up": "Review in 5 days"
+    }
+  },
+  {
+    "NHS_Number": "1937225747",
+    "Patient_Name": "Dre Puffett",
+    "Date_of_Birth": "18/02/2016",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-18",
+      "Medicine_Name": "Salbutamol inhaler",
+      "Dosage": "2 puffs as needed",
+      "Duration": "As required",
+      "Instructions": "Use spacer for children",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-18",
+      "Reason_for_Visit": "Shortness of breath and cough",
+      "Diagnosis": "Reactive airways / viral-triggered wheeze",
+      "Recommendations": "Inhaler use, avoid triggers",
+      "Follow_Up": "Primary care review in 2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "0834678659",
+    "Patient_Name": "Vivi Pilch",
+    "Date_of_Birth": "30/03/2016",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-12",
+      "Medicine_Name": "Paracetamol 500mg",
+      "Dosage": "1-2 tablets every 4-6 hours as needed",
+      "Duration": "3 days",
+      "Instructions": "Do not exceed recommended dose",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-12",
+      "Reason_for_Visit": "Fever and sore throat",
+      "Diagnosis": "Likely viral infection",
+      "Recommendations": "Symptomatic care, hydration",
+      "Follow_Up": "Return if worse or high fever"
+    }
+  },
+  {
+    "NHS_Number": "8440179340",
+    "Patient_Name": "Ferris Gowenlock",
+    "Date_of_Birth": "30/03/1952",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-30",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "Take with meals, monitor glucose",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-30",
+      "Reason_for_Visit": "Raised HbA1c on blood test",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Diet, exercise, start metformin",
+      "Follow_Up": "3 months for HbA1c"
+    }
+  },
+  {
+    "NHS_Number": "9427293039",
+    "Patient_Name": "Gerry Dreier",
+    "Date_of_Birth": "09/02/2021",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-05",
+      "Medicine_Name": "Cetirizine 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "14 days",
+      "Instructions": "Take at night if drowsy",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-05",
+      "Reason_for_Visit": "Sneezing and itchy eyes",
+      "Diagnosis": "Seasonal allergic rhinitis",
+      "Recommendations": "Antihistamine, avoid pollen",
+      "Follow_Up": "If symptoms continue after 2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "3795743850",
+    "Patient_Name": "Huntington Macartney",
+    "Date_of_Birth": "19/10/2020",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-01",
+      "Medicine_Name": "Amoxicillin 250mg",
+      "Dosage": "1 capsule twice daily",
+      "Duration": "5 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-01",
+      "Reason_for_Visit": "Ear pain and fever",
+      "Diagnosis": "Otitis media",
+      "Recommendations": "Analgesia and antibiotics",
+      "Follow_Up": "48-72 hours if no improvement"
+    }
+  },
+  {
+    "NHS_Number": "0176749152",
+    "Patient_Name": "Terry Litel",
+    "Date_of_Birth": "17/07/1984",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-10",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily before breakfast",
+      "Duration": "4 weeks",
+      "Instructions": "Avoid NSAIDs where possible",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-10",
+      "Reason_for_Visit": "Heartburn and reflux symptoms",
+      "Diagnosis": "GORD",
+      "Recommendations": "Lifestyle measures, PPI",
+      "Follow_Up": "4 weeks for symptom review"
+    }
+  },
+  {
+    "NHS_Number": "4647088979",
+    "Patient_Name": "Thorvald Salzberger",
+    "Date_of_Birth": "11/03/1997",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-20",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Take at night, lifestyle advice",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-20",
+      "Reason_for_Visit": "Raised cholesterol",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Diet, statin therapy",
+      "Follow_Up": "3 months for lipid check"
+    }
+  },
+  {
+    "NHS_Number": "7256963432",
+    "Patient_Name": "Kinsley Lygo",
+    "Date_of_Birth": "25/08/1977",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-03",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "7 days",
+      "Instructions": "Take with food",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-03",
+      "Reason_for_Visit": "Lower back pain",
+      "Diagnosis": "Mechanical back pain",
+      "Recommendations": "Analgesia, activity modification, physiotherapy",
+      "Follow_Up": "If not improved in 2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "4054087388",
+    "Patient_Name": "Waverly Soigoux",
+    "Date_of_Birth": "07/01/1979",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-07",
+      "Medicine_Name": "Sertraline 50mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Start and review",
+      "Instructions": "Take in morning, may take 2–4 weeks for effect",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-07",
+      "Reason_for_Visit": "Low mood, poor sleep",
+      "Diagnosis": "Depressive disorder (mild-moderate)",
+      "Recommendations": "Start SSRI, consider talking therapy",
+      "Follow_Up": "2–4 weeks for medication review"
+    }
+  },
+  {
+    "NHS_Number": "1487623658",
+    "Patient_Name": "Ardeen Cicullo",
+    "Date_of_Birth": "29/09/2004",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Cetirizine 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "7 days",
+      "Instructions": "Take at night if drowsy",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Itchy rash and sneezing",
+      "Diagnosis": "Allergic rhinitis with mild urticaria",
+      "Recommendations": "Antihistamine, avoid triggers",
+      "Follow_Up": "If symptoms persist"
+    }
+  },
+  {
+    "NHS_Number": "3906914518",
+    "Patient_Name": "Andras Cox",
+    "Date_of_Birth": "27/06/2005",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-11",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-11",
+      "Reason_for_Visit": "Sinus pain and green discharge",
+      "Diagnosis": "Acute bacterial sinusitis",
+      "Recommendations": "Antibiotics, nasal saline",
+      "Follow_Up": "Review if no improvement in 7 days"
+    }
+  },
+  {
+    "NHS_Number": "9516004776",
+    "Patient_Name": "Huntington Trownson",
+    "Date_of_Birth": "10/02/2001",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-06",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily before food",
+      "Duration": "4 weeks",
+      "Instructions": "Avoid late meals and smoking",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-06",
+      "Reason_for_Visit": "Acid reflux symptoms",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI and lifestyle changes",
+      "Follow_Up": "4 weeks review"
+    }
+  },
+  {
+    "NHS_Number": "4063756793",
+    "Patient_Name": "Erda Farfalameev",
+    "Date_of_Birth": "26/02/1965",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-25",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "Take with food, monitor glucose",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-25",
+      "Reason_for_Visit": "Raised blood sugar on screening",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Lifestyle measures, start metformin",
+      "Follow_Up": "3 months for HbA1c"
+    }
+  },
+  {
+    "NHS_Number": "7955347048",
+    "Patient_Name": "Tadeo Dunlop",
+    "Date_of_Birth": "26/05/1956",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-09",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP and potassium",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-09",
+      "Reason_for_Visit": "High BP readings",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "BP log, diet changes",
+      "Follow_Up": "2 weeks for review"
+    }
+  },
+  {
+    "NHS_Number": "5954675740",
+    "Patient_Name": "Susannah Jobke",
+    "Date_of_Birth": "22/05/2012",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-21",
+      "Medicine_Name": "Amoxicillin 250mg",
+      "Dosage": "1 capsule twice daily",
+      "Duration": "5 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-21",
+      "Reason_for_Visit": "Ear infection symptoms",
+      "Diagnosis": "Otitis media",
+      "Recommendations": "Analgesia and antibiotics",
+      "Follow_Up": "48-72 hours if not better"
+    }
+  },
+  {
+    "NHS_Number": "3958557031",
+    "Patient_Name": "Ellette Dyter",
+    "Date_of_Birth": "02/07/1954",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-15",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Adhere to diet, annual bloods",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-15",
+      "Reason_for_Visit": "High cholesterol on review",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and lifestyle change",
+      "Follow_Up": "3 months for lipid check"
+    }
+  },
+  {
+    "NHS_Number": "5430525790",
+    "Patient_Name": "Falito Oakeby",
+    "Date_of_Birth": "02/12/1999",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-14",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "7 days",
+      "Instructions": "Take with food, avoid if stomach ulcer",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-14",
+      "Reason_for_Visit": "Shoulder pain after injury",
+      "Diagnosis": "Rotator cuff strain",
+      "Recommendations": "Analgesia, rest, physiotherapy",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "2755133783",
+    "Patient_Name": "Euphemia Baltzar",
+    "Date_of_Birth": "03/12/1950",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-01",
+      "Medicine_Name": "Levothyroxine 50mcg",
+      "Dosage": "1 tablet daily before breakfast",
+      "Duration": "Continued",
+      "Instructions": "Take on empty stomach",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-01",
+      "Reason_for_Visit": "Fatigue and weight gain",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Start levothyroxine, bloods in 6 weeks",
+      "Follow_Up": "6 weeks for TSH"
+    }
+  },
+  {
+    "NHS_Number": "3927052396",
+    "Patient_Name": "Gardner Fidge",
+    "Date_of_Birth": "21/02/1989",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-16",
+      "Medicine_Name": "Prednisone 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "5 days",
+      "Instructions": "Short tapering course",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-16",
+      "Reason_for_Visit": "Severe allergic flare",
+      "Diagnosis": "Acute allergic dermatitis",
+      "Recommendations": "Short steroid course, topical emollients",
+      "Follow_Up": "If symptoms return"
+    }
+  },
+  {
+    "NHS_Number": "9672170890",
+    "Patient_Name": "Bud Eastabrook",
+    "Date_of_Birth": "02/11/1974",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-04",
+      "Medicine_Name": "Azithromycin 500mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "3 days",
+      "Instructions": "Take at same time each day",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-04",
+      "Reason_for_Visit": "Bronchitic cough with green sputum",
+      "Diagnosis": "Acute bronchitis (secondary infection)",
+      "Recommendations": "Antibiotic course, fluids",
+      "Follow_Up": "5 days if not improving"
+    }
+  },
+  {
+    "NHS_Number": "3298389188",
+    "Patient_Name": "Shel O'Crigan",
+    "Date_of_Birth": "30/11/2008",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-13",
+      "Medicine_Name": "Paracetamol 500mg",
+      "Dosage": "1-2 tablets every 4-6 hours as needed",
+      "Duration": "3 days",
+      "Instructions": "Follow dose limits",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-13",
+      "Reason_for_Visit": "Fever and migraine symptoms",
+      "Diagnosis": "Tension headache with viral febrile illness",
+      "Recommendations": "Analgesia, rest",
+      "Follow_Up": "If severe or prolonged"
+    }
+  },
+  {
+    "NHS_Number": "0166036064",
+    "Patient_Name": "Jory Caneo",
+    "Date_of_Birth": "17/02/2022",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-26",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Per weight, as advised",
+      "Duration": "3 days",
+      "Instructions": "Dose according to weight chart",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-26",
+      "Reason_for_Visit": "Fever in toddler",
+      "Diagnosis": "Viral illness",
+      "Recommendations": "Supportive care, fluids",
+      "Follow_Up": "Return if high fever or lethargy"
+    }
+  },
+  {
+    "NHS_Number": "7495367466",
+    "Patient_Name": "Charles Meharg",
+    "Date_of_Birth": "15/10/1986",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-17",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-17",
+      "Reason_for_Visit": "Sinus congestion and facial pain",
+      "Diagnosis": "Bacterial sinusitis",
+      "Recommendations": "Antibiotics and nasal decongestant",
+      "Follow_Up": "If not improved after 5 days"
+    }
+  },
+  {
+    "NHS_Number": "2802706446",
+    "Patient_Name": "Murielle Abel",
+    "Date_of_Birth": "26/08/1995",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-08",
+      "Medicine_Name": "Oral contraceptive (combined)",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Take same time daily",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-08",
+      "Reason_for_Visit": "Contraception request",
+      "Diagnosis": "Request for hormonal contraception",
+      "Recommendations": "Start pill, discuss side effects",
+      "Follow_Up": "3 months for review"
+    }
+  },
+  {
+    "NHS_Number": "4009273895",
+    "Patient_Name": "Virginie Trynor",
+    "Date_of_Birth": "22/08/1955",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-05",
+      "Medicine_Name": "Levothyroxine 75mcg",
+      "Dosage": "1 tablet daily before breakfast",
+      "Duration": "Continued",
+      "Instructions": "Regular TSH monitoring",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-05",
+      "Reason_for_Visit": "Low energy, dry skin",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Thyroid replacement, blood tests in 6 weeks",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "9541088074",
+    "Patient_Name": "Kendricks Budgey",
+    "Date_of_Birth": "05/03/1993",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-19",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "10 days",
+      "Instructions": "With food, avoid alcohol",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-19",
+      "Reason_for_Visit": "Tooth pain after extraction",
+      "Diagnosis": "Post-dental extraction pain",
+      "Recommendations": "Analgesia and oral hygiene",
+      "Follow_Up": "If worsening pain or fever"
+    }
+  },
+  {
+    "NHS_Number": "6471828837",
+    "Patient_Name": "Jeremiah Monnoyer",
+    "Date_of_Birth": "29/12/1982",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-12",
+      "Medicine_Name": "Atorvastatin 10mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Lifestyle advice given",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-12",
+      "Reason_for_Visit": "Cardiovascular risk assessment",
+      "Diagnosis": "Elevated LDL",
+      "Recommendations": "Statin therapy, exercise",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "4176305606",
+    "Patient_Name": "Iormina Fiddy",
+    "Date_of_Birth": "20/07/2007",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-23",
+      "Medicine_Name": "Paracetamol 500mg",
+      "Dosage": "1-2 tablets every 4-6 hours as needed",
+      "Duration": "4 days",
+      "Instructions": "Do not exceed max dose",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-23",
+      "Reason_for_Visit": "Fever and sore throat",
+      "Diagnosis": "Viral upper respiratory infection",
+      "Recommendations": "Rest and symptomatic care",
+      "Follow_Up": "If symptoms worsen"
+    }
+  },
+  {
+    "NHS_Number": "7586577323",
+    "Patient_Name": "Gabby O'Fogarty",
+    "Date_of_Birth": "07/07/2006",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-24",
+      "Medicine_Name": "Salbutamol inhaler",
+      "Dosage": "2 puffs as needed",
+      "Duration": "As required",
+      "Instructions": "Use spacer if available",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-24",
+      "Reason_for_Visit": "Exercise-induced cough",
+      "Diagnosis": "Mild exercise-induced asthma",
+      "Recommendations": "Inhaler pre-exercise",
+      "Follow_Up": "If symptoms continue"
+    }
+  },
+  {
+    "NHS_Number": "6203338710",
+    "Patient_Name": "Agathe Dalyiel",
+    "Date_of_Birth": "03/12/1998",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Azithromycin 250mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "3 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Persistent productive cough",
+      "Diagnosis": "Suspected bacterial bronchitis",
+      "Recommendations": "Antibiotics, fluids",
+      "Follow_Up": "Review in 5 days"
+    }
+  },
+  {
+    "NHS_Number": "1455229172",
+    "Patient_Name": "Flossi Gobbet",
+    "Date_of_Birth": "09/10/2015",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-09",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Follow dosing chart",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-09",
+      "Reason_for_Visit": "Fever and ear pain",
+      "Diagnosis": "Viral URTI",
+      "Recommendations": "Symptomatic care, analgesia",
+      "Follow_Up": "If fever persists"
+    }
+  },
+  {
+    "NHS_Number": "4607334987",
+    "Patient_Name": "Osmond Ochterlony",
+    "Date_of_Birth": "07/06/1983",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-01",
+      "Medicine_Name": "Lisinopril 5mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP, avoid NSAIDs",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-01",
+      "Reason_for_Visit": "Routine hypertension management",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "BP monitoring and lifestyle changes",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "4920143451",
+    "Patient_Name": "Hector Beringer",
+    "Date_of_Birth": "27/03/1964",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-18",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Adhere to therapy",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-18",
+      "Reason_for_Visit": "High LDL on routine bloods",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and diet changes",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "5679629224",
+    "Patient_Name": "Patrick Bisset",
+    "Date_of_Birth": "21/03/1994",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-21",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-21",
+      "Reason_for_Visit": "Toothache with swelling",
+      "Diagnosis": "Dental abscess",
+      "Recommendations": "Antibiotics and dental referral",
+      "Follow_Up": "Urgent dental review"
+    }
+  },
+  {
+    "NHS_Number": "6664789957",
+    "Patient_Name": "Glennie Fonquernie",
+    "Date_of_Birth": "20/10/2002",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-11",
+      "Medicine_Name": "Sertraline 50mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Start and review in 4 weeks",
+      "Instructions": "May cause nausea initially",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-11",
+      "Reason_for_Visit": "Low mood and anxiety",
+      "Diagnosis": "Generalised anxiety disorder",
+      "Recommendations": "Start SSRI and consider therapy",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "3137478995",
+    "Patient_Name": "Toma McConway",
+    "Date_of_Birth": "29/06/1963",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-05",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "4 weeks",
+      "Instructions": "Take before food",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-05",
+      "Reason_for_Visit": "Acid reflux and regurgitation",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI therapy, lifestyle changes",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "5456734834",
+    "Patient_Name": "Anthea Abrahamsen",
+    "Date_of_Birth": "22/01/1979",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-10",
+      "Medicine_Name": "Levothyroxine 50mcg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Take on empty stomach",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-10",
+      "Reason_for_Visit": "Fatigue and weight gain",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Start replacement, check TSH",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "9046839311",
+    "Patient_Name": "Bianca Kindleysides",
+    "Date_of_Birth": "29/12/1977",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-20",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "5 days",
+      "Instructions": "Take with food",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-20",
+      "Reason_for_Visit": "Menstrual cramp pain",
+      "Diagnosis": "Dysmenorrhea",
+      "Recommendations": "NSAID use, heat therapy",
+      "Follow_Up": "If severe or irregular bleeding"
+    }
+  },
+  {
+    "NHS_Number": "2029708895",
+    "Patient_Name": "Zelda Caughte",
+    "Date_of_Birth": "27/08/2001",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Urinary symptoms and dysuria",
+      "Diagnosis": "Suspected UTI",
+      "Recommendations": "Antibiotic and urine test",
+      "Follow_Up": "If recurrent"
+    }
+  },
+  {
+    "NHS_Number": "9253511109",
+    "Patient_Name": "Beryle Christoffels",
+    "Date_of_Birth": "18/03/1962",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-08",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Adhere and monitor LFTs",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-08",
+      "Reason_for_Visit": "High cholesterol",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin therapy and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "6034202965",
+    "Patient_Name": "Mort Abramovic",
+    "Date_of_Birth": "26/03/1991",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-12",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "7 days",
+      "Instructions": "With food",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-12",
+      "Reason_for_Visit": "Acute back spasm",
+      "Diagnosis": "Muscle strain",
+      "Recommendations": "NSAID, rest, physio referral",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "0667088997",
+    "Patient_Name": "Tedmund Cutchee",
+    "Date_of_Birth": "01/12/1959",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-22",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "With meals, monitor glucose",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-22",
+      "Reason_for_Visit": "High blood sugar",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Start metformin, diet plan",
+      "Follow_Up": "3 months for HbA1c"
+    }
+  },
+  {
+    "NHS_Number": "3852507189",
+    "Patient_Name": "Shirley Lipsett",
+    "Date_of_Birth": "24/01/2004",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-27",
+      "Medicine_Name": "Cetirizine 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "10 days",
+      "Instructions": "Take at night if drowsy",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-27",
+      "Reason_for_Visit": "Seasonal allergy flare",
+      "Diagnosis": "Allergic rhinitis",
+      "Recommendations": "Antihistamine and nasal spray if needed",
+      "Follow_Up": "If persists"
+    }
+  },
+  {
+    "NHS_Number": "7547043135",
+    "Patient_Name": "Sawyer Hughlock",
+    "Date_of_Birth": "13/02/2019",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-29",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Use measuring spoon",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-29",
+      "Reason_for_Visit": "Ear pain in toddler",
+      "Diagnosis": "Otitis media/viral illness",
+      "Recommendations": "Supportive care and analgesia",
+      "Follow_Up": "48-72 hrs if worse"
+    }
+  },
+  {
+    "NHS_Number": "9880383567",
+    "Patient_Name": "Leilah Willgrass",
+    "Date_of_Birth": "14/03/1962",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-07",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "4 weeks",
+      "Instructions": "Take before food",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-07",
+      "Reason_for_Visit": "Heartburn and regurgitation",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI, weight loss if needed",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "4976220591",
+    "Patient_Name": "Chantalle Tweede",
+    "Date_of_Birth": "25/11/1996",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-13",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-13",
+      "Reason_for_Visit": "Sinus pain and fever",
+      "Diagnosis": "Acute bacterial sinusitis",
+      "Recommendations": "Antibiotics and nasal saline",
+      "Follow_Up": "5 days"
+    }
+  },
+  {
+    "NHS_Number": "0901893994",
+    "Patient_Name": "Emmerich Roubottom",
+    "Date_of_Birth": "10/10/1971",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "5 days",
+      "Instructions": "Take with food",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Elbow pain after injury",
+      "Diagnosis": "Tendinopathy",
+      "Recommendations": "NSAID, rest, physio",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "0689695497",
+    "Patient_Name": "Sandy Flahy",
+    "Date_of_Birth": "04/10/2002",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-18",
+      "Medicine_Name": "Sertraline 50mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Start and review",
+      "Instructions": "Take with food if nausea",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-18",
+      "Reason_for_Visit": "Anxiety symptoms",
+      "Diagnosis": "Generalised anxiety",
+      "Recommendations": "SSRI and CBT referral",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "7516975605",
+    "Patient_Name": "Elane O'Cuddie",
+    "Date_of_Birth": "08/07/2015",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-22",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Follow dosing chart",
+      "Prescribed_By": "Dr. Omar Rahman"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-22",
+      "Reason_for_Visit": "High fever and cough",
+      "Diagnosis": "Viral URTI",
+      "Recommendations": "Supportive care",
+      "Follow_Up": "If worsens"
+    }
+  },
+  {
+    "NHS_Number": "5383430830",
+    "Patient_Name": "Minnie Durbann",
+    "Date_of_Birth": "01/10/1954",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-28",
+      "Medicine_Name": "Levothyroxine 100mcg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Take on empty stomach",
+      "Prescribed_By": "Dr. Lucy Patel"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-28",
+      "Reason_for_Visit": "Tiredness and cold intolerance",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Start replacement, TSH check",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "7494744711",
+    "Patient_Name": "De witt Ayllett",
+    "Date_of_Birth": "29/01/2020",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-03",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Follow dosing guidance",
+      "Prescribed_By": "Dr. Ahmed Saleh"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-03",
+      "Reason_for_Visit": "Fever in infant",
+      "Diagnosis": "Viral illness",
+      "Recommendations": "Hydrate and monitor",
+      "Follow_Up": "If high fever or drowsiness"
+    }
+  },
+  {
+    "NHS_Number": "5353682432",
+    "Patient_Name": "Victor Hartnell",
+    "Date_of_Birth": "13/07/1982",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-01",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP and kidney function",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-01",
+      "Reason_for_Visit": "Elevated BP on screening",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Lifestyle changes and start ACE inhibitor",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "0379517825",
+    "Patient_Name": "Neddy Marrion",
+    "Date_of_Birth": "06/05/1959",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-05",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Avoid grapefruit",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-05",
+      "Reason_for_Visit": "Raised lipids",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "1230322833",
+    "Patient_Name": "Robert Neve",
+    "Date_of_Birth": "01/09/1999",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-09",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-09",
+      "Reason_for_Visit": "Sore throat with exudate",
+      "Diagnosis": "Streptococcal pharyngitis",
+      "Recommendations": "Antibiotics and rest",
+      "Follow_Up": "48 hours"
+    }
+  },
+  {
+    "NHS_Number": "9252211462",
+    "Patient_Name": "Eward Bromilow",
+    "Date_of_Birth": "28/04/1981",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-11",
+      "Medicine_Name": "Ibuprofen 400mg",
+      "Dosage": "1 tablet every 8 hours as needed",
+      "Duration": "7 days",
+      "Instructions": "Take with food",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-11",
+      "Reason_for_Visit": "Dental pain following wisdom tooth",
+      "Diagnosis": "Post-extraction pain",
+      "Recommendations": "Analgesia and mouth care",
+      "Follow_Up": "If fever develops"
+    }
+  },
+  {
+    "NHS_Number": "2296156193",
+    "Patient_Name": "Ronny Ganforthe",
+    "Date_of_Birth": "25/11/1988",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "4 weeks",
+      "Instructions": "Take before breakfast",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Frequent indigestion",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI and diet changes",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "1575207966",
+    "Patient_Name": "Carlene Ravel",
+    "Date_of_Birth": "14/06/1986",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-20",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Vivian Park"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-20",
+      "Reason_for_Visit": "Sinus pressure and purulent discharge",
+      "Diagnosis": "Acute sinusitis",
+      "Recommendations": "Antibiotics and nasal care",
+      "Follow_Up": "5 days"
+    }
+  },
+  {
+    "NHS_Number": "9231682180",
+    "Patient_Name": "Harley Powys",
+    "Date_of_Birth": "23/01/1964",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-30",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP and renal function",
+      "Prescribed_By": "Dr. Sara Malik"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-30",
+      "Reason_for_Visit": "High BP readings",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Lifestyle and medication",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "7059121684",
+    "Patient_Name": "Konstantin Lowles",
+    "Date_of_Birth": "23/10/1969",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-06",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Take at night",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-06",
+      "Reason_for_Visit": "High cholesterol review",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and exercise",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "0117253944",
+    "Patient_Name": "Vina Mordanti",
+    "Date_of_Birth": "01/05/1961",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-22",
+      "Medicine_Name": "Levothyroxine 75mcg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Morning on empty stomach",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-22",
+      "Reason_for_Visit": "Fatigue and cold intolerance",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Replace thyroid hormone, check TSH",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "8549714305",
+    "Patient_Name": "Guglielmo Seabrocke",
+    "Date_of_Birth": "28/03/1952",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-16",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "With food",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-16",
+      "Reason_for_Visit": "High blood sugar on screening",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Start metformin and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "5663733841",
+    "Patient_Name": "Vera Hubbins",
+    "Date_of_Birth": "22/06/1981",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-20",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "4 weeks",
+      "Instructions": "Take before food",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-20",
+      "Reason_for_Visit": "Frequent heartburn",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI and avoid triggers",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "8201426894",
+    "Patient_Name": "Wittie Corney",
+    "Date_of_Birth": "14/01/1962",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-01",
+      "Medicine_Name": "Lisinopril 20mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP and kidneys",
+      "Prescribed_By": "Dr. Konstantin Lowles"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-01",
+      "Reason_for_Visit": "Elevated BP",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Medication adherence and diet",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "4334743129",
+    "Patient_Name": "Chelsy Schwand",
+    "Date_of_Birth": "25/02/1976",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-14",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-14",
+      "Reason_for_Visit": "Earache and fever",
+      "Diagnosis": "Otitis media",
+      "Recommendations": "Antibiotics and analgesia",
+      "Follow_Up": "48-72 hours"
+    }
+  },
+  {
+    "NHS_Number": "2014021686",
+    "Patient_Name": "Kevyn Kilshaw",
+    "Date_of_Birth": "24/01/1988",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-03",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "5 days",
+      "Instructions": "With food",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-03",
+      "Reason_for_Visit": "Ankle sprain",
+      "Diagnosis": "Ligament sprain",
+      "Recommendations": "Rest, RICE, analgesia",
+      "Follow_Up": "If not improving in 2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "2525930002",
+    "Patient_Name": "Crissy Keave",
+    "Date_of_Birth": "14/02/1968",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-06",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Lifestyle advice provided",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-06",
+      "Reason_for_Visit": "Raised cholesterol",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "9385343513",
+    "Patient_Name": "North Allright",
+    "Date_of_Birth": "27/10/1956",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-25",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "With food",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-25",
+      "Reason_for_Visit": "High blood sugar",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Metformin and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "0083453962",
+    "Patient_Name": "Alissa Claiden",
+    "Date_of_Birth": "11/10/2001",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-17",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Take with food if stomach upset",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-17",
+      "Reason_for_Visit": "Ear pain and fever",
+      "Diagnosis": "Otitis media",
+      "Recommendations": "Antibiotics and analgesia",
+      "Follow_Up": "48-72 hours"
+    }
+  },
+  {
+    "NHS_Number": "5892205592",
+    "Patient_Name": "Mac Kerr",
+    "Date_of_Birth": "11/04/1976",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-21",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "8 weeks",
+      "Instructions": "Take before meals",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-21",
+      "Reason_for_Visit": "Chronic reflux",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI and lifestyle changes",
+      "Follow_Up": "8 weeks"
+    }
+  },
+  {
+    "NHS_Number": "6010203082",
+    "Patient_Name": "Jennica Echallie",
+    "Date_of_Birth": "13/01/2004",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-12",
+      "Medicine_Name": "Sertraline 50mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Start and review",
+      "Instructions": "May need 4-6 weeks for effect",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-12",
+      "Reason_for_Visit": "Low mood and insomnia",
+      "Diagnosis": "Depressive symptoms",
+      "Recommendations": "SSRI and therapy referral",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "9369147934",
+    "Patient_Name": "Francis Cottrell",
+    "Date_of_Birth": "17/01/1975",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-09-28",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "7 days",
+      "Instructions": "Take with meals",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-28",
+      "Reason_for_Visit": "Shoulder pain from overuse",
+      "Diagnosis": "Tendinopathy",
+      "Recommendations": "Rest and physio",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "6589057079",
+    "Patient_Name": "Violante Stoker",
+    "Date_of_Birth": "06/09/1961",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-10",
+      "Medicine_Name": "Levothyroxine 50mcg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Morning empty stomach",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-10",
+      "Reason_for_Visit": "Fatigue and dry skin",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Thyroid replacement",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "2936312639",
+    "Patient_Name": "Humfrid Temporal",
+    "Date_of_Birth": "29/06/1962",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-08",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Adhere and report muscle pain",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-08",
+      "Reason_for_Visit": "High cholesterol",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin therapy",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "0700059547",
+    "Patient_Name": "Reade Jerisch",
+    "Date_of_Birth": "20/08/1959",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP and K+",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Hypertension control",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Diet, salt reduction",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "7113173489",
+    "Patient_Name": "Teodoro Standbrooke",
+    "Date_of_Birth": "10/10/1971",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-19",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Finish full course",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-19",
+      "Reason_for_Visit": "Sinus pain and discharge",
+      "Diagnosis": "Bacterial sinusitis",
+      "Recommendations": "Antibiotics and nasal care",
+      "Follow_Up": "5 days"
+    }
+  },
+  {
+    "NHS_Number": "2427976946",
+    "Patient_Name": "Andras Perl",
+    "Date_of_Birth": "17/03/2020",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-05",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Use dispensing syringe",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-05",
+      "Reason_for_Visit": "Fever in young child",
+      "Diagnosis": "Viral infection",
+      "Recommendations": "Hydration and rest",
+      "Follow_Up": "If high fever or lethargy"
+    }
+  },
+  {
+    "NHS_Number": "5974533852",
+    "Patient_Name": "Constantino Studders",
+    "Date_of_Birth": "23/04/2002",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-07",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet every 6-8 hours as needed",
+      "Duration": "5 days",
+      "Instructions": "With food",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-07",
+      "Reason_for_Visit": "Dental pain",
+      "Diagnosis": "Tooth infection",
+      "Recommendations": "Analgesia and dental referral",
+      "Follow_Up": "If fever or swelling"
+    }
+  },
+  {
+    "NHS_Number": "5907940034",
+    "Patient_Name": "Lanny Quickfall",
+    "Date_of_Birth": "27/08/1958",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-30",
+      "Medicine_Name": "Metformin 500mg",
+      "Dosage": "1 tablet twice daily",
+      "Duration": "Continued",
+      "Instructions": "Take with meals",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-30",
+      "Reason_for_Visit": "Raised glucose",
+      "Diagnosis": "Type 2 diabetes",
+      "Recommendations": "Metformin and lifestyle",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "4148515472",
+    "Patient_Name": "Levon Flanigan",
+    "Date_of_Birth": "13/09/2008",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-18",
+      "Medicine_Name": "Paracetamol liquid",
+      "Dosage": "Weight-based dosing",
+      "Duration": "3 days",
+      "Instructions": "Follow dosing instructions",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-18",
+      "Reason_for_Visit": "Fever and cough in child",
+      "Diagnosis": "Viral respiratory infection",
+      "Recommendations": "Supportive care",
+      "Follow_Up": "If worsening"
+    }
+  },
+  {
+    "NHS_Number": "2222769337",
+    "Patient_Name": "Chicky Woodroof",
+    "Date_of_Birth": "09/02/2014",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-12",
+      "Medicine_Name": "Amoxicillin 250mg",
+      "Dosage": "1 capsule twice daily",
+      "Duration": "5 days",
+      "Instructions": "Complete full course",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-12",
+      "Reason_for_Visit": "Ear discharge and fever",
+      "Diagnosis": "Otitis externa/media",
+      "Recommendations": "Antibiotic and ENT referral if recurrent",
+      "Follow_Up": "If no improvement in 48 hrs"
+    }
+  },
+  {
+    "NHS_Number": "0163065462",
+    "Patient_Name": "Ula Baskerville",
+    "Date_of_Birth": "24/11/2000",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-23",
+      "Medicine_Name": "Sertraline 50mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Start and review",
+      "Instructions": "May take several weeks to act",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-23",
+      "Reason_for_Visit": "Low mood and anxiety",
+      "Diagnosis": "Depression/anxiety",
+      "Recommendations": "SSRI and counselling referral",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "8070302771",
+    "Patient_Name": "Welch Treadger",
+    "Date_of_Birth": "14/09/1977",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-10",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-10",
+      "Reason_for_Visit": "High blood pressure",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Medication and lifestyle",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "4590278510",
+    "Patient_Name": "Kerstin Cuphus",
+    "Date_of_Birth": "30/07/2002",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-14",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-14",
+      "Reason_for_Visit": "Sore throat with purulent exudate",
+      "Diagnosis": "Bacterial tonsillitis",
+      "Recommendations": "Antibiotic and fluids",
+      "Follow_Up": "48-72 hours"
+    }
+  },
+  {
+    "NHS_Number": "9475373012",
+    "Patient_Name": "Puff Lumsdale",
+    "Date_of_Birth": "09/10/1963",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-01",
+      "Medicine_Name": "Atorvastatin 40mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Blood tests as requested",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-01",
+      "Reason_for_Visit": "Very high LDL",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "High-intensity statin",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "2733019406",
+    "Patient_Name": "Lotti Bartholomew",
+    "Date_of_Birth": "29/08/1976",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-02",
+      "Medicine_Name": "Omeprazole 20mg",
+      "Dosage": "1 capsule daily",
+      "Duration": "4 weeks",
+      "Instructions": "Take before food",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-02",
+      "Reason_for_Visit": "Ongoing heartburn",
+      "Diagnosis": "GORD",
+      "Recommendations": "PPI and diet",
+      "Follow_Up": "4 weeks"
+    }
+  },
+  {
+    "NHS_Number": "1678031216",
+    "Patient_Name": "Malina Domerq",
+    "Date_of_Birth": "07/05/1992",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-18",
+      "Medicine_Name": "Amoxicillin 500mg",
+      "Dosage": "1 capsule three times daily",
+      "Duration": "7 days",
+      "Instructions": "Complete antibiotic course",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-18",
+      "Reason_for_Visit": "Ear pain and discharge",
+      "Diagnosis": "Otitis media",
+      "Recommendations": "Antibiotics and analgesia",
+      "Follow_Up": "48-72 hours"
+    }
+  },
+  {
+    "NHS_Number": "5752908701",
+    "Patient_Name": "Agace Brettoner",
+    "Date_of_Birth": "16/07/1992",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-30",
+      "Medicine_Name": "Ibuprofen 200mg",
+      "Dosage": "1 tablet as needed every 6-8 hrs",
+      "Duration": "5 days",
+      "Instructions": "Take with food",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-30",
+      "Reason_for_Visit": "Menstrual pain",
+      "Diagnosis": "Dysmenorrhea",
+      "Recommendations": "NSAIDs and heat",
+      "Follow_Up": "If severe"
+    }
+  },
+  {
+    "NHS_Number": "0742718808",
+    "Patient_Name": "Carlie Clamp",
+    "Date_of_Birth": "16/05/1965",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-03",
+      "Medicine_Name": "Lisinopril 10mg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Monitor BP",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-03",
+      "Reason_for_Visit": "High BP on screening",
+      "Diagnosis": "Hypertension",
+      "Recommendations": "Lifestyle and ACE inhibitor",
+      "Follow_Up": "2 weeks"
+    }
+  },
+  {
+    "NHS_Number": "6416503409",
+    "Patient_Name": "Cordey Stratz",
+    "Date_of_Birth": "23/11/1950",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-26",
+      "Medicine_Name": "Levothyroxine 100mcg",
+      "Dosage": "1 tablet daily",
+      "Duration": "Continued",
+      "Instructions": "Morning on empty stomach",
+      "Prescribed_By": "Dr. Amina Khan"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-26",
+      "Reason_for_Visit": "Fatigue and weight gain",
+      "Diagnosis": "Hypothyroidism",
+      "Recommendations": "Thyroid replacement, TSH check",
+      "Follow_Up": "6 weeks"
+    }
+  },
+  {
+    "NHS_Number": "1585276065",
+    "Patient_Name": "Lorain Langcastle",
+    "Date_of_Birth": "20/02/1965",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-09-20",
+      "Medicine_Name": "Atorvastatin 20mg",
+      "Dosage": "1 tablet nightly",
+      "Duration": "Continued",
+      "Instructions": "Lifestyle advice given",
+      "Prescribed_By": "Dr. Randall Kuna"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-09-20",
+      "Reason_for_Visit": "Raised cholesterol",
+      "Diagnosis": "Hyperlipidemia",
+      "Recommendations": "Statin and diet",
+      "Follow_Up": "3 months"
+    }
+  },
+  {
+    "NHS_Number": "7096153047",
+    "Patient_Name": "Cinnamon Pideon",
+    "Date_of_Birth": "03/12/1985",
+    "Gender": "Female",
+    "Prescription": {
+      "Date_Issued": "2025-10-08",
+      "Medicine_Name": "Paracetamol 500mg",
+      "Dosage": "1-2 tablets every 4-6 hours as needed",
+      "Duration": "3 days",
+      "Instructions": "Do not exceed max dose",
+      "Prescribed_By": "Dr. Hector Beringer"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-08",
+      "Reason_for_Visit": "Migraine headache",
+      "Diagnosis": "Tension-type headache",
+      "Recommendations": "Analgesia and rest",
+      "Follow_Up": "If recurrent"
+    }
+  },
+  {
+    "NHS_Number": "0916757552",
+    "Patient_Name": "Web Oxnam",
+    "Date_of_Birth": "29/05/2012",
+    "Gender": "Male",
+    "Prescription": {
+      "Date_Issued": "2025-10-11",
+      "Medicine_Name": "Amoxicillin 250mg",
+      "Dosage": "1 capsule twice daily",
+      "Duration": "5 days",
+      "Instructions": "Complete course",
+      "Prescribed_By": "Dr. Chelsy Schwand"
+    },
+    "Patient_Note": {
+      "Visit_Date": "2025-10-11",
+      "Reason_for_Visit": "Sore throat and fever",
+      "Diagnosis": "Bacterial tonsillitis",
+      "Recommendations": "Antibiotics and analgesia",
+      "Follow_Up": "48-72 hrs"
+    }
+  }
+]
