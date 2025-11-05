@@ -89,6 +89,63 @@
     button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
     .warning { color: #b45309; }
     code.kv { background: #f1f5f9; padding: 2px 6px; border-radius: 6px; }
+    
+    /* New styles for prescription requests */
+    .requests-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    .requests-table th,
+    .requests-table td {
+      padding: 12px 8px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .requests-table th {
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+    }
+    .urgency-low { color: #10b981; }
+    .urgency-medium { color: #f59e0b; }
+    .urgency-high { color: #ef4444; }
+    .status-pending { 
+      background: #fef3c7; 
+      color: #d97706;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .status-approved { 
+      background: #d1fae5; 
+      color: #059669;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .status-rejected { 
+      background: #fee2e2; 
+      color: #dc2626;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -139,277 +196,540 @@
         </div>
       </section>
 
-<section class="tab hidden" id="tab-history">
-  <div class="card">
-    <h2>Medical History</h2>
-    <ul class="list" id="historyList"></ul>
-  </div>
-</section>
-
+      <section class="tab hidden" id="tab-history">
+        <div class="card">
+          <h2>Medical History</h2>
+          <ul class="list" id="historyList"></ul>
+        </div>
+      </section>
 
       <section class="tab hidden" id="tab-prescriptions">
         <div class="card">
-          <h2>All Prescriptions</h2>
+          <div class="header">
+            <h2>All Prescriptions</h2>
+            <button id="requestPrescriptionBtn" class="ghost">Request Prescription</button>
+          </div>
           <ul class="list" id="allPresc"></ul>
         </div>
       </section>
 
       <section class="tab hidden" id="tab-requests">
         <div class="card">
-          <h2>Prescription Requests</h2>
-          <ul class="list" id="allReqs"></ul>
+          <div class="header">
+            <h2>Request New Prescription</h2>
+          </div>
+          
+          <form id="prescriptionRequestForm" style="display: grid; gap: 16px;">
+            <div>
+              <label for="medicineSelect">Medicine</label>
+              <select id="medicineSelect" required>
+                <option value="">Select a medicine...</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="reasonInput">Reason for Request</label>
+              <textarea id="reasonInput" required placeholder="Please describe why you need this medication..."></textarea>
+            </div>
+            
+            <div>
+              <label for="urgencySelect">Urgency</label>
+              <select id="urgencySelect" required>
+                <option value="low">Low - Can wait a few days</option>
+                <option value="medium" selected>Medium - Need within 2-3 days</option>
+                <option value="high">High - Need urgently (today/tomorrow)</option>
+              </select>
+            </div>
+            
+            <div style="display: flex; gap: 12px; justify-content: flex-end;">
+              <button type="button" id="cancelRequestBtn" class="ghost">Cancel</button>
+              <button type="submit" style="background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
+                Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="header">
+            <h2>My Prescription Requests</h2>
+          </div>
+          
+          <div id="requestsTableContainer">
+            <table class="requests-table">
+              <thead>
+                <tr>
+                  <th>Medicine</th>
+                  <th>Reason</th>
+                  <th>Urgency</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="requestsTableBody">
+                <!-- Requests will be populated here -->
+              </tbody>
+            </table>
+            <div id="noRequestsMessage" style="text-align: center; padding: 40px; color: var(--muted); display: none;">
+              No prescription requests found.
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="tab hidden" id="tab-appointments">
         <div class="card">
-          <h2>All Appointments</h2>
+          <div class="header">
+            <h2>All Appointments</h2>
+            <button id="requestAppointmentBtn" class="ghost">Request Appointment</button>
+          </div>
           <ul class="list" id="allAppts"></ul>
         </div>
       </section>
     </main>
   </div>
-<script>
-  let details = null; // make it global so accidental uses won't crash
+
+  <script>
+  let details = null;
 
   // ---- CONFIG ----
-  // Build data root: if baseUrl is http(s) use it, otherwise fall back to your GitHub raw
   const qs = new URLSearchParams(location.search);
   const baseParam = (qs.get('baseUrl') || '').trim();
   const isHttp = /^https?:\/\//i.test(baseParam);
 
-  // default to your repo's raw data (works from file://)
   const RAW = 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data';
-
   const DATA_ROOT = isHttp ? baseParam.replace(/\/+$/,'') : RAW;
 
   const DATA_ENDPOINTS = {
-    details:       `${DATA_ROOT}/Patientdetails.json`,        // Capital P, lowercase d ✅
-    appointments:  `${DATA_ROOT}/appointments.json`,           // ✅
-    prescriptions: `${DATA_ROOT}/prescriptions.json`,          // ✅
-    requests:      `${DATA_ROOT}/prescription-requests.json`   // ← fixed to use hyphen ✅
+    details: `${DATA_ROOT}/Patientdetails.json`,
+    appointments: `${DATA_ROOT}/appointments.json`,
+    prescriptions: `${DATA_ROOT}/prescriptions.json`,
+    requests: `${DATA_ROOT}/prescription-requests.json`,
+    medicines: 'https://jsethi-mdx.github.io/cst2572.github.io/medicines.json'
   };
 
-    // ---- HELPERS ----
-    function toArray(x) { return !x ? [] : (Array.isArray(x) ? x : [x]); }
-
-    const $ = (sel) => document.querySelector(sel);
-    const $all = (sel) => Array.from(document.querySelectorAll(sel));
-function firstDefined(obj, keys) {
-  if (!obj || typeof obj !== 'object') return undefined; // ← guard added
-  for (const key of keys) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const val = obj[key];
-      if (val !== undefined && val !== null && String(val).trim() !== '') return val;
+  // ---- HELPERS ----
+  function toArray(x) { return !x ? [] : (Array.isArray(x) ? x : [x]); }
+  const $ = (sel) => document.querySelector(sel);
+  const $all = (sel) => Array.from(document.querySelectorAll(sel));
+  
+  function firstDefined(obj, keys) {
+    if (!obj || typeof obj !== 'object') return undefined;
+    for (const key of keys) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        const val = obj[key];
+        if (val !== undefined && val !== null && String(val).trim() !== '') return val;
+      }
     }
+    return undefined;
   }
-  return undefined;
-}
 
-    const parseDate = (d) => d ? new Date(d) : null;
-    const fmtDate = (d) => d ? new Date(d).toLocaleDateString() : '—';
+  const parseDate = (d) => d ? new Date(d) : null;
+  const fmtDate = (d) => d ? new Date(d).toLocaleDateString() : '—';
 
-    // Get ?patientId= fallback
-    function getParamId() {
-      const url = new URL(location.href);
-      const pid = url.searchParams.get('patientId');
-      return pid ? String(pid) : null;
-    }
-
-    async function resolveActivePatientId() {
-      // Temporary: hardcode for testing
-      return '1';
-    }
-
-async function getJSON(url) {
-  console.log('Fetching:', url);
-  const res = await fetch(url, { cache: 'no-cache' });
-  if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
-  return res.json();
-}
-
-function renderHeader(details) {
-  $('#patientName').textContent = firstDefined(details, ['name','patientName','Patient_Name']) || 'Patient';
-  $('#patientNHS').textContent  = firstDefined(details, ['nhs','nhsNumber','NHS_Number','NHS']) || '—';
-  $('#patientDOB').textContent  = fmtDate(firstDefined(details, ['dob','DOB','dateOfBirth']));
-}
-
-function sameId(a, b) {
-  if (a == null || b == null) return false;
-  return String(a).trim() === String(b).trim();
-}
-
-function filterByPatientId(arr, activeIdOrAliases, preferNHS = true) {
-  const aliases = Array.isArray(activeIdOrAliases)
-    ? activeIdOrAliases.map(a => String(a).trim())
-    : [String(activeIdOrAliases).trim()];
-
-  // Prefer NHS fields when any alias looks like a long number
-  const keysNHSFirst = ['patientNHS','NHS_Number','patientIdNumber','patientId','patient_id','id'];
-  const keysIdFirst  = ['patientId','patient_id','id','patientIdNumber','patientNHS','NHS_Number'];
-
-  const looksLikeNHS = aliases.some(a => /^\d{6,}$/.test(a));
-  const keys = (preferNHS || looksLikeNHS) ? keysNHSFirst : keysIdFirst;
-
-  return (arr || []).filter(item =>
-    keys.some(k => aliases.some(a => sameId(item?.[k], a)))
-  );
-}
-
-
-function renderList(targetSel, rows, emptyText) {
-  const ul = $(targetSel);
-  if (!ul) {                     // ← prevents crash if the node is missing
-    console.warn('renderList target not found:', targetSel);
-    return;
+  function getParamId() {
+    const url = new URL(location.href);
+    const pid = url.searchParams.get('patientId');
+    return pid ? String(pid) : null;
   }
-  ul.innerHTML = '';
-  if (!rows || rows.length === 0) {
-    const li = document.createElement('li');
-    li.innerHTML = '<span class="muted">' + (emptyText || 'No data') + '</span>';
-    ul.appendChild(li);
-    return;
+
+  async function resolveActivePatientId() {
+    const viaUrl = getParamId();
+    if (viaUrl) return viaUrl;
+    return '6538586104';
   }
-  rows.forEach(r => {
-    const leftMain = firstDefined(r, ['medicine','title','reason','note','type']) || '—';
-    const right    = firstDefined(r, ['status','duration','date','dateIssued','when']) || '';
-    const li = document.createElement('li');
-    li.innerHTML = '<div>' + leftMain + '</div><div class="muted">' +
-      (typeof right === 'string' ? right : fmtDate(right)) + '</div>';
-    ul.appendChild(li);
-  });
-}
 
+  async function getJSON(url) {
+    console.log('Fetching:', url);
+    const res = await fetch(url, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
+    return res.json();
+  }
 
-function nextAppointments(appts) {
-  const now = new Date();
-  return appts
-    .map(a => ({ ...a, _dt: parseDate(firstDefined(a,['date','when','datetime'])) }))
-    .filter(a => a._dt && a._dt >= now)
-    .sort((a,b) => a._dt - b._dt)
-    .slice(0, 5);
-}
+  function renderHeader(details) {
+    $('#patientName').textContent = firstDefined(details, ['name','patientName','Patient_Name']) || 'Patient';
+    $('#patientNHS').textContent  = firstDefined(details, ['nhs','nhsNumber','NHS_Number','NHS']) || '—';
+    $('#patientDOB').textContent  = fmtDate(firstDefined(details, ['dob','DOB','dateOfBirth']));
+  }
 
-async function loadAndRender() {
-  $all('nav a').forEach(a => a.addEventListener('click', (e) => {
-    e.preventDefault();
-    const tab = a.getAttribute('data-tab');
-    if (!tab) return;
-    $all('nav a').forEach(x => x.classList.toggle('active', x === a));
-    $all('.tab').forEach(s => s.classList.add('hidden'));
-    $('#tab-' + tab).classList.remove('hidden');
-  }));
+  function sameId(a, b) {
+    if (a == null || b == null) return false;
+    return String(a).trim() === String(b).trim();
+  }
 
-  $('#refreshBtn').addEventListener('click', () => init(true));
-  $('#logoutBtn').addEventListener('click', () => {
-    localStorage.removeItem('activePatientId');
-    location.href = location.pathname;
-  });
+  function filterByPatientId(arr, activeIdOrAliases, preferNHS = true) {
+    const aliases = Array.isArray(activeIdOrAliases)
+      ? activeIdOrAliases.map(a => String(a).trim())
+      : [String(activeIdOrAliases).trim()];
 
-  await init(false);
-}
+    const keysNHSFirst = ['patientNHS','NHS_Number','patientIdNumber','patientId','patient_id','id'];
+    const keysIdFirst  = ['patientId','patient_id','id','patientIdNumber','patientNHS','NHS_Number'];
+    const looksLikeNHS = aliases.some(a => /^\d{6,}$/.test(a));
+    const keys = (preferNHS || looksLikeNHS) ? keysNHSFirst : keysIdFirst;
 
-async function init(forceRefresh) {
-  try {
-    console.log('=== DEBUG START ===');
-    const activeId = await resolveActivePatientId();
-    console.log('Active ID:', activeId);
-    $('#activeId').textContent = activeId || '—';
+    return (arr || []).filter(item =>
+      keys.some(k => aliases.some(a => sameId(item?.[k], a)))
+    );
+  }
 
-    // Test if we can fetch the data
-    console.log('Testing data fetch from:', DATA_ENDPOINTS.details);
-
-    const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
-      getJSON(DATA_ENDPOINTS.details),
-      getJSON(DATA_ENDPOINTS.appointments),
-      getJSON(DATA_ENDPOINTS.prescriptions),
-      getJSON(DATA_ENDPOINTS.requests),
-    ]);
-
-    console.log('=== DATA FETCH RESULTS ===');
-    console.log('Details data:', detailsArr);
-    console.log('Appointments data:', apptsAll);
-    console.log('Prescriptions data:', prescAll);
-    console.log('Requests data:', reqAll);
-    console.log('Details length:', detailsArr?.length);
-    console.log('Appointments length:', apptsAll?.length);
-    console.log('Prescriptions length:', prescAll?.length);
-    console.log('Requests length:', reqAll?.length);
-
-    details = Array.isArray(detailsArr) ? detailsArr.find(p => {
-      const pid = firstDefined(p, ['id','patientId','patient_id','patientIdNumber','NHS_Number']);
-      return sameId(pid, activeId);
-    }) : null;
-
-    console.log('Found patient details:', details);
-
-    if (!activeId || !details) {
-      renderHeader({});
-      renderList('#recentPresc', [], 'No patient selected.');
-      renderList('#upcomingAppts', [], 'No patient selected.');
-      renderList('#reqList', [], 'No patient selected.');
-      renderList('#allPresc', [], 'No patient selected.');
-      renderList('#allReqs', [], 'No patient selected.');
-      renderList('#allAppts', [], 'No patient selected.');
-      renderList('#historyList', [], 'No patient selected.');
+  function renderList(targetSel, rows, emptyText) {
+    const ul = $(targetSel);
+    if (!ul) {
+      console.warn('renderList target not found:', targetSel);
       return;
     }
+    ul.innerHTML = '';
+    if (!rows || rows.length === 0) {
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="muted">' + (emptyText || 'No data') + '</span>';
+      ul.appendChild(li);
+      return;
+    }
+    rows.forEach(r => {
+      const leftMain = firstDefined(r, ['medicine','title','reason','note','type']) || '—';
+      const right    = firstDefined(r, ['status','duration','date','dateIssued','when']) || '';
+      const li = document.createElement('li');
+      li.innerHTML = '<div>' + leftMain + '</div><div class="muted">' +
+        (typeof right === 'string' ? right : fmtDate(right)) + '</div>';
+      ul.appendChild(li);
+    });
+  }
 
-    // Render header
-    renderHeader(details);
+  function nextAppointments(appts) {
+    const now = new Date();
+    return appts
+      .map(a => ({ ...a, _dt: parseDate(firstDefined(a,['date','when','datetime'])) }))
+      .filter(a => a._dt && a._dt >= now)
+      .sort((a,b) => a._dt - b._dt)
+      .slice(0, 5);
+  }
 
-    // Build Medical History
-    const historyRaw = toArray(firstDefined(details, ['medicalHistory','history','Patient_Note','patient_note']));
-    const myHistory = historyRaw.map(h => ({
-      title: firstDefined(h, ['Diagnosis','Reason_for_Visit','title','reason','note']) || 'Clinical note',
-      when:  firstDefined(h, ['Visit_Date','date','when']),
-      note:  firstDefined(h, ['Recommendations','Notes','notes','summary'])
-    }));
+// Load medicines for dropdown
+async function loadMedicines() {
+  try {
+    const medicines = await getJSON(DATA_ENDPOINTS.medicines);
+    const select = $('#medicineSelect');
+    select.innerHTML = '<option value="">Select a medicine...</option>';
     
-    // Render medical history
-    renderList('#historyList', myHistory, 'No medical history found.');
-
-    // Build aliases for this patient
-    const aliasIds = Array.from(new Set(
-      [
-        String(activeId).trim(),
-        firstDefined(details, ['patientIdNumber']),
-        firstDefined(details, ['id','patientId','patient_id']),
-        firstDefined(details, ['NHS_Number','nhs','nhsNumber'])
-      ].filter(v => v != null && String(v).trim() !== '')
-    )).map(v => String(v).trim());
-
-    console.log('Alias IDs for filtering:', aliasIds);
-
-    // Filter using aliases
-    const myAppts = filterByPatientId(apptsAll, aliasIds);
-    const myPresc = filterByPatientId(prescAll, aliasIds);
-    const myReqs  = filterByPatientId(reqAll,  aliasIds);
-
-    console.log('Filtered results:');
-    console.log('My appointments:', myAppts.length, myAppts);
-    console.log('My prescriptions:', myPresc.length, myPresc);
-    console.log('My requests:', myReqs.length, myReqs);
-
-    console.log('aliasIds:', aliasIds);
-    console.log('matched counts → presc/appts/reqs:', myPresc.length, myAppts.length, myReqs.length);
-
-    // Render all sections
-    renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
-    renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
-    renderList('#reqList', myReqs.slice(-5).reverse(), 'No requests found.');
-
-    renderList('#allPresc', myPresc, 'No prescriptions found.');
-    renderList('#allReqs',  myReqs,  'No requests found.');
-    renderList('#allAppts', myAppts, 'No appointments found.');
-
+    console.log('Medicines data:', medicines);
+    
+    medicines.forEach(med => {
+      const option = document.createElement('option');
+      
+      // Use the exact property names from the medicine data
+      const medicineId = med.medicineId;
+      const medicineName = med.medicineName;
+      const category = med.category;
+      
+      option.value = medicineId;
+      option.textContent = `${medicineName} (${category})`;
+      select.appendChild(option);
+    });
+    
+    console.log('Loaded medicines count:', medicines.length);
+    
   } catch (err) {
-    console.error('Error in init:', err);
-    alert('Failed to load data. See console.');
+    console.error('Failed to load medicines:', err);
+    // Use fallback list
+    loadFallbackMedicines();
   }
 }
 
-loadAndRender();
-</script>
+// Load medicines for dropdown
+async function loadMedicines() {
+  try {
+    const medicines = await getJSON(DATA_ENDPOINTS.medicines);
+    const select = $('#medicineSelect');
+    select.innerHTML = '<option value="">Select a medicine...</option>';
+    
+    console.log('Medicines data structure:', medicines);
+    
+    medicines.forEach(med => {
+      const option = document.createElement('option');
+      
+      // Use the actual property names from the JSON: "id" and "Drug"
+      const medicineId = med.id;
+      const medicineName = med.Drug;
+      const category = med.category || 'General'; // Use category if available, otherwise default
+      
+      option.value = medicineId;
+      option.textContent = `${medicineName}${category ? ' (' + category + ')' : ''}`;
+      select.appendChild(option);
+    });
+    
+    console.log('Loaded medicines count:', medicines.length);
+    
+  } catch (err) {
+    console.error('Failed to load medicines:', err);
+    // Use fallback list
+    loadFallbackMedicines();
+  }
+}
+
+// Fallback medicine list
+function loadFallbackMedicines() {
+  const fallbackMedicines = [
+    { id: 1, Drug: "Nabumetone" },
+    { id: 2, Drug: "Acetaminophen" },
+    { id: 3, Drug: "Ibuprofen" },
+    { id: 4, Drug: "Amoxicillin" },
+    { id: 5, Drug: "Lisinopril" },
+    { id: 6, Drug: "Atorvastatin" },
+    { id: 7, Drug: "Metformin" },
+    { id: 8, Drug: "Levothyroxine" },
+    { id: 9, Drug: "Omeprazole" },
+    { id: 10, Drug: "Sertraline" }
+  ];
+  
+  const select = $('#medicineSelect');
+  select.innerHTML = '<option value="">Select a medicine...</option>';
+  fallbackMedicines.forEach(med => {
+    const option = document.createElement('option');
+    option.value = med.id;
+    option.textContent = med.Drug;
+    select.appendChild(option);
+  });
+}
+
+  // Render prescription requests table
+  function renderPrescriptionRequests(requests) {
+    const tbody = $('#requestsTableBody');
+    const noRequestsMsg = $('#noRequestsMessage');
+    
+    tbody.innerHTML = '';
+    
+    if (!requests || requests.length === 0) {
+      noRequestsMsg.style.display = 'block';
+      return;
+    }
+    
+    noRequestsMsg.style.display = 'none';
+    
+    // Sort by date (newest first)
+    const sortedRequests = requests.slice().reverse();
+    
+    sortedRequests.forEach(req => {
+      const row = document.createElement('tr');
+      
+      // Get medicine name from ID
+      const medicineName = req.medicine || 'Unknown Medicine';
+      const urgencyClass = `urgency-${req.urgency || 'medium'}`;
+      const statusClass = `status-${req.status?.toLowerCase() || 'pending'}`;
+      
+      row.innerHTML = `
+        <td>${medicineName}</td>
+        <td>${req.reason || '—'}</td>
+        <td class="${urgencyClass}">
+          ${(req.urgency || 'medium').charAt(0).toUpperCase() + (req.urgency || 'medium').slice(1)}
+        </td>
+        <td>
+          <span class="${statusClass}">${(req.status || 'Pending').charAt(0).toUpperCase() + (req.status || 'Pending').slice(1)}</span>
+        </td>
+        <td>${fmtDate(req.date)}</td>
+      `;
+      
+      tbody.appendChild(row);
+    });
+  }
+
+// Handle prescription request form submission
+function handlePrescriptionRequest(e) {
+  e.preventDefault();
+  
+  const medicineSelect = $('#medicineSelect');
+  const reasonInput = $('#reasonInput');
+  const urgencySelect = $('#urgencySelect');
+  
+  const medicineText = medicineSelect.options[medicineSelect.selectedIndex].text;
+  const reason = reasonInput.value;
+  const urgency = urgencySelect.value;
+  
+  if (!medicineSelect.value || !reason) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  
+  // Extract just the medicine name without the category for display
+  const medicineName = medicineText.split(' (')[0];
+  
+  // Create new request object
+  const newRequest = {
+    id: 'req-' + Date.now(),
+    patientId: details ? firstDefined(details, ['id','patientId','patient_id']) : 'unknown',
+    medicine: medicineName,
+    reason: reason,
+    urgency: urgency,
+    status: 'Pending',
+    response: '',
+    date: new Date().toISOString(),
+    patientNHS: details ? firstDefined(details, ['NHS_Number','nhs','nhsNumber']) : 'unknown'
+  };
+  
+  // Store in localStorage and update the display
+  const userRequests = JSON.parse(localStorage.getItem('userPrescriptionRequests') || '[]');
+  userRequests.push(newRequest);
+  localStorage.setItem('userPrescriptionRequests', JSON.stringify(userRequests));
+  
+  // Update the display
+  renderPrescriptionRequests(userRequests);
+  
+  // Reset form
+  medicineSelect.value = '';
+  reasonInput.value = '';
+  urgencySelect.value = 'medium';
+  
+  // Show success message
+  alert('Prescription request submitted successfully! Your doctor will review it soon.');
+  
+  // Refresh the requests list in dashboard
+  init(false);
+}
+
+  // Reset form
+  function resetPrescriptionForm() {
+    $('#medicineSelect').value = '';
+    $('#reasonInput').value = '';
+    $('#urgencySelect').value = 'medium';
+  }
+
+  async function loadAndRender() {
+    $all('nav a').forEach(a => a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = a.getAttribute('data-tab');
+      if (!tab) return;
+      $all('nav a').forEach(x => x.classList.toggle('active', x === a));
+      $all('.tab').forEach(s => s.classList.add('hidden'));
+      $('#tab-' + tab).classList.remove('hidden');
+    }));
+
+    $('#refreshBtn').addEventListener('click', () => init(true));
+    $('#logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('activePatientId');
+      location.href = location.pathname;
+    });
+
+    // Add request appointment functionality
+    $('#requestAppointmentBtn').addEventListener('click', () => {
+      const reason = prompt('Enter reason for appointment:');
+      const preferredDate = prompt('Enter preferred date (YYYY-MM-DD):');
+      if (reason && preferredDate) {
+        alert(`Appointment request submitted!\nReason: ${reason}\nPreferred Date: ${preferredDate}\n\nOur staff will contact you to confirm your appointment.`);
+      }
+    });
+
+    // Load medicines for dropdown
+    await loadMedicines();
+    
+    // Prescription request form handlers
+    $('#prescriptionRequestForm').addEventListener('submit', handlePrescriptionRequest);
+    $('#cancelRequestBtn').addEventListener('click', resetPrescriptionForm);
+    
+    // Load existing requests from localStorage
+    const userRequests = JSON.parse(localStorage.getItem('userPrescriptionRequests') || '[]');
+    renderPrescriptionRequests(userRequests);
+
+    await init(false);
+  }
+
+  async function init(forceRefresh) {
+    try {
+      console.log('=== DEBUG START ===');
+      const activeId = await resolveActivePatientId();
+      console.log('Active ID:', activeId);
+      $('#activeId').textContent = activeId || '—';
+
+      const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
+        getJSON(DATA_ENDPOINTS.details),
+        getJSON(DATA_ENDPOINTS.appointments),
+        getJSON(DATA_ENDPOINTS.prescriptions),
+        getJSON(DATA_ENDPOINTS.requests),
+      ]);
+
+      console.log('=== DATA FETCH RESULTS ===');
+      console.log('Details length:', detailsArr?.length);
+      console.log('Appointments length:', apptsAll?.length);
+      console.log('Prescriptions length:', prescAll?.length);
+      console.log('Requests length:', reqAll?.length);
+
+      details = Array.isArray(detailsArr) ? detailsArr.find(p => {
+        const nhsMatch = sameId(p.NHS_Number, activeId);
+        const otherIdMatch = sameId(firstDefined(p, ['id','patientId','patient_id','patientIdNumber']), activeId);
+        return nhsMatch || otherIdMatch;
+      }) : null;
+
+      console.log('Found patient details:', details);
+
+      if (!activeId || !details) {
+        renderHeader({});
+        renderList('#recentPresc', [], 'No patient selected.');
+        renderList('#upcomingAppts', [], 'No patient selected.');
+        renderList('#reqList', [], 'No patient selected.');
+        renderList('#allPresc', [], 'No patient selected.');
+        renderList('#allReqs', [], 'No patient selected.');
+        renderList('#allAppts', [], 'No patient selected.');
+        renderList('#historyList', [], 'No patient selected.');
+        return;
+      }
+
+      renderHeader(details);
+
+      // Build Medical History
+      const historyRaw = toArray(firstDefined(details, ['medicalHistory','history','Patient_Note','patient_note']));
+      const myHistory = historyRaw.map(h => ({
+        title: firstDefined(h, ['Diagnosis','Reason_for_Visit','title','reason','note']) || 'Clinical note',
+        when:  firstDefined(h, ['Visit_Date','date','when']),
+        note:  firstDefined(h, ['Recommendations','Notes','notes','summary'])
+      }));
+      
+      renderList('#historyList', myHistory, 'No medical history found.');
+
+      // Build aliases for this patient
+      const aliasIds = Array.from(new Set(
+        [
+          String(activeId).trim(),
+          firstDefined(details, ['patientIdNumber']),
+          firstDefined(details, ['id','patientId','patient_id']),
+          firstDefined(details, ['NHS_Number','nhs','nhsNumber'])
+        ].filter(v => v != null && String(v).trim() !== '')
+      )).map(v => String(v).trim());
+
+      console.log('Alias IDs for filtering:', aliasIds);
+
+      // Filter using aliases
+      const myAppts = filterByPatientId(apptsAll, aliasIds);
+      const myPresc = filterByPatientId(prescAll, aliasIds);
+      const myReqs  = filterByPatientId(reqAll,  aliasIds);
+
+      // Combine with user's locally stored requests
+      const userRequests = JSON.parse(localStorage.getItem('userPrescriptionRequests') || '[]');
+      const combinedRequests = [...myReqs, ...userRequests.filter(req => 
+        sameId(req.patientNHS, activeId) || sameId(req.patientId, activeId)
+      )];
+
+      console.log('Filtered results:');
+      console.log('My appointments:', myAppts.length);
+      console.log('My prescriptions:', myPresc.length);
+      console.log('My requests:', combinedRequests.length);
+
+      // Update the requests table
+      renderPrescriptionRequests(combinedRequests);
+
+      // Render all sections
+      renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
+      renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
+      renderList('#reqList', combinedRequests.slice(-5).reverse(), 'No requests found.');
+
+      renderList('#allPresc', myPresc, 'No prescriptions found.');
+      renderList('#allReqs',  combinedRequests,  'No requests found.');
+      renderList('#allAppts', myAppts, 'No appointments found.');
+
+    } catch (err) {
+      console.error('Error in init:', err);
+      alert('Failed to load data. See console.');
+    }
+  }
+
+  loadAndRender();
+  </script>
 </body>
 </html>
