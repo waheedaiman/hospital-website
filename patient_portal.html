@@ -222,12 +222,12 @@
 
   const Config = {
     endpoints: {
-      patients: Query.get('patients') || `${BASE_URL}/patient.json`,
-      doctors: Query.get('doctors') || `${BASE_URL}/doc.json`,
-      prescriptions: Query.get('prescriptions') || `${BASE_URL}/prescriptions.json`,
-      appointments: Query.get('appointments') || `${BASE_URL}/appointments.json`,
-      prescriptionRequests: Query.get('rxRequests') || `${BASE_URL}/prescription-requests.json`,
-      medicalNotes: Query.get('notes') || `${BASE_URL}/medical-notes.json`,
+      patients: Query.get('patients') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/patient.json',
+      doctors: Query.get('doctors') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/doc.json',
+      prescriptions: Query.get('prescriptions') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/prescriptions.json',
+      appointments: Query.get('appointments') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/appointments.json',
+      prescriptionRequests: Query.get('rxRequests') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/prescription-requests.json',
+      medicalNotes: Query.get('notes') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/medical-notes.json',
     },
     writes: {
       appointments: Query.get('postAppointments') || null,
