@@ -186,6 +186,7 @@ const DATA_ENDPOINTS = {
 
 
     // ---- HELPERS ----
+    function toArray(x) { return !x ? [] : (Array.isArray(x) ? x : [x]); }
     function getParamId() {
   const url = new URL(location.href);
   const pid = url.searchParams.get('patientId');
@@ -272,6 +273,18 @@ function filterByPatientId(arr, activeId) {
     return sameId(pid, activeId);
   });
 }
+
+// Build Medical History rows from Patientdetails.json (handles object or array)
+const historyRaw = toArray(firstDefined(details, ['medicalHistory','history','Patient_Note','patient_note']));
+const myHistory = historyRaw.map(h => ({
+  // fields chosen so your renderList picks them up
+  title: firstDefined(h, ['Diagnosis','Reason_for_Visit','title','reason','note']) || 'Clinical note',
+  when:  firstDefined(h, ['Visit_Date','date','when']),
+  note:  firstDefined(h, ['Recommendations','Notes','notes','summary'])
+}));
+
+// Render the Medical History tab/list (make sure your HTML has <ul id="historyList">)
+renderList('#historyList', myHistory, 'No medical history found.');
 
 
 function renderList(targetSel, rows, emptyText) {
