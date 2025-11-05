@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -170,30 +169,29 @@
       </section>
     </main>
   </div>
+<script>
+  let details = null; // make it global so accidental uses won't crash
 
-  <script>
-    let details = null; // make it global so accidental uses won't crash
-    // ---- CONFIG ----
-    const DATA_HOST = 'https://waheedaiman.github.io/hospital-website/data';
+  // ---- CONFIG ----
+  // Build data root: if baseUrl is http(s) use it, otherwise fall back to your GitHub raw
+  const qs = new URLSearchParams(location.search);
+  const baseParam = (qs.get('baseUrl') || '').trim();
+  const isHttp = /^https?:\/\//i.test(baseParam);
 
-    // Same-origin endpoints (page and data are on the same domain)
-// in patient_portal.html (or its JS)
-const DATA_ENDPOINTS = {
-  details: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/Patientdetails.json',
-  appointments: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/appointments.json',
-  prescriptions: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/prescriptions.json',
-  requests: 'https://raw.githubusercontent.com/waheedaiman/hospital-website/refs/heads/main/data/prescription-requests.json',
-};
+  // default to your repo's raw data (works from file://)
+  const RAW = 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data';
 
+  const DATA_ROOT = isHttp ? baseParam.replace(/\/+$/,'') : RAW;
 
+  const DATA_ENDPOINTS = {
+    details:       `${DATA_ROOT}/Patientdetails.json`,        // Capital P, lowercase d ✅
+    appointments:  `${DATA_ROOT}/appointments.json`,           // ✅
+    prescriptions: `${DATA_ROOT}/prescriptions.json`,          // ✅
+    requests:      `${DATA_ROOT}/prescription-requests.json`   // ← fixed to use hyphen ✅
+  };
 
     // ---- HELPERS ----
     function toArray(x) { return !x ? [] : (Array.isArray(x) ? x : [x]); }
-    function getParamId() {
-  const url = new URL(location.href);
-  const pid = url.searchParams.get('patientId');
-  return pid ? String(pid).trim() : null;
-}
 
     const $ = (sel) => document.querySelector(sel);
     const $all = (sel) => Array.from(document.querySelectorAll(sel));
@@ -219,35 +217,12 @@ function firstDefined(obj, keys) {
     }
 
     async function resolveActivePatientId() {
-      const viaUrl = getParamId();
-      if (viaUrl) return viaUrl;
-
-      const stored = localStorage.getItem('activePatientId');
-      if (stored) return String(stored);
-
-      const loggedUser = localStorage.getItem('loggedInUsername');
-      if (loggedUser) {
-        try {
-          const res = await fetch(DATA_ENDPOINTS.patientsAuth, { cache: 'no-cache' });
-          if (res.ok) {
-            const users = await res.json();
-            const hit = Array.isArray(users) ? users.find(u => u.username === loggedUser) : null;
-            if (hit) {
-              const mapped = firstDefined(hit, ['detailsId','patientId','patient_id','id']);
-              if (mapped !== undefined && mapped !== null) {
-                localStorage.setItem('activePatientId', String(mapped));
-                return String(mapped);
-              }
-            }
-          }
-        } catch (e) {
-          console.warn('Could not map logged user to detailsId', e);
-        }
-      }
-      return null;
+      // Temporary: hardcode for testing
+      return '1';
     }
 
 async function getJSON(url) {
+  console.log('Fetching:', url);
   const res = await fetch(url, { cache: 'no-cache' });
   if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
   return res.json();
@@ -269,30 +244,17 @@ function filterByPatientId(arr, activeIdOrAliases, preferNHS = true) {
     ? activeIdOrAliases.map(a => String(a).trim())
     : [String(activeIdOrAliases).trim()];
 
-  // choose key priority depending on whether the alias looks like a long number (likely NHS)
+  // Prefer NHS fields when any alias looks like a long number
   const keysNHSFirst = ['patientNHS','NHS_Number','patientIdNumber','patientId','patient_id','id'];
   const keysIdFirst  = ['patientId','patient_id','id','patientIdNumber','patientNHS','NHS_Number'];
 
   const looksLikeNHS = aliases.some(a => /^\d{6,}$/.test(a));
-  const keys = preferNHS || looksLikeNHS ? keysNHSFirst : keysIdFirst;
+  const keys = (preferNHS || looksLikeNHS) ? keysNHSFirst : keysIdFirst;
 
   return (arr || []).filter(item =>
     keys.some(k => aliases.some(a => sameId(item?.[k], a)))
   );
 }
-
-
-// Build Medical History rows from Patientdetails.json (handles object or array)
-const historyRaw = toArray(firstDefined(details, ['medicalHistory','history','Patient_Note','patient_note']));
-const myHistory = historyRaw.map(h => ({
-  // fields chosen so your renderList picks them up
-  title: firstDefined(h, ['Diagnosis','Reason_for_Visit','title','reason','note']) || 'Clinical note',
-  when:  firstDefined(h, ['Visit_Date','date','when']),
-  note:  firstDefined(h, ['Recommendations','Notes','notes','summary'])
-}));
-
-// Render the Medical History tab/list (make sure your HTML has <ul id="historyList">)
-renderList('#historyList', myHistory, 'No medical history found.');
 
 
 function renderList(targetSel, rows, emptyText) {
@@ -349,8 +311,13 @@ async function loadAndRender() {
 
 async function init(forceRefresh) {
   try {
+    console.log('=== DEBUG START ===');
     const activeId = await resolveActivePatientId();
+    console.log('Active ID:', activeId);
     $('#activeId').textContent = activeId || '—';
+
+    // Test if we can fetch the data
+    console.log('Testing data fetch from:', DATA_ENDPOINTS.details);
 
     const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
       getJSON(DATA_ENDPOINTS.details),
@@ -359,21 +326,22 @@ async function init(forceRefresh) {
       getJSON(DATA_ENDPOINTS.requests),
     ]);
 
-details = Array.isArray(detailsArr) ? detailsArr.find(p => {
-  const pid = firstDefined(p, ['id','patientId','patient_id','patientIdNumber','NHS_Number']);
-  return sameId(pid, activeId);
-}) : null;
+    console.log('=== DATA FETCH RESULTS ===');
+    console.log('Details data:', detailsArr);
+    console.log('Appointments data:', apptsAll);
+    console.log('Prescriptions data:', prescAll);
+    console.log('Requests data:', reqAll);
+    console.log('Details length:', detailsArr?.length);
+    console.log('Appointments length:', apptsAll?.length);
+    console.log('Prescriptions length:', prescAll?.length);
+    console.log('Requests length:', reqAll?.length);
 
-// Build a set of alias IDs for this patient (so P001, 1, or NHS all work)
-const aliasIds = Array.from(new Set(
-  [activeId,
-   firstDefined(details, ['patientIdNumber']),
-   firstDefined(details, ['id','patientId','patient_id']),
-   firstDefined(details, ['NHS_Number','nhs','nhsNumber'])]
-  .filter(v => v != null && String(v).trim() !== '')
-)).map(v => String(v).trim());
+    details = Array.isArray(detailsArr) ? detailsArr.find(p => {
+      const pid = firstDefined(p, ['id','patientId','patient_id','patientIdNumber','NHS_Number']);
+      return sameId(pid, activeId);
+    }) : null;
 
-
+    console.log('Found patient details:', details);
 
     if (!activeId || !details) {
       renderHeader({});
@@ -383,38 +351,65 @@ const aliasIds = Array.from(new Set(
       renderList('#allPresc', [], 'No patient selected.');
       renderList('#allReqs', [], 'No patient selected.');
       renderList('#allAppts', [], 'No patient selected.');
+      renderList('#historyList', [], 'No patient selected.');
       return;
     }
 
+    // Render header
     renderHeader(details);
 
-    // TEMP PATCH (only for testing)
-    prescAll.forEach(p => {
-      if (p.id === 'rx-001') p.patientNHS = '6538586104';
-    });
+    // Build Medical History
+    const historyRaw = toArray(firstDefined(details, ['medicalHistory','history','Patient_Note','patient_note']));
+    const myHistory = historyRaw.map(h => ({
+      title: firstDefined(h, ['Diagnosis','Reason_for_Visit','title','reason','note']) || 'Clinical note',
+      when:  firstDefined(h, ['Visit_Date','date','when']),
+      note:  firstDefined(h, ['Recommendations','Notes','notes','summary'])
+    }));
+    
+    // Render medical history
+    renderList('#historyList', myHistory, 'No medical history found.');
 
-const myAppts = filterByPatientId(apptsAll, aliasIds);
-const myPresc = filterByPatientId(prescAll, aliasIds);
-const myReqs  = filterByPatientId(reqAll,  aliasIds);
+    // Build aliases for this patient
+    const aliasIds = Array.from(new Set(
+      [
+        String(activeId).trim(),
+        firstDefined(details, ['patientIdNumber']),
+        firstDefined(details, ['id','patientId','patient_id']),
+        firstDefined(details, ['NHS_Number','nhs','nhsNumber'])
+      ].filter(v => v != null && String(v).trim() !== '')
+    )).map(v => String(v).trim());
 
-    console.log('matched prescriptions:', myPresc.length);
-    console.log('first matched presc:', myPresc[0]);
+    console.log('Alias IDs for filtering:', aliasIds);
 
+    // Filter using aliases
+    const myAppts = filterByPatientId(apptsAll, aliasIds);
+    const myPresc = filterByPatientId(prescAll, aliasIds);
+    const myReqs  = filterByPatientId(reqAll,  aliasIds);
+
+    console.log('Filtered results:');
+    console.log('My appointments:', myAppts.length, myAppts);
+    console.log('My prescriptions:', myPresc.length, myPresc);
+    console.log('My requests:', myReqs.length, myReqs);
+
+    console.log('aliasIds:', aliasIds);
+    console.log('matched counts → presc/appts/reqs:', myPresc.length, myAppts.length, myReqs.length);
+
+    // Render all sections
     renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
     renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
     renderList('#reqList', myReqs.slice(-5).reverse(), 'No requests found.');
+
     renderList('#allPresc', myPresc, 'No prescriptions found.');
     renderList('#allReqs',  myReqs,  'No requests found.');
     renderList('#allAppts', myAppts, 'No appointments found.');
+
   } catch (err) {
-    console.error(err);
+    console.error('Error in init:', err);
     alert('Failed to load data. See console.');
   }
 }
 
 loadAndRender();
-localStorage.setItem('activePatientId', '1');
 </script>
 </body>
 </html>
-
