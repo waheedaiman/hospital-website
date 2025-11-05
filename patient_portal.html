@@ -222,12 +222,12 @@
 
   const Config = {
     endpoints: {
-      patients: Query.get('patients') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/Patientdetails.json',
-      doctors: Query.get('doctors') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/doc.json',
-      prescriptions: Query.get('prescriptions') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/prescriptions.json',
-      appointments: Query.get('appointments') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/appointments.json',
-      prescriptionRequests: Query.get('rxRequests') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/prescription-requests.json',
-      medicalNotes: Query.get('notes') || 'https://raw.githubusercontent.com/waheedaiman/hospital-website/main/data/medical-notes.json',
+      patients: Query.get('patients') || `${BASE_URL}/patient.json`,
+      doctors: Query.get('doctors') || `${BASE_URL}/doc.json`,
+      prescriptions: Query.get('prescriptions') || `${BASE_URL}/prescriptions.json`,
+      appointments: Query.get('appointments') || `${BASE_URL}/appointments.json`,
+      prescriptionRequests: Query.get('rxRequests') || `${BASE_URL}/prescription-requests.json`,
+      medicalNotes: Query.get('notes') || `${BASE_URL}/medical-notes.json`,
     },
     writes: {
       appointments: Query.get('postAppointments') || null,
@@ -268,20 +268,15 @@
     for (const u of urls) {
       if (!u) continue;
       try {
-        console.log('Fetching:', u); // Debug log
         const res = await fetch(u, { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
-          console.log('Fetch successful:', u); // Debug log
           // Cache successful response for offline use
           try { localStorage.setItem('cache:' + u, JSON.stringify(data)); } catch (e) { /* ignore */ }
           return data;
         }
-        const errorText = await res.text();
-        console.error(`Failed to fetch ${u}: ${res.status}`, errorText); // Debug log
-        lastError = new Error(`Failed to fetch ${u}: ${res.status} - ${errorText}`);
+        lastError = new Error(`Failed to fetch ${u}: ${res.status}`);
       } catch (e) {
-        console.error('Fetch error:', u, e); // Debug log
         lastError = e;
       }
     }
