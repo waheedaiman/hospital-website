@@ -253,14 +253,14 @@ const DATA_ENDPOINTS = {
       $('#patientDOB').textContent  = fmtDate(firstDefined(details, ['dob','DOB','dateOfBirth']));
     }
 
-    function sameId(a, b) {
-      if (a === undefined || a === null || b === undefined || b === null) return false;
-      return String(a) === String(b);
-    }
+      function sameId(a, b) {
+        if (a == null || b == null) return false;
+        return String(a).trim() === String(b).trim();
+      } // nhs can be string AND number
 
     function filterByPatientId(arr, activeId) {
       return (arr || []).filter(item => {
-        const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS']);
+        const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS','NHS_Number']);
         return sameId(pid, activeId);
       });
     }
@@ -352,6 +352,11 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
         const myReqs  = filterByPatientId(reqAll,  activeId);
 
         // Dashboard widgets
+        console.log("Prescriptions loaded:", prescAll);
+        console.log("Example ID from record:", prescAll[0]?.patientNHS);
+        console.log("Filtered for patient:", myPresc);
+        console.log("Active ID:", activeId);
+
         renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
         renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
         renderList('#reqList', myReqs.slice(-5).reverse(), 'No requests found.');
@@ -369,6 +374,7 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
 
     loadAndRender();
     localStorage.setItem('activePatientId', '1');
+    console.log(prescAll.find(p => p.patientNHS));
   </script>
 </body>
 </html>
