@@ -351,10 +351,11 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
         renderHeader(details);
 
         // Filter data for this patient
+        console.log("👀 TEST sameId:", sameId("6538586104", activeId));
         const myAppts = filterByPatientId(apptsAll, activeId);
-        console.log("sameId with known value:", sameId("6538586104", activeId));
         const myPresc = filterByPatientId(prescAll, activeId);
-        const myReqs  = filterByPatientId(reqAll,  activeId);
+        const myReqs  = filterByPatientId(reqAll, activeId);
+        console.log("🧠 typeof activeId =", typeof activeId, "value =", activeId);
 
         // Dashboard widgets
         console.log("Prescriptions loaded:", prescAll);
