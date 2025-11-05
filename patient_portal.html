@@ -268,15 +268,20 @@
     for (const u of urls) {
       if (!u) continue;
       try {
+        console.log('Fetching:', u); // Debug log
         const res = await fetch(u, { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
+          console.log('Fetch successful:', u); // Debug log
           // Cache successful response for offline use
           try { localStorage.setItem('cache:' + u, JSON.stringify(data)); } catch (e) { /* ignore */ }
           return data;
         }
-        lastError = new Error(`Failed to fetch ${u}: ${res.status}`);
+        const errorText = await res.text();
+        console.error(`Failed to fetch ${u}: ${res.status}`, errorText); // Debug log
+        lastError = new Error(`Failed to fetch ${u}: ${res.status} - ${errorText}`);
       } catch (e) {
+        console.error('Fetch error:', u, e); // Debug log
         lastError = e;
       }
     }
