@@ -194,14 +194,17 @@ const DATA_ENDPOINTS = {
 
     const $ = (sel) => document.querySelector(sel);
     const $all = (sel) => Array.from(document.querySelectorAll(sel));
-    const firstDefined = (obj, keys) => {
-      for (const k of keys) {
-        if (obj && Object.prototype.hasOwnProperty.call(obj, k) && obj[k] !== undefined && obj[k] !== null) {
-          return obj[k];
-        }
+function firstDefined(obj, keys) {
+  for (const key of keys) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const value = obj[key];
+      if (value !== undefined && value !== null && String(value).trim() !== '') {
+        return value;
       }
-      return undefined;
-    };
+    }
+  }
+  return undefined;
+}
     const parseDate = (d) => d ? new Date(d) : null;
     const fmtDate = (d) => d ? new Date(d).toLocaleDateString() : '—';
 
@@ -354,8 +357,10 @@ const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
         // Dashboard widgets
         console.log("Prescriptions loaded:", prescAll);
         console.log("Example ID from record:", prescAll[0]?.patientNHS);
+        console.log("First prescription record:", JSON.stringify(prescAll[0], null, 2));
         console.log("Filtered for patient:", myPresc);
         console.log("Active ID:", activeId);
+        prescAll[0].patientNHS = "6538586104";
 
         renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
         renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
