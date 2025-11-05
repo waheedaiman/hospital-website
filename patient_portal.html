@@ -243,150 +243,133 @@ function firstDefined(obj, keys) {
       }
       return null;
     }
+    
+async function getJSON(url) {
+  const res = await fetch(url, { cache: 'no-cache' });
+  if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
+  return res.json();
+}
 
-    async function getJSON(url) {
-      const res = await fetch(url, { cache: 'no-cache' });
-      if (!res.ok) throw new Error('Fetch failed: ' + url + ' ' + res.status);
-      return res.json();
+function renderHeader(details) {
+  $('#patientName').textContent = firstDefined(details, ['name','patientName','Patient_Name']) || 'Patient';
+  $('#patientNHS').textContent  = firstDefined(details, ['nhs','nhsNumber','NHS_Number','NHS']) || '—';
+  $('#patientDOB').textContent  = fmtDate(firstDefined(details, ['dob','DOB','dateOfBirth']));
+}
+
+function sameId(a, b) {
+  if (a == null || b == null) return false;
+  return String(a).trim() === String(b).trim();
+}
+
+function filterByPatientId(arr, activeId) {
+  return (arr || []).filter(item => {
+    const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS']);
+    console.log('Checking item:', item.id, 'pid=', pid, 'activeId=', activeId);
+    return sameId(pid, activeId);
+  });
+}
+
+function renderList(targetSel, rows, emptyText) {
+  const ul = $(targetSel);
+  ul.innerHTML = '';
+  if (!rows || rows.length === 0) {
+    const li = document.createElement('li');
+    li.innerHTML = '<span class="muted">' + (emptyText || 'No data') + '</span>';
+    ul.appendChild(li);
+    return;
+  }
+  rows.forEach(r => {
+    const leftMain = firstDefined(r, ['medicine','title','reason','note','type']) || '—';
+    const right = firstDefined(r, ['status','duration','date','dateIssued','when']) || '';
+    const li = document.createElement('li');
+    li.innerHTML = '<div>' + leftMain + '</div><div class="muted">' + 
+      (typeof right === 'string' ? right : fmtDate(right)) + '</div>';
+    ul.appendChild(li);
+  });
+}
+
+function nextAppointments(appts) {
+  const now = new Date();
+  return appts
+    .map(a => ({ ...a, _dt: parseDate(firstDefined(a,['date','when','datetime'])) }))
+    .filter(a => a._dt && a._dt >= now)
+    .sort((a,b) => a._dt - b._dt)
+    .slice(0, 5);
+}
+
+async function loadAndRender() {
+  $all('nav a').forEach(a => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tab = a.getAttribute('data-tab');
+    if (!tab) return;
+    $all('nav a').forEach(x => x.classList.toggle('active', x === a));
+    $all('.tab').forEach(s => s.classList.add('hidden'));
+    $('#tab-' + tab).classList.remove('hidden');
+  }));
+
+  $('#refreshBtn').addEventListener('click', () => init(true));
+  $('#logoutBtn').addEventListener('click', () => {
+    localStorage.removeItem('activePatientId');
+    location.href = location.pathname;
+  });
+
+  await init(false);
+}
+
+async function init(forceRefresh) {
+  try {
+    const activeId = await resolveActivePatientId();
+    $('#activeId').textContent = activeId || '—';
+
+    const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
+      getJSON(DATA_ENDPOINTS.details),
+      getJSON(DATA_ENDPOINTS.appointments),
+      getJSON(DATA_ENDPOINTS.prescriptions),
+      getJSON(DATA_ENDPOINTS.requests),
+    ]);
+
+    const details = Array.isArray(detailsArr) ? detailsArr.find(p => {
+      const pid = firstDefined(p, ['id','patientId','patient_id','NHS_Number']);
+      return sameId(pid, activeId);
+    }) : null;
+
+    if (!activeId || !details) {
+      renderHeader({});
+      renderList('#recentPresc', [], 'No patient selected.');
+      renderList('#upcomingAppts', [], 'No patient selected.');
+      renderList('#reqList', [], 'No patient selected.');
+      renderList('#allPresc', [], 'No patient selected.');
+      renderList('#allReqs', [], 'No patient selected.');
+      renderList('#allAppts', [], 'No patient selected.');
+      return;
     }
 
-    function renderHeader(details) {
-      $('#patientName').textContent = firstDefined(details, ['name','patientName','Patient_Name']) || 'Patient';
-      $('#patientNHS').textContent  = firstDefined(details, ['nhs','nhsNumber','NHS_Number','NHS']) || '—';
-      $('#patientDOB').textContent  = fmtDate(firstDefined(details, ['dob','DOB','dateOfBirth']));
-    }
+    renderHeader(details);
 
-      function sameId(a, b) {
-        if (a == null || b == null) return false;
-        return String(a).trim() === String(b).trim();
-      } // nhs can be string AND number
+    // TEMP PATCH (only for testing)
+    prescAll.forEach(p => {
+      if (p.id === 'rx-001') p.patientNHS = '6538586104';
+    });
 
-      function filterByPatientId(arr, activeId) {
-        return (arr || []).filter(item => {
-          const pid = firstDefined(item, ['patientId','patient_id','patientIdNumber','patientNHS']);
-          console.log('Checking item:', item.id, 'pid=', pid, 'activeId=', activeId);
-          return sameId(pid, activeId);
-        });
-      }
+    const myAppts = filterByPatientId(apptsAll, activeId);
+    const myPresc = filterByPatientId(prescAll, activeId);
+    const myReqs  = filterByPatientId(reqAll,  activeId);
 
-    function renderList(targetSel, rows, emptyText) {
-      const ul = $(targetSel);
-      ul.innerHTML = '';
-      if (!rows || rows.length === 0) {
-        const li = document.createElement('li');
-        li.innerHTML = '<span class="muted">' + (emptyText || 'No data') + '</span>';
-        ul.appendChild(li);
-        return;
-      }
-      rows.forEach(r => {
-        const leftMain = firstDefined(r, ['medicine','title','reason','note','type']) || '—';
-        const right = firstDefined(r, ['status','duration','date','dateIssued','when']) || '';
-        const li = document.createElement('li');
-        li.innerHTML = '<div>' + leftMain + '</div><div class="muted">' + (typeof right === 'string' ? right : fmtDate(right)) + '</div>';
-        ul.appendChild(li);
-      });
-    }
+    renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
+    renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
+    renderList('#reqList', myReqs.slice(-5).reverse(), 'No requests found.');
+    renderList('#allPresc', myPresc, 'No prescriptions found.');
+    renderList('#allReqs',  myReqs,  'No requests found.');
+    renderList('#allAppts', myAppts, 'No appointments found.');
+  } catch (err) {
+    console.error(err);
+    alert('Failed to load data. See console.');
+  }
+}
 
-    function nextAppointments(appts) {
-      const now = new Date();
-      return appts
-        .map(a => ({ ...a, _dt: parseDate(firstDefined(a,['date','when','datetime'])) }))
-        .filter(a => a._dt && a._dt >= now)
-        .sort((a,b) => a._dt - b._dt)
-        .slice(0, 5);
-    }
-
-    async function loadAndRender() {
-      // Tabs (keep simple)
-      $all('nav a').forEach(a => a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const tab = a.getAttribute('data-tab');
-        if (!tab) return;
-        $all('nav a').forEach(x => x.classList.toggle('active', x === a));
-        $all('.tab').forEach(s => s.classList.add('hidden'));
-        $('#tab-' + tab).classList.remove('hidden');
-      }));
-
-      $('#refreshBtn').addEventListener('click', () => init(true));
-      $('#logoutBtn').addEventListener('click', () => {
-        localStorage.removeItem('activePatientId');
-        location.href = location.pathname; // reload without params
-      });
-
-      await init(false);
-    }
-
-    async function init(forceRefresh) {
-      try {
-        const activeId = await resolveActivePatientId();
-        $('#activeId').textContent = activeId || '—';
-
-const [detailsArr, apptsAll, prescAll, reqAll] = await Promise.all([
-  getJSON(DATA_ENDPOINTS.details),
-  getJSON(DATA_ENDPOINTS.appointments),
-  getJSON(DATA_ENDPOINTS.prescriptions),
-  getJSON(DATA_ENDPOINTS.requests),
-]);
-
-
-        // Resolve patient details by ID, tolerate different key names
-        const details = Array.isArray(detailsArr) ? detailsArr.find(p => {
-          const pid = firstDefined(p, ['id','patientId','patient_id','NHS_Number']);
-          return sameId(pid, activeId);
-        }) : null;
-
-        if (!activeId || !details) {
-          // If we cannot resolve, show guidance
-          renderHeader({});
-          renderList('#recentPresc', [], 'No patient selected. Add ?patientId=<ID> to the URL (e.g. patient_portal.html?patientId=1) or set localStorage.activePatientId.');
-          renderList('#upcomingAppts', [], 'No patient selected.');
-          renderList('#reqList', [], 'No patient selected.');
-          renderList('#allPresc', [], 'No patient selected.');
-          renderList('#allReqs', [], 'No patient selected.');
-          renderList('#allAppts', [], 'No patient selected.');
-          return;
-        }
-
-        // Header
-        renderHeader(details);
-
-        // Filter data for this patient
-        console.log("👀 TEST sameId:", sameId("6538586104", activeId));
-        const myAppts = filterByPatientId(apptsAll, activeId);
-        const myPresc = filterByPatientId(prescAll, activeId);
-        const myReqs  = filterByPatientId(reqAll, activeId);
-        console.log("🧠 typeof activeId =", typeof activeId, "value =", activeId);
-
-        // Dashboard widgets
-        console.log("Prescriptions loaded:", prescAll);
-        console.log("Example ID from record:", prescAll[0]?.patientNHS);
-        console.log("First prescription record:", JSON.stringify(prescAll[0], null, 2));
-        console.log("Filtered for patient:", myPresc);
-        console.log("Active ID:", activeId);
-        prescAll.forEach(p => {
-        if (p.id === 'rx-001') {
-          p.patientNHS = "6538586104";
-        }
-      });
-
-
-        renderList('#recentPresc', myPresc.slice(-5).reverse(), 'No prescriptions found.');
-        renderList('#upcomingAppts', nextAppointments(myAppts), 'No upcoming appointments.');
-        renderList('#reqList', myReqs.slice(-5).reverse(), 'No requests found.');
-
-        // Full tabs
-        renderList('#allPresc', myPresc, 'No prescriptions found.');
-        renderList('#allReqs',  myReqs,  'No requests found.');
-        renderList('#allAppts', myAppts, 'No appointments found.');
-
-      } catch (err) {
-        console.error(err);
-        alert('Failed to load data. See console.');
-      }
-    }
-
-    loadAndRender();
-    localStorage.setItem('activePatientId', '1');
-  </script>
+loadAndRender();
+localStorage.setItem('activePatientId', '1');
+</script>
 </body>
 </html>
+
